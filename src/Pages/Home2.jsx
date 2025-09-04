@@ -13,6 +13,7 @@ import Header3 from "../components/Header3";
 import Hero1 from "../components/Hero1";
 import TargetAudience from "../components/TargetAudience";
 import CTASection from "../components/Form";
+import CTASection1 from "../components/Form1";
 
 const Home2 = () => {
   return (
@@ -186,7 +187,7 @@ const Home2 = () => {
         </div>
       </section> */}
       <Address />
-      <CTASection />
+      <CTASection1 />
       {/* <!-- Features Section --> */}
       {/* <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -278,6 +279,7 @@ const Home2 = () => {
         </div>
       </section> */}
       <FeaturesSection />
+      {/* <CTASection1 /> */}
       <TestimonialsSection />
       {/* <!-- Audience Section --> */}
 

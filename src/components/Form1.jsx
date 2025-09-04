@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const cities = [
   "Delhi",
@@ -21,52 +22,36 @@ export default function CTASection() {
 
   const openForm = (city) => {
     setSelectedCity(city);
-    setFormData((prev) => ({ ...prev, city }));
     setIsOpen(true);
   };
 
   const closeForm = () => {
     setIsOpen(false);
-    setFormData({ name: "", city: "", phone: "" });
+    setFormData({ name: "", city: " ", phone: "" });
+    setSelectedCity("");
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     // For now, just log or alert (since no backend)
-  //     console.log("Form submitted:", formData);
-  //     alert(
-  //       `Thank you ${formData.name}! We’ll contact you for Virtual Office in ${formData.city}.`
-  //     );
-  //     closeForm();
-  //   };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSer60HKgpOidicarJbM3By1V6l7gOHFiH_WyNUjWBVpDuQCdw/viewform",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData), // your form data
-        }
-      );
+    // Prefilled Google Form URL
+    const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSer60HKgpOidicarJbM3By1V6l7gOHFiH_WyNUjWBVpDuQCdw/viewform?usp=pp_url&entry.2005620554=${encodeURIComponent(
+      formData.name
+    )}&entry.1166974658=${encodeURIComponent(
+      selectedCity
+    )}&entry.839337160=${encodeURIComponent(formData.phone)}`;
 
-      if (response.ok) {
-        alert("Form submitted successfully!");
-        closeForm();
-      } else {
-        alert("Failed to submit form. Please try again.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("An error occurred. Please try again.");
-    }
+    // Open Google Form with prefilled values
+    window.open(formUrl, "_blank");
+
+    toast.success(
+      `✅ Thank you ${formData.name}! We’ll contact you for Virtual Office in ${selectedCity}.`
+    );
+    closeForm();
   };
 
   return (
@@ -74,6 +59,8 @@ export default function CTASection() {
       <h2 className="text-2xl text-gray-200 font-bold mb-6">
         Choose Your City for Virtual Office
       </h2>
+
+      {/* City buttons */}
       <div className="flex flex-wrap justify-center gap-4">
         {cities.map((city, index) => (
           <button
@@ -99,6 +86,7 @@ export default function CTASection() {
             <h3 className="text-xl font-semibold mb-4">
               Get Virtual Office in {selectedCity}
             </h3>
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
@@ -113,7 +101,7 @@ export default function CTASection() {
                 type="text"
                 name="city"
                 placeholder="City"
-                value={formData.city}
+                value={selectedCity}
                 onChange={handleChange}
                 required
                 className="w-full border border-gray-300 rounded px-3 py-2"
