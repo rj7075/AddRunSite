@@ -26,7 +26,7 @@ const Header3 = () => {
               >
                 FAQ
               </a>
-              <button className="bg-transparent border border-gray-300 text-gray-300 hover:bg-gray-800 px-3 py-1.5 rounded-md text-sm transition-colors">
+              <button className="bg-transparent border border-gray-300 text-[#5CC6EC] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
                 Book a Call
               </button>
             </nav>

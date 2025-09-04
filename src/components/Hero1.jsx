@@ -2,10 +2,10 @@ import React from "react";
 
 const Hero1 = () => {
   return (
-    <section className="relative min-h-screen flex py-3 pb-6 items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-[#0E141B] to-purple-900">
+    <section className="relative min-h-screen flex py-7 pb-6 items-center justify-center overflow-hidden bg-[#011F3F] from-blue-900 via-[#0E141B] to-purple-900">
       {/* Background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMzMTk2YTUiIHN0cm9rZS1vcGFjaXR5PSIwLjIiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIvPjwvZz48L3N2Zz4=')] opacity-30"></div>
+      {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMzMTk2YTUiIHN0cm9rZS1vcGFjaXR5PSIwLjIiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIvPjwvZz48L3N2Zz4=')] opacity-30"></div> */}
 
       {/* Floating elements */}
       <div className="absolute top-20 right-10 w-20 h-20 bg-[#3196a5]/20 rounded-full blur-xl animate-bounce"></div>
@@ -19,13 +19,13 @@ const Hero1 = () => {
           {/* Content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
-              <span className="bg-[#3196a5]/20 text-[#3196a5] border border-[#3196a5]/30 px-4 py-2 rounded-full text-sm font-medium">
+              <span className="bg-[#3196a5]/20 text-[#3196a5] border  border-[#3196a5]/30 px-4 py-2 rounded-full text-sm font-bold">
                 Go Live in 24 Hours
               </span>
 
               <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
                 Get an{" "}
-                <span className="bg-gradient-to-r from-[#3196a5] to-green-400 bg-clip-text text-transparent">
+                <span className="bg-[#5CC6EC] from-[#3196a5]  bg-clip-text text-transparent">
                   MCA- & GST-Ready
                 </span>{" "}
                 Business Address in Gurgaon
@@ -39,7 +39,7 @@ const Hero1 = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
-              <button className="bg-gradient-to-r from-[#3196a5] to-green-500 text-white text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
+              <button className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
                 Reserve My Address
               </button>
 
@@ -116,8 +116,8 @@ const Hero1 = () => {
 
           {/* Visual */}
           <div className="relative">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-xl">
-              <div className="aspect-square bg-gradient-to-br from-[#3196a5]/20 to-green-400/20 rounded-xl flex items-center justify-center">
+            <div className="bg-[#131E2C]  border border-white/20 rounded-2xl p-8 shadow-xl">
+              <div className="aspect-square bg-[#213D50] from-[#3196a5]/20 to-green-400/20 rounded-xl flex items-center justify-center">
                 {/* Placeholder for GST book visual */}
                 <div className="text-center space-y-4">
                   <div className="w-24 h-32 bg-[#3196a5]/30 rounded-lg mx-auto animate-pulse">

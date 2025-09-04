@@ -3,11 +3,13 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[var(--color-secondary)] text-white py-12">
+      <footer className="bg-[#0E141B] text-white py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <div className="text-2xl font-bold mb-2">Asset Sense</div>
+              <div className="text-2xl font-bold mb-2">
+                <img className="w-35 h-20" src="/logo.png" alt="logo" />
+              </div>
               <p className="text-gray-400">Virtual Office Solutions</p>
             </div>
             <div className="flex space-x-6">

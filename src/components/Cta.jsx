@@ -17,7 +17,7 @@ const Cta = () => {
             Start for ₹999
           </button>
 
-          <button className="bg-[#161C25] text-gray-100 px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
+          <button className="bg-[#49925b] text-gray-100 px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
             Talk to an Expert
           </button>
         </div>

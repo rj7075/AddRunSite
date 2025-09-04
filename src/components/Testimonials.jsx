@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-[#151B24]">
+    <section className="py-16 bg-[#0E141B]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-gray-100 mb-4">
           What Clients Say About Asset Sense Virtual Office
