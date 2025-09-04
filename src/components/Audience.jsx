@@ -42,12 +42,12 @@ const AudienceSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[var(--color-primary)]" id="audience">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-3xl font-bold text-center text-[#d6dbdb] mb-4">
           Is This For You?
         </h2>
-        <p className="text-lg text-center text-gray-600 mb-12">
+        <p className="text-lg text-center text-gray-300 mb-12">
           Perfect for businesses of all sizes looking for professional presence
           without the overhead
         </p>
@@ -56,15 +56,17 @@ const AudienceSection = () => {
           {audienceData.map((item) => (
             <div
               key={item.id}
-              className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow duration-300"
+              className="bg-[#161C25] p-6 rounded-xl text-center hover:shadow-lg transition-shadow duration-300"
             >
               <div
                 className={`w-16 h-16 ${item.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
               >
                 <i className={`${item.icon} ${item.iconColor} text-2xl`}></i>
               </div>
-              <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-              <p className="text-gray-600">{item.description}</p>
+              <h3 className="text-xl font-semibold text-[#bdbcc4] mb-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-300">{item.description}</p>
             </div>
           ))}
         </div>

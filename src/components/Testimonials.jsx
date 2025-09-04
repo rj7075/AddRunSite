@@ -98,12 +98,12 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#151B24]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-3xl font-bold text-center text-gray-100 mb-4">
           What Clients Say About Asset Sense Virtual Office
         </h2>
-        <p className="text-lg text-center text-gray-600 mb-12">
+        <p className="text-lg text-center text-gray-300 mb-12">
           Rated 4.9/5 from 384 Google Reviews
         </p>
 
@@ -111,7 +111,7 @@ const TestimonialsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none hidden md:block"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#161C25] rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none hidden md:block"
             aria-label="Previous testimonials"
           >
             <i className="fas fa-chevron-left text-gray-700"></i>
@@ -119,7 +119,7 @@ const TestimonialsSection = () => {
 
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none hidden md:block"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#161C25] rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none hidden md:block"
             aria-label="Next testimonials"
           >
             <i className="fas fa-chevron-right text-gray-700"></i>
@@ -134,7 +134,7 @@ const TestimonialsSection = () => {
             {testimonialData.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="w-100 md:w-100 sm:w-20  snap-always snap-center flex-shrink-0 bg-white p-8 rounded-xl shadow-md"
+                className="w-100 md:w-100 sm:w-20  snap-always snap-center flex-shrink-0 bg-[#2f333a] p-8 rounded-xl shadow-md"
               >
                 <div className="flex items-center mb-4">
                   <div
@@ -145,16 +145,18 @@ const TestimonialsSection = () => {
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">
+                    <h4 className="font-semibold text-gray-100">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-gray-300 text-sm">
                       {testimonial.position}
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-600 md:px-4 mb-4">
+                <p className="text-gray-300 md:px-4 mb-4">
                   {testimonial.content}
                 </p>
-                <div className="flex items-center text-sm text-gray-500">
+                <div className="flex items-center text-sm text-gray-300">
                   <i
                     className={`${testimonial.icon} ${testimonial.iconColor} mr-2`}
                   ></i>

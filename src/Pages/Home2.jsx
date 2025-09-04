@@ -4,12 +4,20 @@ import ProCons from "../components/ProCons";
 import Cta from "../components/Cta";
 import AudienceSection from "../components/Audience";
 import TestimonialsSection from "../components/Testimonials";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Address from "../components/Address";
+import FeaturesSection from "../components/Features";
+import Header2 from "../components/Header2";
+import Header3 from "../components/Header3";
+import Hero1 from "../components/Hero1";
+import TargetAudience from "../components/TargetAudience";
 
 const Home2 = () => {
   return (
     <div>
       {/* <!-- Header --> */}
-      <header class="bg-gradient-to-r shadow-sm py-4">
+      {/* <header class="bg-gradient-to-r shadow-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
           <div class="text-2xl font-bold text-[var(--color-primary)]">
             Asset Sense
@@ -32,10 +40,13 @@ const Home2 = () => {
             </a>
           </div>
         </div>
-      </header>
+      </header> */}
+      <Header3 />
+      <Header />
+      <Hero1 />
 
       {/* <!-- Hero Section --> */}
-      <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
+      {/* <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
           <div class="md:w-1/2 mb-8 md:mb-0">
             <h1 class="text-4xl md:text-5xl font-bold text-[var(--color-secondary)] mb-6">
@@ -99,12 +110,13 @@ const Home2 = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* <Hero /> */}
 
       <ProCons />
 
       {/* <!-- Address Section --> */}
-      <section class="py-16 bg-gray-50">
+      {/* <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
           <h2 class="text-3xl font-bold text-center text-[var(--color-secondary)] mb-4">
             Your Legal Address
@@ -171,10 +183,11 @@ const Home2 = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <Address />
 
       {/* <!-- Features Section --> */}
-      <section class="py-16 bg-white">
+      {/* <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
           <h2 class="text-3xl font-bold text-center text-[var(--color-secondary)] mb-4">
             Why Asset Sense
@@ -185,7 +198,7 @@ const Home2 = () => {
           </p>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* <!-- Feature 1 --> */}
+           
             <div class="bg-gray-50 p-6 rounded-xl text-center">
               <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fas fa-indian-rupee-sign text-blue-500 text-2xl"></i>
@@ -197,7 +210,7 @@ const Home2 = () => {
               </p>
             </div>
 
-            {/* <!-- Feature 2 --> */}
+            
             <div class="bg-gray-50 p-6 rounded-xl text-center">
               <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fas fa-file-invoice text-green-500 text-2xl"></i>
@@ -211,7 +224,7 @@ const Home2 = () => {
               </p>
             </div>
 
-            {/* <!-- Feature 3 --> */}
+      
             <div class="bg-gray-50 p-6 rounded-xl text-center">
               <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fas fa-door-open text-purple-500 text-2xl"></i>
@@ -223,7 +236,7 @@ const Home2 = () => {
               <p class="text-sm text-gray-500">10 hours included every month</p>
             </div>
 
-            {/* <!-- Feature 4 --> */}
+           
             <div class="bg-gray-50 p-6 rounded-xl text-center">
               <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i class="fas fa-ban text-red-500 text-2xl"></i>
@@ -262,10 +275,12 @@ const Home2 = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <FeaturesSection />
       <TestimonialsSection />
       {/* <!-- Audience Section --> */}
-      <AudienceSection />
+
+      <TargetAudience />
 
       <FAQSection />
 

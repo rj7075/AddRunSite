@@ -1,24 +1,27 @@
 import React from "react";
 import ProCons from "../components/ProCons";
 import FAQSection from "../components/Faq";
-import Header from "../components/Header";
+
 import Cta from "../components/Cta";
-import AudienceSection from "../components/Audience";
+
 import TestimonialsSection from "../components/Testimonials";
 import FeaturesSection from "../components/Features";
-import Hero from "../components/Hero";
+
 import Address from "../components/Address";
+import Header3 from "../components/Header3";
+import Hero1 from "../components/Hero1";
+import TargetAudience from "../components/TargetAudience";
 
 const Home = () => {
   return (
     <div>
-      <Header />
-      <Hero />
+      <Header3 />
+      <Hero1 />
       <ProCons />
       <Address />
       <FeaturesSection />
       <TestimonialsSection />
-      <AudienceSection />
+      <TargetAudience />
       <FAQSection />
       <Cta />
     </div>

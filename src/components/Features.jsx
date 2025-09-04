@@ -42,12 +42,12 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[var(--color-primary)]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-3xl font-bold text-center text-[#dbd5d5] mb-4">
           Why Asset Sense
         </h2>
-        <p className="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">
+        <p className="text-lg text-center text-[#a9acab] max-w-3xl mx-auto mb-12">
           Everything you need to run a compliant business, at a fraction of the
           cost
         </p>
@@ -56,7 +56,7 @@ const FeaturesSection = () => {
           {featuresData.map((feature) => (
             <div
               key={feature.id}
-              className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
+              className="bg-[#151B24] p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
             >
               <div
                 className={`w-16 h-16 ${feature.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
@@ -65,33 +65,35 @@ const FeaturesSection = () => {
                   className={`${feature.icon} ${feature.iconColor} text-2xl`}
                 ></i>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600 mb-4">{feature.price}</p>
-              <p className="text-sm text-gray-500">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-100">
+                {feature.title}
+              </h3>
+              <p className=" mb-4 text-gray-300">{feature.price}</p>
+              <p className="text-sm text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 bg-blue-50 p-8 rounded-xl text-center">
-          <h3 className="text-2xl font-bold text-gray-800 mb-2">
+        <div className="mt-12 bg-[#151B24] p-8 rounded-xl text-center">
+          <h3 className="text-2xl font-bold text-gray-100 mb-2">
             Save 85% on Office Costs
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-300 mb-6">
             Get all the benefits of a premium business address without the
             overhead
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <span className="text-2xl font-bold text-blue-600">₹999</span>
-              <span className="text-gray-600">/mo</span>
-              <p className="text-sm text-gray-500">Premium Virtual Office</p>
+            <div className="bg-[#303133] p-4 rounded-lg shadow-sm">
+              <span className="text-2xl font-bold text-blue-100">₹999</span>
+              <span className="text-blue-100">/mo</span>
+              <p className="text-sm text-blue-100">Premium Virtual Office</p>
             </div>
             <div className="text-3xl text-gray-300">→</div>
-            <div className="bg-white p-4 rounded-lg shadow-sm">
+            <div className="bg-[#303133] p-4 rounded-lg shadow-sm">
               <span className="text-2xl font-bold text-green-600">
                 Save 85%
               </span>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-blue-100">
                 Compared to traditional office
               </p>
             </div>
