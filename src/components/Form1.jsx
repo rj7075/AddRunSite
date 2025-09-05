@@ -38,7 +38,7 @@ export default function CTASection() {
 
   const closeForm = () => {
     setIsOpen(false);
-    setFormData({ name: "", city: " ", phone: "" });
+    setFormData({ name: "", city: "", phone: "" });
     setSelectedCity("");
   };
 
@@ -46,23 +46,34 @@ export default function CTASection() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prefilled Google Form URL
-    const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSer60HKgpOidicarJbM3By1V6l7gOHFiH_WyNUjWBVpDuQCdw/viewform?usp=pp_url&entry.2005620554=${encodeURIComponent(
-      formData.name
-    )}&entry.1166974658=${encodeURIComponent(
-      selectedCity
-    )}&entry.839337160=${encodeURIComponent(formData.phone)}`;
+    // ✅ Google Form hidden "formResponse" endpoint
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSer60HKgpOidicarJbM3By1V6l7gOHFiH_WyNUjWBVpDuQCdw/formResponse";
 
-    // Open Google Form with prefilled values
-    window.open(formUrl, "_blank");
+    // ✅ Map your custom fields to Google Form entry IDs
+    const formDataToSend = new FormData();
+    formDataToSend.append("entry.2005620554", formData.name); // Name field
+    formDataToSend.append("entry.1166974658", selectedCity); // City field
+    formDataToSend.append("entry.839337160", formData.phone); // Phone field
 
-    toast.success(
-      `✅ Thank you ${formData.name}! We’ll contact you for Virtual Office in ${selectedCity}.`
-    );
-    closeForm();
+    try {
+      await fetch(formUrl, {
+        method: "POST",
+        body: formDataToSend,
+        mode: "no-cors", // required since Google doesn't return CORS headers
+      });
+
+      toast.success(
+        `Thank you ${formData.name}! We will contact you for Virtual Office in ${selectedCity}.`
+      );
+      closeForm();
+    } catch (error) {
+      toast.error("❌ Something went wrong. Please try again.");
+      console.error("Google Form submission error:", error);
+    }
   };
 
   return (
@@ -72,7 +83,7 @@ export default function CTASection() {
       </h2>
       <p className="justify-center items-center text-sm mb-4 px-2 font-medium text-gray-300">
         Click On City where You Want Your Virtual Office or Fill Your Desired
-        City By Clicking on Any City ,Our Team Contact You Soon.
+        City By Clicking on Any City, Our Team Will Contact You Soon.
       </p>
 
       {/* City buttons */}
@@ -117,7 +128,7 @@ export default function CTASection() {
                 name="city"
                 placeholder="City"
                 value={selectedCity}
-                onChange={handleChange}
+                onChange={(e) => setSelectedCity(e.target.value)}
                 required
                 className="w-full border border-gray-300 rounded px-3 py-2"
               />

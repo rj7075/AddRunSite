@@ -14,6 +14,7 @@ import Hero1 from "../components/Hero1";
 import TargetAudience from "../components/TargetAudience";
 import CTASection from "../components/Form";
 import CTASection1 from "../components/Form1";
+import Benifits from "../components/Benifits";
 
 const Home2 = () => {
   return (
@@ -115,7 +116,8 @@ const Home2 = () => {
       </section> */}
       {/* <Hero /> */}
 
-      <ProCons />
+      {/* <ProCons /> */}
+      <Benifits />
 
       {/* <!-- Address Section --> */}
       {/* <section class="py-16 bg-gray-50">
