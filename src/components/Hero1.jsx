@@ -39,7 +39,10 @@ const Hero1 = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
-              <a href="https://wa.me/919907800600?text=Thank%20you%20for%20Contacting%20us.%20Please%20Provide%20your%20Name,%20City%20where%20you%20want%20virtual%20Office,%20Mobile%20no.">
+              <a
+                href="https://wa.me/919907800600?text=Hello%20I%20am%20Interested%20in%20your%20Virtual%20Office%20Services"
+                target="_blank"
+              >
                 <button className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
                   Reserve My Address
                 </button>

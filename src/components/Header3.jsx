@@ -31,8 +31,8 @@ const Header3 = () => {
                 FAQ
               </a>
               <a
-                href="https://wa.me/919907800600?text=Thank%20you%20for%20Contacting%20us.%20Please%20Provide%20your%20Name,%20City%20where%20you%20want%20virtual%20Office,%20Mobile%20no.
-"
+                href="https://wa.me/919907800600?text=Hello%20I%20am%20Interested%20in%20your%20Virtual%20Office%20Services"
+                target="_blank"
               >
                 <button className="cursor-pointer bg-transparent border border-gray-300 text-[#5CC6EC] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
                   Book a Call
@@ -58,8 +58,8 @@ const Header3 = () => {
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
                 <a
-                  href="https://wa.me/919907800600?text=Thank%20you%20for%20Contacting%20us.%20Please%20Provide%20your%20Name,%20City%20where%20you%20want%20virtual%20Office,%20Mobile%20no.
-"
+                  href="https://wa.me/919907800600?text=Hello%20I%20am%20Interested%20in%20your%20Virtual%20Office%20Services"
+                  target="_blank"
                 >
                   <span>Talk to an advisor in 3 min</span>
                 </a>
@@ -83,8 +83,8 @@ const Header3 = () => {
               </div>{" "} */}
 
               <a
-                href="https://wa.me/919907800600?text=Thank%20you%20for%20Contacting%20us.%20Please%20Provide%20your%20Name,%20City%20where%20you%20want%20virtual%20Office,%20Mobile%20no.
-"
+                href="https://wa.me/919907800600?text=Hello%20I%20am%20Interested%20in%20your%20Virtual%20Office%20Services"
+                target="_blank"
               >
                 <button className="bg-[#354346] text-white px-4 py-2 rounded-lg hover:bg-[#267985] transition text-sm flex items-center">
                   <svg

@@ -31,7 +31,10 @@ const ProCons = () => {
           </div>
         </div>
         <div className="flex items-center justify-center py-10">
-          <a href="https://wa.me/919907800600?text=Thank%20you%20for%20Contacting%20us.%20Please%20Provide%20your%20Name,%20City%20where%20you%20want%20virtual%20Office,%20Mobile%20no."></a>{" "}
+          <a
+            href="https://wa.me/919907800600?text=Hello%20I%20am%20Interested%20in%20your%20Virtual%20Office%20Services"
+            target="_blank"
+          ></a>{" "}
           <button className="bg-green-400 text-gray-100 px-6 py-3 sm:px-8 sm:py-4m  rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
             Start Saving Today
           </button>
