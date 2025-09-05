@@ -8,7 +8,11 @@ const Header3 = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <img className="w-35 h-20" src="/logo.png" alt="logo" />
+              <img
+                className="mt-4 w-60 h-55 overflow-hidden"
+                src="/AS VO.png"
+                alt="logo"
+              />
               {/* <p className="text-white">Virtual Office Solutions</p> */}
             </div>
 

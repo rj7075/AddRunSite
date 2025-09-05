@@ -23,7 +23,7 @@ const Hero1 = () => {
                 Go Live in 24 Hours
               </span>
 
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight py-2 text-white">
                 Get an{" "}
                 <span className="bg-[#5CC6EC] from-[#3196a5]  bg-clip-text text-transparent">
                   MCA- & GST-Ready
@@ -117,12 +117,13 @@ const Hero1 = () => {
           {/* Visual */}
           <div className="relative">
             <div className="bg-[#131E2C]  border border-white/20 rounded-2xl p-8 shadow-xl">
-              <div className="aspect-square bg-[#213D50] from-[#3196a5]/20 to-green-400/20 rounded-xl flex items-center justify-center">
+              <div className="aspect-square bg-[#c0cace] rounded-xl flex items-center justify-center">
+                <img src="/Hero pic.png" alt="Hero Image" />
                 {/* Placeholder for GST book visual */}
                 <div className="text-center space-y-4">
-                  <div className="w-24 h-32 bg-[#3196a5]/30 rounded-lg mx-auto animate-pulse">
-                    {/* Document Icon */}
-                    <svg
+                  {/* <div className="w-24 h-32 bg-[#3196a5]/30 rounded-lg mx-auto animate-pulse"> */}
+                  {/* Document Icon */}
+                  {/* <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="48"
                       height="48"
@@ -139,11 +140,11 @@ const Hero1 = () => {
                       <line x1="16" y1="13" x2="8" y2="13"></line>
                       <line x1="16" y1="17" x2="8" y2="17"></line>
                       <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                  </div>
-                  <div className="text-sm text-gray-300">
+                    </svg> */}
+                  {/* </div> */}
+                  {/* <div className="text-sm text-gray-300">
                     GST Registration Ready
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

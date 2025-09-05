@@ -9,6 +9,9 @@ const cities = [
   "Chennai",
   "Kolkata",
   "Gurgaon",
+  "Noida",
+  "Lucknow",
+  "Mohali",
 ];
 
 export default function CTASection() {
