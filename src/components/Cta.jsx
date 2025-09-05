@@ -16,10 +16,14 @@ const Cta = () => {
           <button className="bg-[#5CC6EC] text-gray-100 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
             Start for ₹999
           </button>
-
-          <button className="bg-[#49925b] text-gray-100 px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
-            Talk to an Expert
-          </button>
+          <a
+            className="w-full sm:w-auto"
+            href="https://wa.me/919907800600?text=Thank%20you%20for%20Contacting%20us.%20Please%20Provide%20your%20Name,%20City%20where%20you%20want%20virtual%20Office,%20Mobile%20no."
+          >
+            <button className="bg-[#49925b] text-gray-100 px-5 py-2.5 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
+              Talk to an Expert
+            </button>
+          </a>
         </div>
 
         <p class="mt-4 text-blue-100">

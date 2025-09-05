@@ -12,6 +12,14 @@ const cities = [
   "Noida",
   "Lucknow",
   "Mohali",
+  "Ahmedabad",
+  "Pune",
+  "Surat",
+  "Jaipur",
+  "Indore",
+  "Chandigarh",
+  "Coimbatore",
+  "Nagpur",
 ];
 
 export default function CTASection() {
@@ -62,6 +70,10 @@ export default function CTASection() {
       <h2 className="text-2xl text-gray-200 font-bold mb-6">
         Choose Your City for Virtual Office
       </h2>
+      <p className="justify-center items-center text-sm mb-4 px-2 font-medium text-gray-300">
+        Click On City where You Want Your Virtual Office or Fill Your Desired
+        City By Clicking on Any City ,Our Team Contact You Soon.
+      </p>
 
       {/* City buttons */}
       <div className="flex flex-wrap justify-center gap-4">
