@@ -177,10 +177,10 @@ const Benifits = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">
             Is This For You?
           </h2>
-          {/* <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+          <p className="text-xl md:text-sm text-gray-200 max-w-2xl mx-auto">
             Perfect for businesses of all sizes looking for professional
             presence without the overhead
-          </p> */}
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -235,7 +235,7 @@ const Benifits = () => {
                     </ul>
                   </div>
                   <button className="bg-[#49925b] cursor-pointer mt-3 text-gray-100 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-lg font-semibold text-base sm:text-sm hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
-                    Click Hero To Solve
+                    Click Here To Solve
                   </button>
                 </div>
 
