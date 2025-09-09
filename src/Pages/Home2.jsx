@@ -15,6 +15,8 @@ import TargetAudience from "../components/TargetAudience";
 import CTASection from "../components/Form";
 import CTASection1 from "../components/Form1";
 import Benifits from "../components/Benifits";
+import Location from "../components/Location";
+import Map from "../components/map";
 
 const Home2 = () => {
   return (
@@ -189,6 +191,8 @@ const Home2 = () => {
         </div>
       </section> */}
       <Address />
+      {/* <Location /> */}
+
       <CTASection1 />
       {/* <!-- Features Section --> */}
       {/* <section class="py-16 bg-white">

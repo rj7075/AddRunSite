@@ -23,9 +23,9 @@ const TargetAudience = () => {
         "Essential for e-commerce sellers who need GST registration across multiple states.",
       details: [
         "Multi-state GST registration",
-        "Marketplace compliance",
+        "vpob gst",
         "Return address for customers",
-        "Inventory management support",
+        "Virtual office space in India (any city)",
       ],
     },
     {
@@ -35,8 +35,8 @@ const TargetAudience = () => {
         "Ideal for independent professionals who need a corporate presence.",
       details: [
         "Professional meeting rooms",
-        "Client visiting facilities",
-        "Business correspondence handling",
+        "Office Space for Online Business",
+        "virtual office on rent",
         "Corporate image enhancement",
       ],
     },
@@ -49,7 +49,7 @@ const TargetAudience = () => {
         "Market entry support",
         "Regulatory compliance",
         "Local presence establishment",
-        "Business registration assistance",
+        "Virtual address for company registration in India",
       ],
     },
   ];

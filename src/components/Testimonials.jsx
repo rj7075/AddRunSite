@@ -11,10 +11,11 @@ const TestimonialsSection = () => {
       name: "R. Sinha",
       position: "Founder, ShipKart",
       content:
-        '"Asset Sense registered my GST address in 2 days and saved me ₹75,000 in rent."',
+        '"Asset Sense provided excellent virtual office space in Gurgaon, helping my startup establish a professional presence without high costs. I saved ₹75,000 annually on office rent."',
+
       icon: "fas fa-file-invoice-dollar",
       iconColor: "text-green-500",
-      tag: "Filed GST in 2 days",
+      tag: "95% cost savings",
     },
     {
       id: 2,
@@ -24,7 +25,7 @@ const TestimonialsSection = () => {
       name: "J. Kaur",
       position: "CFO, SaaSBee",
       content:
-        '"Our bank asked for one extra doc and support replied within 3 minutes."',
+        '" I highly recommend Asset Sense for virtual office space Delhi. Our bank asked for one extra doc and support replied within 3 minutes."',
       icon: "fas fa-clock",
       iconColor: "text-blue-500",
       tag: "3-min response time",
@@ -37,7 +38,7 @@ const TestimonialsSection = () => {
       name: "M. Sharma",
       position: "Director, TechFlow",
       content:
-        '"The virtual office helped us expand to 5 states without physical presence."',
+        '"Choosing Asset Sense for a virtual office in Jaipur was a game-changer. Asset Sense helped us expand to 5 states without physical presence."',
       icon: "fas fa-map-marker-alt",
       iconColor: "text-red-500",
       tag: "5-state expansion",
@@ -50,10 +51,10 @@ const TestimonialsSection = () => {
       name: "A. Shah",
       position: "CEO, TechInnovate",
       content:
-        '"The virtual office solution helped us establish a presence in multiple cities without the overhead costs."',
+        '" Asset Sense handled my virtual office Noida GST registration effortlessly, ensuring compliance and providing a prestigious address. Their expertise saved time and simplified the entire process."',
       icon: "fas fa-city",
       iconColor: "text-indigo-500",
-      tag: "Multi-city presence",
+      tag: "Single window service",
     },
     {
       id: 5,
@@ -63,7 +64,7 @@ const TestimonialsSection = () => {
       name: "P. Kumar",
       position: "Director, EcomSolutions",
       content:
-        '"Setting up our business was seamless with Asset Sense. The documentation was ready in hours, not days."',
+        '"For an affordable virtual office Ahmedabad, Asset Sense exceeded our expectations.The documentation was ready in hours, not days."',
       icon: "fas fa-file-contract",
       iconColor: "text-teal-500",
       tag: "Quick documentation",
@@ -144,6 +145,7 @@ const TestimonialsSection = () => {
                       {testimonial.initials}
                     </span>
                   </div>
+
                   <div>
                     <h4 className="font-semibold text-gray-100">
                       {testimonial.name}
@@ -152,6 +154,7 @@ const TestimonialsSection = () => {
                       {testimonial.position}
                     </p>
                   </div>
+                  <span>{testimonial.tag}</span>
                 </div>
                 <p className="text-gray-300 md:px-4 mb-4">
                   {testimonial.content}

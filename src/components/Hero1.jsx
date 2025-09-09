@@ -28,12 +28,12 @@ const Hero1 = () => {
                 <span className="bg-[#5CC6EC] from-[#3196a5]  bg-clip-text text-transparent">
                   MCA- & GST-Ready
                 </span>{" "}
-                Business Address in Gurgaon
+                Business Address in any City In India.
               </h1>
 
               <p className="text-xl text-gray-300 max-w-xl">
                 Stop burning cash on rent. Start operating nationwide with a
-                compliant virtual office at Welldone Tech Park.
+                compliant virtual office at a city of your choice.
               </p>
             </div>
 
@@ -125,7 +125,7 @@ const Hero1 = () => {
               <div className="aspect-square bg-[#c0cace] rounded-xl flex items-center justify-center">
                 <img src="/Hero pic.png" alt="Hero Image" />
                 {/* Placeholder for GST book visual */}
-                <div className="text-center space-y-4">
+                <div className="text-center space-y-1">
                   {/* <div className="w-24 h-32 bg-[#3196a5]/30 rounded-lg mx-auto animate-pulse"> */}
                   {/* Document Icon */}
                   {/* <svg

@@ -76,7 +76,7 @@ const FeaturesSection = () => {
 
         <div className="mt-12 bg-[#151B24] p-8 rounded-xl text-center">
           <h3 className="text-2xl font-bold text-gray-100 mb-2">
-            Save 85% on Office Costs
+            Save 95% on Office Costs
           </h3>
           <p className="text-gray-300 mb-6">
             Get all the benefits of a premium business address without the
@@ -91,7 +91,7 @@ const FeaturesSection = () => {
             <div className="text-3xl text-gray-300">→</div>
             <div className="bg-[#303133] p-4 rounded-lg shadow-sm">
               <span className="text-2xl font-bold text-green-600">
-                Save 85%
+                Save 95%
               </span>
               <p className="text-sm text-blue-100">
                 Compared to traditional office
