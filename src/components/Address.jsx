@@ -46,15 +46,15 @@ const Address = () => {
             Pick a City of your choice from more than 40+ locations in India
           </p>
 
-          <div class="flex flex-col md:flex-row items-start gap-8">
-            <div class="md:w-1/2 ml-10">
+          <div class="flex flex-col items-start gap-4">
+            <div class="w-full md:ml-2 sm:ml-0">
               <div class="bg-[#243E4C] p-6 rounded-xl shadow-md h-full ">
                 <h3 class="text-xl text-white font-semibold mb-4">
                   40+ Cities Virtual offices across India’s major business hubs
                 </h3>
                 <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-4 overflow-hidden">
                   <img
-                    className="w-200 h-100"
+                    className="w-250 h-100"
                     src="/location1.png"
                     alt="location"
                   />
@@ -66,20 +66,24 @@ const Address = () => {
                   <FaShieldAlt className="text-purple-400 text-2xl" />
                   Reliable Service Trusted by 500+ businesses nationwide
                 </p>
-                <div class="flex items-center justify-between">
-                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-3 md:gap-8 items-center justify-between">
+                  <span class="bg-blue-100 text-blue-800 px-3 sm:px-2 py-1 rounded-full text-xs sm:text-sm md:text-base text-center">
                     Prime Location
                   </span>
-                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                  <span class="bg-green-100 text-green-800 px-3 sm:px-2 py-1 rounded-full text-xs sm:text-sm md:text-base text-center">
                     Affordable Price
                   </span>
-                  <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                  <span class="bg-purple-100 text-purple-800 px-3 sm:px-2 py-1 rounded-full text-xs sm:text-sm md:text-base text-center">
                     Virtual Office Near You
                   </span>
                 </div>
+
+                {/* <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                  Virtual Office Near You
+                </span> */}
               </div>
             </div>
-            <div class="md:w-1/2">
+            <div class="w-full">
               {/* Highlights of Address Section  */}
               <section className="bg-[#0E141B] mt-10 grid gap-5 md:grid-cols-2 px-10">
                 {highlights.map((item, index) => (
