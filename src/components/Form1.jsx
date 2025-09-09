@@ -2,14 +2,9 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 
 const cities = [
-  "Delhi",
-  "Mumbai",
   "Bangalore",
   "Hyderabad",
-  "Chennai",
-  "Kolkata",
-  "Gurgaon",
-  "Noida",
+
   "Lucknow",
   "Mohali",
   "Ahmedabad",
@@ -87,7 +82,7 @@ export default function CTASection() {
       </p>
 
       {/* City buttons */}
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4 px-12  items-center justify-center">
         {cities.map((city, index) => (
           <button
             key={index}

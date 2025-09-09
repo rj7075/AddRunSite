@@ -46,110 +46,67 @@ const Address = () => {
             Pick a City of your choice from more than 40+ locations in India
           </p>
 
-          <div class="flex flex-col items-start gap-4">
-            <div class="w-full md:ml-2 sm:ml-0">
-              <div class="bg-[#243E4C] p-6 rounded-xl shadow-md h-full ">
-                <h3 class="text-xl text-white font-semibold mb-4">
-                  40+ Cities Virtual offices across India’s major business hubs
-                </h3>
-                <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-4 overflow-hidden">
-                  <img
-                    className="w-250 h-100"
-                    src="/location1.png"
-                    alt="location"
-                  />
-                  {/* <div class="w-full h-48 bg-[#789fb3] flex items-center justify-center">
-                    <i class="fas fa-building text-blue-600 text-5xl"></i>
-                  </div> */}
-                </div>
-                <p class="text-gray-300 flex gap-2 mb-4">
-                  <FaShieldAlt className="text-purple-400 text-2xl" />
-                  Reliable Service Trusted by 500+ businesses nationwide
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-3 md:gap-8 items-center justify-between">
-                  <span class="bg-blue-100 text-blue-800 px-3 sm:px-2 py-1 rounded-full text-xs sm:text-sm md:text-base text-center">
-                    Prime Location
-                  </span>
-                  <span class="bg-green-100 text-green-800 px-3 sm:px-2 py-1 rounded-full text-xs sm:text-sm md:text-base text-center">
-                    Affordable Price
-                  </span>
-                  <span class="bg-purple-100 text-purple-800 px-3 sm:px-2 py-1 rounded-full text-xs sm:text-sm md:text-base text-center">
-                    Virtual Office Near You
-                  </span>
-                </div>
+          <div className="min-h-screen bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8">
+              {/* First Column */}
+              <div className="w-full lg:w-1/2">
+                <div className="bg-[#243E4C] w-full p-4 sm:p-6 rounded-xl shadow-md h-full">
+                  <h3 className="text-lg sm:text-xl text-white font-semibold mb-4">
+                    40+ Cities Virtual offices across India's major business
+                    hubs
+                  </h3>
 
-                {/* <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
-                  Virtual Office Near You
-                </span> */}
-              </div>
-            </div>
-            <div class="w-full">
-              {/* Highlights of Address Section  */}
-              <section className="bg-[#0E141B] mt-10 grid gap-5 md:grid-cols-2 px-10">
-                {highlights.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-800 p-5 rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
-                  >
-                    {item.icon}
-                    <h3 className="text-white font-semibold mt-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm mt-1">{item.desc}</p>
+                  <div className="relative pt-[56.25%] bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                    <img
+                      className="absolute top-0 left-0 w-full h-full object-cover"
+                      src="/location1.png"
+                      alt="Virtual office location"
+                    />
                   </div>
-                ))}
-              </section>
-              {/* <div class="bg-[#243E4C] p-6 rounded-xl shadow-md mb-6">
-                <h3 class="text-xl font-semibold mb-4 text-white">
-                  Premium Features
-                </h3>
-                <ul class="space-y-3">
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    <span className="text-[#9b9393]">
-                      5-min to Huda City Centre metro
+
+                  <p className="text-gray-300 flex gap-2 items-start mb-4">
+                    <FaShieldAlt className="text-purple-400 text-xl mt-1 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">
+                      Reliable Service Trusted by 500+ businesses nationwide
                     </span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    <span className="text-[#9b9393]">
-                      In the same campus as TCS, Wipro
+                  </p>
+
+                  <div className="grid grid-cols-1 xs:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs sm:text-sm text-center">
+                      Prime Location
                     </span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    <span className="text-[#9b9393]">
-                      Free parking & reception
+                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs sm:text-sm text-center">
+                      Affordable Price
                     </span>
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                    <span className="text-[#9b9393]">
-                      Professional business address
+                    <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs sm:text-sm text-center">
+                      Virtual Office Near You
                     </span>
-                  </li>
-                </ul>
-              </div> */}
-              {/* <button class="w-full bg-[#2a7986] text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center justify-center">
-                <i class="fas fa-vr-cardboard mr-2"></i> See the Office (360°
-                Tour)
-              </button> */}
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Column */}
+              <div className="w-full lg:w-1/2">
+                <section className="bg-[#0E141B] mt-6 lg:mt-0 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 p-2">
+                  {highlights.map((item, index) => (
+                    <div
+                      key={index}
+                      className="bg-gray-800 p-4 sm:p-5 rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
+                    >
+                      {item.icon}
+                      <h3 className="text-white font-semibold mt-3 text-sm sm:text-base">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-300 text-xs sm:text-sm mt-1">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </section>
+              </div>
             </div>
           </div>
         </div>
-        {/* Highlights of Address Section  */}
-        {/* <section className="bg-[#0E141B] mt-10 grid gap-8 md:grid-cols-4 px-10">
-          {highlights.map((item, index) => (
-            <div
-              key={index}
-              className="bg-gray-800 p-5 rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
-            >
-              {item.icon}
-              <h3 className="text-white font-semibold mt-3">{item.title}</h3>
-              <p className="text-gray-300 text-sm mt-1">{item.desc}</p>
-            </div>
-          ))}
-        </section> */}
       </section>
     </div>
   );
