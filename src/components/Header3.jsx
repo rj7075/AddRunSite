@@ -140,13 +140,13 @@ const Header3 = () => {
             <nav className="flex mt-2 items-center justify-center space-x-6 md:hidden">
               <a
                 href="#pricing"
-                className="text-sm bg-green-100 text-green-800 p-1 border px-2 rounded-full transition-colors"
+                className="text-sm bg-green-100 text-green-800 p-1 border px-3 rounded-full transition-colors"
               >
                 Pricing
               </a>
               <a
                 href="#faq"
-                className="text-sm bg-blue-100  text-blue-800  border px-2 rounded-full transition-colors"
+                className="text-sm bg-blue-100  text-blue-800 p-1 border px-3 rounded-full transition-colors"
               >
                 FAQ
               </a>
