@@ -68,7 +68,7 @@ const Cta = () => {
             onClick={() => handleOpenForm("Reserve My Address")}
             className="bg-[#e2dbdb] text-gray-900 text-lg px-8 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
           >
-            Start For 650
+            Start For ₹650
           </button>
 
           {/* PopupForm should override text color so it doesn't inherit text-white */}

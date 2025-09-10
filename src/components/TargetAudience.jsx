@@ -201,7 +201,7 @@ const TargetAudience = () => {
                     {audience.description}
                   </p>
                   <button className="hover:bg-[#49925b] text-gray-900 bg-white cursor-pointer mt-3 hover:text-gray-100 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-lg font-semibold text-base sm:text-sm transition w-full sm:w-auto">
-                    [See Benifits Below] ↓
+                    [See Benefits Below] ↓
                   </button>
                 </div>
 

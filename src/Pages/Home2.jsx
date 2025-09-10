@@ -27,32 +27,24 @@ const Home2 = () => {
       {/* <!-- Header --> */}
 
       <Header3 />
-      <Header />
+      {/* <Header /> */}
       <Hero1 />
-
       {/* <!-- Hero section  */}
-
       {/* <ProCons /> */}
       <Benifits />
-
       <Address />
       {/* <Address1 /> */}
       {/* <Location /> */}
       <Locations />
       <CTASection1 />
       <Pricing />
-
       {/* <!-- Features Section --> */}
-
       <FeaturesSection />
       {/* <CTASection1 /> */}
       <TestimonialsSection />
       {/* <!-- Audience Section --> */}
-
       <TargetAudience />
-
       <FAQSection />
-
       {/* <!-- CTA Section --> */}
       <Cta />
     </div>

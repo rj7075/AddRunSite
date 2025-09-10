@@ -126,7 +126,10 @@ const Locations = () => {
                     </span>
                   </div>
                 </div>
-                <button className="cursor-pointer bg-[#5CC6EC] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
+                <button
+                  onClick={() => openForm("")}
+                  className="cursor-pointer bg-[#5CC6EC] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
+                >
                   Book Now
                 </button>
               </div>
