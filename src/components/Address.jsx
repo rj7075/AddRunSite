@@ -69,10 +69,10 @@ const Address = () => {
                     hubs
                   </h3>
 
-                  <div className="relative h-64 sm:h-80 md:h-64 lg:h-72 bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                  <div className="relative h-64 sm:h-80 md:h-75 lg:h-72 bg-gray-200 rounded-lg mb-4 overflow-hidden">
                     <img
                       className="absolute top-0 left-0 w-full h-full object-cover"
-                      src="/location1.png"
+                      src="/location2.png"
                       alt="Virtual office location"
                     />
                   </div>
