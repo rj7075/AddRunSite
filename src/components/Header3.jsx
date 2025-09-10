@@ -113,7 +113,7 @@ const Header3 = () => {
 
           {/* Trust badges strip */}
           <div className="border-t border-gray-700 py-2">
-            {/* <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-300">
+            <div className=" hidden md:flex flex-wrap justify-center items-center gap-4 text-xs text-gray-300">
               <div className="flex items-center space-x-1 bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -133,9 +133,9 @@ const Header3 = () => {
                 <span>GST/MCA Approved</span>
               </div>
               <div className="flex items-center space-x-1 bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                <span>500+ Clients</span>
+                <span>1500+ Clients</span>
               </div>
-            </div> */}
+            </div>
 
             <nav className="flex mt-2 items-center justify-center space-x-6 md:hidden">
               <a

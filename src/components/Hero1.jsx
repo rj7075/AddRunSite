@@ -12,17 +12,16 @@ const Hero1 = () => {
   return (
     <section className="relative min-h-screen flex py-7 pb-6 items-center justify-center overflow-hidden bg-[#011F3F] from-blue-900 via-[#0E141B] to-purple-900">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
-      {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMzMTk2YTUiIHN0cm9rZS1vcGFjaXR5PSIwLjIiIHN0cm9rZS13aWR0aD0iMiI+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIvPjwvZz48L3N2Zz4=')] opacity-30"></div> */}
+      <div className="absolute bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
 
       {/* Floating elements */}
       {/* <div className="absolute top-20 right-10 w-20 h-20 bg-[#3196a5]/20 rounded-full blur-xl animate-bounce"></div> */}
-      <div
-        className="absolute bottom-20 left-10 w-32 h-32 bg-[#3196a5]/20 rounded-full blur-xl animate-bounce"
+      {/* <div
+        className="absolute bottom-20 left-10 w-32 top-20 h-32 bg-[#3196a5]/20 rounded-full blur-xl animate-bounce"
         style={{ animationDelay: "2s" }}
-      ></div>
+      ></div> */}
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mt-30 mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8">

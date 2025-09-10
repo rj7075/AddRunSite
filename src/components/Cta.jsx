@@ -52,7 +52,7 @@ const Cta = () => {
     //         </p>
     //       </div>
     //     </section>
-    <section className="py-16 bg-[#314157] text-white">
+    <section className="py-16 bg-[#314157] mt-12 text-white">
       <div className="container mx-auto px-4 gap-4 text-center">
         <h2 className="text-3xl font-bold mb-6">
           Ready to Activate Your Virtual Office?
