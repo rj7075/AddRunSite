@@ -1,6 +1,15 @@
 import React from "react";
+import PopupForm from "./PopupForm";
+import { useState } from "react";
 
 const FeaturesSection = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState("");
+
+  const handleOpenForm = (title) => {
+    setFormTitle(title);
+    setIsFormOpen(true);
+  };
   // Features data stored in an array
   const featuresData = [
     {
@@ -9,8 +18,8 @@ const FeaturesSection = () => {
       iconColor: "text-blue-500",
       bgColor: "bg-blue-100",
       title: "Lowest Price Guarantee",
-      price: "From ₹999/mo",
-      description: "Save up to 85% vs. serviced office",
+      price: "From ₹650/mo",
+      description: "Save up to 95% vs. Serviced Office",
     },
     {
       id: 2,
@@ -19,15 +28,15 @@ const FeaturesSection = () => {
       bgColor: "bg-green-100",
       title: "Bank Documents in 4 hrs",
       price: "4 hrs delivery",
-      description: "NOC, rent agreement, utility bill delivered instantly",
+      description: "NOC, Rent Agreement, Utility Bill Delivered Instantly",
     },
     {
       id: 3,
       icon: "fas fa-door-open",
       iconColor: "text-purple-500",
       bgColor: "bg-purple-100",
-      title: "Meeting Rooms @ ₹299/hr",
-      price: "₹299/hr",
+      title: "Meeting Rooms @ ₹200/hr",
+      price: "₹200/hr",
       description: "10 hours included every month",
     },
     {
@@ -83,17 +92,30 @@ const FeaturesSection = () => {
             overhead
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <div className="bg-[#303133] p-4 rounded-lg shadow-sm">
-              <span className="text-2xl font-bold text-blue-100">₹999</span>
-              <span className="text-blue-100">/mo</span>
-              <p className="text-sm text-blue-100">Premium Virtual Office</p>
+            <div className="bg-[#ffffff] p-4 rounded-lg shadow-sm">
+              <span className="text-2xl font-bold text-gray-900">₹650</span>
+              <span className="text-gray-900">/mo</span>
+              <p className="text-sm text-gray-900">Premium Virtual Office</p>
             </div>
-            <div className="text-3xl text-gray-300">→</div>
-            <div className="bg-[#303133] p-4 rounded-lg shadow-sm">
+            <div className="text-3xl text-gray-900">
+              →
+              <button
+                onClick={() => handleOpenForm("Reserve My Address")}
+                className="bg-[#5CC6EC]  text-gray-100 text-5xl px-4 pb-1.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                →
+              </button>
+              <PopupForm
+                isOpen={isFormOpen}
+                onClose={() => setIsFormOpen(false)}
+                formTitle={formTitle}
+              />
+            </div>
+            <div className="bg-[#ffffff] p-4 rounded-lg shadow-sm">
               <span className="text-2xl font-bold text-green-600">
                 Save 95%
               </span>
-              <p className="text-sm text-blue-100">
+              <p className="text-sm text-gray-700">
                 Compared to traditional office
               </p>
             </div>

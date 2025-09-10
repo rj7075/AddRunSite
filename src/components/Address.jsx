@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import PopupForm from "./PopupForm";
 import {
   FaCity,
   FaRupeeSign,
@@ -8,6 +9,13 @@ import {
 } from "react-icons/fa";
 
 const Address = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState("");
+
+  const handleOpenForm = (title) => {
+    setFormTitle(title);
+    setIsFormOpen(true);
+  };
   const highlights = [
     // {
     //   icon: <FaCity className="text-blue-400 text-2xl" />,
@@ -23,7 +31,7 @@ const Address = () => {
       icon: <FaBolt className="text-yellow-400 text-2xl" />,
       title: "Quick Setup",
       desc: [
-        "3-Step Setup",
+        "Three Step Setup",
         "1. Click on [RESERVE MY ADDRESS]",
         "2. Enter the city of your choice",
         "3. Send your KYC documents",
@@ -106,7 +114,7 @@ const Address = () => {
                         {item.desc}
                       </p> */}
                       {Array.isArray(item.desc) ? (
-                        <ul className="list-inside space-y-1 text-sm text-gray-300">
+                        <ul className="list-inside space-y-1 text-left text-sm text-gray-300">
                           {item.desc.map((step, i) => (
                             <li key={i}>{step}</li>
                           ))}
@@ -122,9 +130,17 @@ const Address = () => {
               </div>
             </div>
             <div className="items-center flex mt-10 justify-center">
-              <button className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
+              <button
+                onClick={() => handleOpenForm("Reserve My Address")}
+                className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+              >
                 Reserve My Address
               </button>
+              <PopupForm
+                isOpen={isFormOpen}
+                onClose={() => setIsFormOpen(false)}
+                formTitle={formTitle}
+              />
             </div>
           </div>
         </div>

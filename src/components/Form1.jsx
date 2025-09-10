@@ -1,10 +1,11 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 
+import PopupForm from "./PopupForm";
+
 const cities = [
   "Bangalore",
   "Hyderabad",
-
   "Lucknow",
   "Mohali",
   "Ahmedabad",
@@ -18,6 +19,14 @@ const cities = [
 ];
 
 export default function CTASection() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState("");
+
+  const handleOpenForm = (title) => {
+    setFormTitle(title);
+    setIsFormOpen(true);
+  };
+
   const [selectedCity, setSelectedCity] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -73,16 +82,69 @@ export default function CTASection() {
 
   return (
     <section className="py-16 bg-[#334c68] text-center">
-      <h2 className="text-2xl text-gray-200 font-bold mb-6">
+      {/* <h2 className="text-2xl text-gray-200 font-bold mb-6">
         Other location for your Virtual Office
       </h2>
       <p className="justify-center items-center text-sm mb-4 px-2 font-medium text-gray-300">
         Click On City where You Want Your Virtual Office or Fill Your Desired
         City By Clicking on Any City, Our Team Will Contact You Soon.
-      </p>
+      </p> */}
+      <div className="text-center mb-12 px-4">
+        {/* Heading with gradient underline */}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-100 mb-4 relative inline-block">
+          Other locations for your
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+            Virtual Office
+          </span>
+          <span className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+        </h2>
 
+        {/* Subtext with background glow and padding */}
+        <p className="max-w-3xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg font-medium mb-6 px-4 py-2 bg-[#1a1f27] rounded-lg shadow-md">
+          Click on any city where you want your Virtual Office, or enter a
+          custom city of your choice. Our team will reach out to you promptly
+          with details and support.
+        </p>
+
+        {/* Optional call-to-action button */}
+        <button
+          onClick={() => handleOpenForm("Reserve My Address")}
+          className="mt-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 hover:scale-105"
+        >
+          Explore Cities
+        </button>
+        <PopupForm
+          isOpen={isFormOpen}
+          onClose={() => setIsFormOpen(false)}
+          formTitle={formTitle}
+        />
+      </div>
+
+      <div className="p-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {cities.map((city, index) => (
+            <button
+              key={index}
+              onClick={() => openForm(city)}
+              className="group relative bg-[#141516] rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-5 border border-gray-100 hover:border-blue-300 overflow-hidden"
+            >
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-200 transition-colors">
+                  <i className="fas fa-city text-blue-600 text-xl"></i>
+                </div>
+                <span className="font-semibold text-gray-300 group-hover:text-blue-700 transition-colors">
+                  {city}
+                </span>
+              </div>
+
+              {/* Hover effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
+            </button>
+          ))}
+        </div>
+      </div>
       {/* City buttons */}
-      <div className="flex flex-wrap gap-4 px-3  items-center justify-center">
+      {/* <div className="flex flex-wrap gap-4 px-3  items-center justify-center">
         {cities.map((city, index) => (
           <button
             key={index}
@@ -92,7 +154,7 @@ export default function CTASection() {
             {city}
           </button>
         ))}
-      </div>
+      </div> */}
 
       {/* Modal */}
       {isOpen && (

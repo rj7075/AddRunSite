@@ -13,16 +13,28 @@ const Footer = () => {
               <p className="text-gray-400">Virtual Office Solutions</p>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://www.facebook.com/AssetSenseIndia"
+                className="text-gray-400 hover:text-white"
+              >
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://x.com/mohan_skills"
+                className="text-gray-400 hover:text-white"
+              >
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://www.linkedin.com/company/asset-sense-pvt-ltd"
+                className="text-gray-400 hover:text-white"
+              >
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://www.instagram.com/assetsense1/#"
+                className="text-gray-400 hover:text-white"
+              >
                 <i className="fab fa-instagram"></i>
               </a>
             </div>

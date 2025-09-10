@@ -20,7 +20,7 @@ const Header3 = () => {
             <nav className="hidden md:flex items-center space-x-6">
               <a
                 href="#pricing"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
+                className="text-sm  text-gray-300 hover:text-white transition-colors"
               >
                 Pricing
               </a>
@@ -37,7 +37,7 @@ const Header3 = () => {
 "
                 target="_blank"
               >
-                <button className="cursor-pointer bg-green-500 border border-gray-300 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
+                <button className="cursor-pointer bg-[#5CC6EC] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
                   Book a Call
                 </button>
               </a>
@@ -113,7 +113,7 @@ const Header3 = () => {
 
           {/* Trust badges strip */}
           <div className="border-t border-gray-700 py-2">
-            <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-300">
+            {/* <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-gray-300">
               <div className="flex items-center space-x-1 bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -135,18 +135,18 @@ const Header3 = () => {
               <div className="flex items-center space-x-1 bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
                 <span>500+ Clients</span>
               </div>
-            </div>
+            </div> */}
 
             <nav className="flex mt-2 items-center justify-center space-x-6 md:hidden">
               <a
                 href="#pricing"
-                className="text-sm text-gray-300 hover:text-white border px-2 rounded-full transition-colors"
+                className="text-sm bg-green-100 text-green-800 p-1 border px-2 rounded-full transition-colors"
               >
                 Pricing
               </a>
               <a
                 href="#faq"
-                className="text-sm text-gray-300 hover:text-white border px-2 rounded-full transition-colors"
+                className="text-sm bg-blue-100  text-blue-800  border px-2 rounded-full transition-colors"
               >
                 FAQ
               </a>
@@ -154,7 +154,7 @@ const Header3 = () => {
                 href="https://wa.me/919907800600?text=Hello%2C%20I%20am%20interested%20in%20your%20Virtual%20Office%20Services.%20Please%20call%20me%20back."
                 target="_blank"
               >
-                <button className="cursor-pointer bg-green-500 border border-gray-300 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
+                <button className="cursor-pointer bg-[#5CC6EC] border border-gray-300 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
                   Book a Call
                 </button>
               </a>

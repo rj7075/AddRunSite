@@ -134,7 +134,7 @@ const Benifits = () => {
                 className="border border-gray-600 rounded-xl overflow-hidden bg-gray-900 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div
-                  className="p-6 cursor-pointer group"
+                  className="p-3 cursor-pointer group"
                   onClick={() => toggleItem(index)}
                 >
                   <div className="flex items-center justify-between">
@@ -159,16 +159,14 @@ const Benifits = () => {
                   {/* <p className="text-gray-300 mt-4 text-left">
                     {audience.description}
                   </p> */}
-                  <div className="bg-gray-900 p-4">
+                  <div className="bg-gray-900 p-3">
                     <ul className="space-y-2">
                       {audience.detailsloss.map((detail, detailIndex) => (
                         <li
                           key={detailIndex}
                           className="flex items-center gap-2 text-sm text-gray-400"
                         >
-                          {/* <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> */}
-                          {/* <i class="fas fa-check-circle text-green-500 mr-3"></i> */}
-                          <i class="fas fa-times-circle text-red-500 mr-3"></i>
+                          <i class="fas fa-times-circle text-red-500 mr-2"></i>
 
                           {detail}
                         </li>
@@ -189,7 +187,7 @@ const Benifits = () => {
                       {audience.detailsbenifit.map((detail, detailIndex) => (
                         <li
                           key={detailIndex}
-                          className="flex items-center gap-2 text-sm text-gray-700"
+                          className="flex items-center gap-2 px-2 text-sm text-gray-700"
                         >
                           {/* <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> */}
                           <i class="fas fa-check-circle text-green-500 mr-3"></i>

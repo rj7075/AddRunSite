@@ -1,70 +1,68 @@
 import React, { useState, useRef } from "react";
 
 const TestimonialsSection = () => {
-  // Testimonial data stored in an array
   const testimonialData = [
     {
       id: 1,
-      initials: "RS",
-      bgColor: "bg-blue-100",
-      textColor: "text-blue-500",
-      name: "R. Sinha",
+      name: "Ranjeet Sinha",
       position: "Founder, ShipKart",
       content:
         '"Asset Sense provided excellent virtual office space in Gurgaon, helping my startup establish a professional presence without high costs. I saved ₹75,000 annually on office rent."',
-
+      initials: "RS",
+      bgColor: "bg-blue-500",
+      textColor: "text-white",
       icon: "fas fa-file-invoice-dollar",
       iconColor: "text-green-500",
       tag: "95% cost savings",
     },
     {
       id: 2,
-      initials: "JK",
-      bgColor: "bg-purple-100",
-      textColor: "text-purple-500",
-      name: "J. Kaur",
+      name: "Jasleen Kaur",
       position: "CFO, SaaSBee",
       content:
         '" I highly recommend Asset Sense for virtual office space Delhi. Our bank asked for one extra doc and support replied within 3 minutes."',
+      initials: "JK",
+      bgColor: "bg-purple-500",
+      textColor: "text-white",
       icon: "fas fa-clock",
       iconColor: "text-blue-500",
       tag: "3-min response time",
     },
     {
       id: 3,
-      initials: "MS",
-      bgColor: "bg-green-100",
-      textColor: "text-green-500",
-      name: "M. Sharma",
+      name: "Manish Sharma",
       position: "Director, TechFlow",
       content:
         '"Choosing Asset Sense for a virtual office in Jaipur was a game-changer. Asset Sense helped us expand to 5 states without physical presence."',
+      initials: "MS",
+      bgColor: "bg-green-500",
+      textColor: "text-white",
       icon: "fas fa-map-marker-alt",
       iconColor: "text-red-500",
       tag: "5-state expansion",
     },
     {
       id: 4,
-      initials: "AS",
-      bgColor: "bg-yellow-100",
-      textColor: "text-yellow-500",
-      name: "A. Shah",
+      name: "Anita Shah",
       position: "CEO, TechInnovate",
       content:
         '" Asset Sense handled my virtual office Noida GST registration effortlessly, ensuring compliance and providing a prestigious address. Their expertise saved time and simplified the entire process."',
+      initials: "AS",
+      bgColor: "bg-yellow-500",
+      textColor: "text-white",
       icon: "fas fa-city",
       iconColor: "text-indigo-500",
       tag: "Single window service",
     },
     {
       id: 5,
-      initials: "PK",
-      bgColor: "bg-pink-100",
-      textColor: "text-pink-500",
-      name: "P. Kumar",
+      name: "Praveen Kumar",
       position: "Director, EcomSolutions",
       content:
         '"For an affordable virtual office Ahmedabad, Asset Sense exceeded our expectations.The documentation was ready in hours, not days."',
+      initials: "PK",
+      bgColor: "bg-pink-500",
+      textColor: "text-white",
       icon: "fas fa-file-contract",
       iconColor: "text-teal-500",
       tag: "Quick documentation",
@@ -87,16 +85,12 @@ const TestimonialsSection = () => {
     }
   };
 
-  const scrollNext = () => {
-    const nextIndex = (currentIndex + 1) % testimonialData.length;
-    scrollToIndex(nextIndex);
-  };
-
-  const scrollPrev = () => {
-    const prevIndex =
-      (currentIndex - 1 + testimonialData.length) % testimonialData.length;
-    scrollToIndex(prevIndex);
-  };
+  const scrollNext = () =>
+    scrollToIndex((currentIndex + 1) % testimonialData.length);
+  const scrollPrev = () =>
+    scrollToIndex(
+      (currentIndex - 1 + testimonialData.length) % testimonialData.length
+    );
 
   return (
     <section className="py-16 bg-[#0E141B]">
@@ -117,7 +111,6 @@ const TestimonialsSection = () => {
           >
             <i className="fas fa-chevron-left text-gray-700"></i>
           </button>
-
           <button
             onClick={scrollNext}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#161C25] rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none hidden md:block"
@@ -126,7 +119,7 @@ const TestimonialsSection = () => {
             <i className="fas fa-chevron-right text-gray-700"></i>
           </button>
 
-          {/* Testimonial Cards Container */}
+          {/* Testimonial Cards */}
           <div
             ref={scrollContainerRef}
             className="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-6 scrollbar-hide"
@@ -135,12 +128,15 @@ const TestimonialsSection = () => {
             {testimonialData.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="w-100 md:w-100 sm:w-20  snap-always snap-center flex-shrink-0 bg-[#2f333a] p-8 rounded-xl shadow-md"
+                className="flex-shrink-0 w-80 sm:w-72 md:w-96 snap-center bg-[#2f333a] p-6 rounded-xl shadow-md"
               >
                 <div className="flex items-center mb-4">
+                  {/* Initials Circle */}
                   <div
-                    className={`w-12 h-12 ${testimonial.bgColor} rounded-full flex items-center justify-center mr-4`}
-                  ></div>
+                    className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${testimonial.bgColor} ${testimonial.textColor} font-bold`}
+                  >
+                    {testimonial.initials}
+                  </div>
 
                   <div>
                     <h4 className="font-semibold text-gray-100">
@@ -150,11 +146,12 @@ const TestimonialsSection = () => {
                       {testimonial.position}
                     </p>
                   </div>
-                  <span>{testimonial.tag}</span>
                 </div>
-                <p className="text-gray-300 md:px-4 mb-4">
+
+                <p className="text-gray-300 mb-4 text-sm md:text-base">
                   {testimonial.content}
                 </p>
+
                 <div className="flex items-center text-sm text-gray-300">
                   <i
                     className={`${testimonial.icon} ${testimonial.iconColor} mr-2`}

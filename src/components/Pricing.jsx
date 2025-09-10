@@ -7,15 +7,16 @@ const Pricing = () => {
       period: "/year",
       description: "Perfect for freelancers and small businesses",
       features: [
-        "Professional business address",
-        "Mail handling & forwarding",
-        "GST registration support",
-        "Basic call forwarding",
-        "Monthly report",
-        "Email support",
+        "Virtual Office Address for GST/MCA Reg",
+        "Professional Business Address",
+        "Mail Handling & Forwarding",
+        "Courier Handling",
+        // "GST Registration Support",
+        "Email Support",
       ],
       popular: false,
       cta: "Get Started",
+      link: "https://inkpot.tech/checkouts/assetsense-virtual-office-registration-7499/",
     },
     {
       name: "Professional",
@@ -24,15 +25,16 @@ const Pricing = () => {
       description: "Ideal for growing businesses and startups",
       features: [
         "Everything in Starter",
-        "Dedicated phone number",
-        "Live call answering",
-        "Mail scanning & digital delivery",
-        "Meeting room access (4 hrs/month)",
+        "Online Submission of GST Application (worth ₹5000 )",
+        "Representative for Signing on Behalf of Client (GST/Current Account in Bank).",
+        // "Mail Scanning & digital delivery",
+        "Meeting Room Starting @₹200/hour",
         "Priority support",
-        "Business registration assistance",
+        "Business Registration Assistance",
       ],
       popular: true,
       cta: "Get Started",
+      link: "https://inkpot.tech/checkouts/assetsense-virtual-office-registration-9499/",
     },
     {
       name: "Enterprise",
@@ -41,15 +43,17 @@ const Pricing = () => {
       description: "Complete solution for established companies",
       features: [
         "Everything in Professional",
-        "Multiple location addresses",
-        "Unlimited meeting room access",
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Custom mail handling",
-        "Legal compliance consulting",
+        "Multiple Location Addresses PPOB/APOB",
+        // "Meeting Room access @Multiple Locations",
+        "Unlimited Meeting Room Access",
+        "Dedicated Account Manager",
+        "Phone Support",
+        "Virtual Office in Grade A Building",
+        "Legal Compliance Consulting",
       ],
       popular: false,
       cta: "Get Started",
+      link: "https://inkpot.tech/checkouts/assetsense-virtual-office-registration-11499/",
     },
   ];
 
@@ -163,19 +167,20 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-
-              <button
-                className={`w-full py-4 text-lg font-semibold rounded-lg group ${
-                  plan.popular
-                    ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md hover:shadow-lg transition-shadow"
-                    : "bg-gray-100 text-gray-900 hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:text-white transition-all"
-                }`}
-              >
-                <span className="flex items-center justify-center">
-                  {plan.cta}
-                  {plan.popular ? <Zap /> : <ArrowRight />}
-                </span>
-              </button>
+              <a href={plan.link} target="_blank">
+                <button
+                  className={`w-full py-4 text-lg font-semibold rounded-lg group ${
+                    plan.popular
+                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md hover:shadow-lg transition-shadow"
+                      : "bg-gray-100 text-gray-900 hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:text-white transition-all"
+                  }`}
+                >
+                  <span className="flex items-center justify-center">
+                    {plan.cta}
+                    {plan.popular ? <Zap /> : <ArrowRight />}
+                  </span>
+                </button>
+              </a>
             </div>
           ))}
         </div>
@@ -186,20 +191,22 @@ const Pricing = () => {
             <h3 className="text-2xl font-bold mb-4 text-purple-600">
               All Plans Include
             </h3>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-400">
-              <div className="flex items-center justify-center space-x-2">
-                <CheckCircle />
-                <span>No Setup Fees</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <CheckCircle />
-                <span>Cancel Anytime</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <CheckCircle />
-                <span>30-Day Money Back</span>
-              </div>
-            </div>
+  <div className="flex justify-start items-center text-left space-x-2">
+    <CheckCircle />
+    <span>No Setup Fees</span>
+  </div>
+  <div className="flex justify-start items-center text-left space-x-2">
+    <CheckCircle />
+    <span>Cancel Anytime</span>
+  </div>
+  <div className="flex justify-start items-center text-left space-x-2">
+    <CheckCircle />
+    <span>30-Day Money Back</span>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

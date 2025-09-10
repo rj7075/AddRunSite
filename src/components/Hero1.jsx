@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import PopupForm from "./PopupForm";
 
 const Hero1 = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState("");
+
+  const handleOpenForm = (title) => {
+    setFormTitle(title);
+    setIsFormOpen(true);
+  };
   return (
     <section className="relative min-h-screen flex py-7 pb-6 items-center justify-center overflow-hidden bg-[#011F3F] from-blue-900 via-[#0E141B] to-purple-900">
       {/* Background effects */}
@@ -39,16 +47,18 @@ const Hero1 = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
-              <a
-                href="https://wa.me/919907800600?text=Hello%2C%20I%20am%20interested%20in%20your%20Virtual%20Office%20Services.%20Please%20send%20me%20your%20Plans.
-
-"
-                target="_blank"
+              <button
+                onClick={() => handleOpenForm("Reserve My Address")}
+                className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
               >
-                <button className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
-                  Reserve My Address
-                </button>
-              </a>
+                Reserve My Address
+              </button>
+
+              <PopupForm
+                isOpen={isFormOpen}
+                onClose={() => setIsFormOpen(false)}
+                formTitle={formTitle}
+              />
 
               <div className="flex items-center space-x-2 text-sm text-gray-300">
                 {/* Clock Icon */}
