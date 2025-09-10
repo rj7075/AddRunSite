@@ -109,14 +109,15 @@ const Locations = () => {
                 </div>
               )}
 
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-1">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-3 group-hover:shadow-lg group-hover:shadow-blue-200 transition-all duration-300">
                   <MapPin />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-1 text-gray-300">
+                  <h3 className="text-lg font-semibold mb-1 px-1 text-gray-300">
                     {location.city}
                   </h3>
+
                   <p className="text-gray-400 text-sm mb-3">{location.area}</p>
                   <div className="flex items-center space-x-2 text-blue-600">
                     <Building />
@@ -125,6 +126,9 @@ const Locations = () => {
                     </span>
                   </div>
                 </div>
+                <button className="cursor-pointer bg-[#5CC6EC] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
+                  Book Now
+                </button>
               </div>
             </div>
           ))}

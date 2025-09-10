@@ -46,7 +46,7 @@ const Benifits = () => {
       description:
         "Ideal for independent professionals who need a corporate presence.",
       detailsloss: [
-        "High CA Fees upto ₹ .5000/-",
+        "High CA Fees upto ₹5000/-",
         "Upto 15 days for getting ARN",
         "No Customer Support",
       ],

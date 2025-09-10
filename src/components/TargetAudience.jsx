@@ -200,17 +200,20 @@ const TargetAudience = () => {
                   <p className="text-gray-300 mt-4 text-left">
                     {audience.description}
                   </p>
+                  <button className="hover:bg-[#49925b] text-gray-900 bg-white cursor-pointer mt-3 hover:text-gray-100 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-lg font-semibold text-base sm:text-sm transition w-full sm:w-auto">
+                    [See Benifits Below] ↓
+                  </button>
                 </div>
 
                 {isOpen && (
-                  <div className="bg-[var(--color-primary)] border-t border-blue-100 p-4">
+                  <div className="bg-[#fff] border-t border-blue-100 p-4">
                     <ul className="space-y-2">
                       {audience.details.map((detail, detailIndex) => (
                         <li
                           key={detailIndex}
-                          className="flex items-center gap-2 text-sm text-gray-400"
+                          className="flex items-center gap-2 text-sm text-gray-600"
                         >
-                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                           {detail}
                         </li>
                       ))}

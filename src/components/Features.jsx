@@ -101,7 +101,7 @@ const FeaturesSection = () => {
               →
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#5CC6EC]  text-gray-100 text-5xl px-4 pb-1.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-[#5CC6EC]  text-gray-100 text-5xl items-center justify-center px-4 pb-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 →
               </button>

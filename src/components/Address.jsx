@@ -65,8 +65,7 @@ const Address = () => {
               <div className="w-full lg:w-1/2">
                 <div className="bg-[#243E4C] w-full p-4 sm:p-6 rounded-xl shadow-md h-full">
                   <h3 className="text-lg sm:text-xl text-white font-semibold mb-4">
-                    40+ Cities Virtual offices across India's major business
-                    hubs
+                    Virtual offices in 40+ Cities across India
                   </h3>
 
                   <div className="relative h-64 sm:h-80 md:h-75 lg:h-72 bg-gray-200 rounded-lg mb-4 overflow-hidden">
@@ -120,7 +119,7 @@ const Address = () => {
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-gray-300 text-xs sm:text-sm mt-1">
+                        <p className="text-gray-300 text-sm sm:text-sm mt-1">
                           {item.desc}
                         </p>
                       )}
