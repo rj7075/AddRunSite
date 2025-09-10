@@ -40,7 +40,8 @@ const Hero1 = () => {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
               <a
-                href="https://wa.me/919907800600?text=Hello,%20I%20am%20interested%20in%20your%20Virtual%20Office.%20Please%20call%20me%20back.
+                href="https://wa.me/919907800600?text=Hello%2C%20I%20am%20interested%20in%20your%20Virtual%20Office%20Services.%20Please%20send%20me%20your%20Plans.
+
 "
                 target="_blank"
               >
@@ -122,36 +123,9 @@ const Hero1 = () => {
 
           {/* Visual */}
           <div className="relative">
-            <div className="bg-[#131E2C]  border border-white/20 rounded-2xl p-8 shadow-xl">
-              <div className="aspect-square bg-[#c0cace] rounded-xl flex items-center justify-center">
+            <div className="rounded-2xl p-2 shadow-xl">
+              <div className="aspect-square border bg-[#0c5c7c] rounded-xl flex items-center justify-center">
                 <img src="/Hero pic.png" alt="Hero Image" />
-                {/* Placeholder for GST book visual */}
-                <div className="text-center space-y-1">
-                  {/* <div className="w-24 h-32 bg-[#3196a5]/30 rounded-lg mx-auto animate-pulse"> */}
-                  {/* Document Icon */}
-                  {/* <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="48"
-                      height="48"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-[#3196a5] mx-auto mt-6"
-                    >
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <line x1="16" y1="13" x2="8" y2="13"></line>
-                      <line x1="16" y1="17" x2="8" y2="17"></line>
-                      <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg> */}
-                  {/* </div> */}
-                  {/* <div className="text-sm text-gray-300">
-                    GST Registration Ready
-                  </div> */}
-                </div>
               </div>
             </div>
 

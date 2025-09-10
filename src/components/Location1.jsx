@@ -16,13 +16,13 @@ const Locations = () => {
       city: "Gurgaon",
       area: "Golf Course Extn. Road",
       addresses: 18,
-      popular: false,
+      affordable: true,
     },
     {
       city: "Noida",
       area: "Sector 62",
       addresses: 10,
-      popular: false,
+      affordable: true,
     },
     {
       city: "Chennai",
@@ -110,7 +110,7 @@ const Locations = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-200">
-            Other Locations for your
+            Choose Your City for
             <br />
             <span className="text-blue-600">Virtual Office</span>
           </h2>
@@ -134,6 +134,11 @@ const Locations = () => {
                   Popular
                 </div>
               )}
+              {location.affordable && (
+                <div className="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit">
+                  Affordable
+                </div>
+              )}
 
               <div className="flex items-start space-x-4">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-3 group-hover:shadow-lg group-hover:shadow-blue-200 transition-all duration-300">
@@ -155,10 +160,10 @@ const Locations = () => {
             </div>
           ))}
         </div>
-       <div className="items-center flex justify-center">
-        <button className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
-          City of My Choice
-        </button>
+        <div className="items-center flex justify-center">
+          <button className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
+            city of My Choice
+          </button>
         </div>
 
         {/* Call to Action */}

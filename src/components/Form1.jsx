@@ -74,7 +74,7 @@ export default function CTASection() {
   return (
     <section className="py-16 bg-[#334c68] text-center">
       <h2 className="text-2xl text-gray-200 font-bold mb-6">
-        Choose Your City for Virtual Office
+        Other location for your Virtual Office
       </h2>
       <p className="justify-center items-center text-sm mb-4 px-2 font-medium text-gray-300">
         Click On City where You Want Your Virtual Office or Fill Your Desired
@@ -82,7 +82,7 @@ export default function CTASection() {
       </p>
 
       {/* City buttons */}
-      <div className="flex flex-wrap justify-center gap-4 px-12  items-center justify-center">
+      <div className="flex flex-wrap gap-4 px-3  items-center justify-center">
         {cities.map((city, index) => (
           <button
             key={index}

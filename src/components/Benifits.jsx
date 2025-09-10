@@ -1,5 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { FaBuilding, FaUsers } from "react-icons/fa";
+import { TbWindow } from "react-icons/tb"; // Tabler Window Icon
+import { MdGroups } from "react-icons/md"; // Client meeting (group of people)
+import { FaFileInvoice } from "react-icons/fa"; // GST filing / invoice
 
 const Benifits = () => {
   const [openItems, setOpenItems] = useState([]);
@@ -15,8 +19,8 @@ const Benifits = () => {
       subtitle: "Virtual Office",
       detailsbenifit: [
         "Save 95% in Annual Office Rentals",
-        "No Security",
-        "No Lock-in ",
+        "No Security / No Lock-in",
+        "Fully Legal in India",
       ],
     },
     {
@@ -78,77 +82,14 @@ const Benifits = () => {
     );
   };
 
-  // SVG Icons for each category
-  const iconComponents = [
-    // Users icon (Start-ups & SMEs)
-    <svg
-      key="users"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#3196a5"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-      <circle cx="9" cy="7" r="4"></circle>
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-    </svg>,
-    // Shopping Cart icon (Amazon/Flipkart Sellers)
-    <svg
-      key="cart"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#3196a5"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="9" cy="21" r="1"></circle>
-      <circle cx="20" cy="21" r="1"></circle>
-      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-    </svg>,
-    // Briefcase icon (Consultants & Freelancers)
-    <svg
-      key="briefcase"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#3196a5"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-    </svg>,
-    // Globe icon (Global Companies)
-    <svg
-      key="globe"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#3196a5"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="12" r="10"></circle>
-      <line x1="2" y1="12" x2="22" y2="12"></line>
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-    </svg>,
+  const iconComponent = [
+    <FaBuilding size={24} color="#3196a5" />, // Building
+    <TbWindow size={24} color="#3196a5" />, // Window
+    <FaFileInvoice size={24} color="#3196a5" />, // Online GST Filing
+    <MdGroups size={24} color="#3196a5" />, // Client Meeting
   ];
+
+  // SVG Icons for each category
 
   // Chevron Down icon
   const ChevronDown = ({ isOpen }) => (
@@ -199,7 +140,7 @@ const Benifits = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                        {iconComponents[index]}
+                        {iconComponent[index]}
                       </div>
 
                       <div className="text-left">
@@ -234,21 +175,21 @@ const Benifits = () => {
                       ))}
                     </ul>
                   </div>
-                  <button className="bg-[#49925b] cursor-pointer mt-3 text-gray-100 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-lg font-semibold text-base sm:text-sm hover:bg-gray-100 hover:text-gray-700 transition w-full sm:w-auto">
-                    Click Here To Solve
+                  <button className="hover:bg-[#49925b] text-gray-900 bg-white cursor-pointer mt-3 hover:text-gray-100 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-lg font-semibold text-base sm:text-sm transition w-full sm:w-auto">
+                    [How to Solve] ↓
                   </button>
                 </div>
 
                 {isOpen && (
-                  <div className="bg-[var(--color-primary)] border-t border-blue-100 p-4">
-                    <h3 className="font-semibold px-2 py-2 text-lg text-gray-200">
+                  <div className="bg-[#fff] border-t border-blue-300 p-4">
+                    <h3 className="font-semibold px-2 py-2 text-lg text-gray-900">
                       {audience.subtitle}
                     </h3>
                     <ul className="space-y-2">
                       {audience.detailsbenifit.map((detail, detailIndex) => (
                         <li
                           key={detailIndex}
-                          className="flex items-center gap-2 text-sm text-gray-400"
+                          className="flex items-center gap-2 text-sm text-gray-700"
                         >
                           {/* <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> */}
                           <i class="fas fa-check-circle text-green-500 mr-3"></i>

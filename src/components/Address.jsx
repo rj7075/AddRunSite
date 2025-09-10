@@ -17,12 +17,17 @@ const Address = () => {
     {
       icon: <FaRupeeSign className="text-green-400 text-2xl" />,
       title: "Affordable Plans",
-      desc: "Starting at just ₹499/month with flexible options",
+      desc: "Starting at just ₹650/month with flexible options",
     },
     {
       icon: <FaBolt className="text-yellow-400 text-2xl" />,
       title: "Quick Setup",
-      desc: "Paperless documentation in less than 24 hours",
+      desc: [
+        "3-Step Setup",
+        "1. Click on [RESERVE MY ADDRESS]",
+        "2. Enter the city of your choice",
+        "3. Send your KYC documents",
+      ],
     },
     // {
     //   icon: <FaShieldAlt className="text-purple-400 text-2xl" />,
@@ -32,7 +37,7 @@ const Address = () => {
     {
       icon: <FaUndo className="text-red-400 text-2xl" />,
       title: "Money-Back Guarantee",
-      desc: "Full refund if you’re not satisfied",
+      desc: "In case your GST get rejected then get your Money Back ",
     },
   ];
   return (
@@ -56,7 +61,7 @@ const Address = () => {
                     hubs
                   </h3>
 
-                  <div className="relative pt-[56.25%] bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                  <div className="relative h-64 sm:h-80 md:h-64 lg:h-72 bg-gray-200 rounded-lg mb-4 overflow-hidden">
                     <img
                       className="absolute top-0 left-0 w-full h-full object-cover"
                       src="/location1.png"
@@ -87,7 +92,7 @@ const Address = () => {
 
               {/* Second Column */}
               <div className="w-full lg:w-1/2">
-                <section className="bg-[#0E141B] mt-6 lg:mt-0 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 p-2">
+                <section className="bg-transparant mt-6 lg:mt-0 rounded-medium grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 p-2">
                   {highlights.map((item, index) => (
                     <div
                       key={index}
@@ -97,13 +102,29 @@ const Address = () => {
                       <h3 className="text-white font-semibold mt-3 text-sm sm:text-base">
                         {item.title}
                       </h3>
-                      <p className="text-gray-300 text-xs sm:text-sm mt-1">
+                      {/* <p className="text-gray-300 text-xs sm:text-sm mt-1">
                         {item.desc}
-                      </p>
+                      </p> */}
+                      {Array.isArray(item.desc) ? (
+                        <ul className="list-inside space-y-1 text-sm text-gray-300">
+                          {item.desc.map((step, i) => (
+                            <li key={i}>{step}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-gray-300 text-xs sm:text-sm mt-1">
+                          {item.desc}
+                        </p>
+                      )}
                     </div>
                   ))}
                 </section>
               </div>
+            </div>
+            <div className="items-center flex mt-10 justify-center">
+              <button className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1">
+                Reserve My Address
+              </button>
             </div>
           </div>
         </div>
