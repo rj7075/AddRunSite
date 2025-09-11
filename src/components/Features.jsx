@@ -97,13 +97,13 @@ const FeaturesSection = () => {
               <span className="text-gray-900">/mo</span>
               <p className="text-sm text-gray-900">Premium Virtual Office</p>
             </div>
-            <div className="text-3xl text-gray-900">
+            <div className="text-xl text-gray-900">
               →
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#5CC6EC]  text-gray-100 text-5xl items-center justify-center px-4 pb-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-[#5CC6EC]  text-gray-100 items-center justify-center px-2 pb-2 rounded-lg  shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                →
+                <span className="text-5xl font-bold text-blue-100">→</span>
               </button>
               <PopupForm
                 isOpen={isFormOpen}
