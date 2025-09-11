@@ -9,7 +9,7 @@ import Hero from "../components/Hero";
 import Address from "../components/Address";
 import FeaturesSection from "../components/Features";
 import Header2 from "../components/Header2";
-import Header3 from "../components/Header3";
+
 import Hero1 from "../components/Hero1";
 import TargetAudience from "../components/TargetAudience";
 import CTASection from "../components/Form";
@@ -26,7 +26,6 @@ const Home2 = () => {
     <div>
       {/* <!-- Header --> */}
 
-      <Header3 />
       {/* <Header /> */}
       <Hero1 />
       {/* <!-- Hero section  */}

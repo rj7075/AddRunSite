@@ -8,9 +8,13 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <div className="text-2xl font-bold mb-2">
-                <img className="w-35 h-20" src="/logo.png" alt="logo" />
+                <a href="/virtual-office">
+                  <img className="w-35 h-20" src="/logo.png" alt="logo" />
+                </a>
               </div>
               <p className="text-gray-400">Virtual Office Solutions</p>
+              Office Suite: 02-007, 2nd Floor, Emaar The Palm Square, Golf
+              Course Road Extn. Sector 66, Gurgaon, Haryana (INDIA)
             </div>
             <div className="flex space-x-6">
               <a
@@ -39,7 +43,32 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+          {/* <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>© 2025 Asset Sense. All rights reserved.</p>
+          </div> */}
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 space-y-2">
+            <div className="flex justify-center gap-4 mb-2">
+              <a
+                href="/privacy-policy"
+                className="hover:text-white transition-colors text-blue-600 underline"
+              >
+                Privacy Policy
+              </a>
+              <span>|</span>
+              <a
+                href="/refund-policy"
+                className="hover:text-white transition-colors text-blue-600 underline"
+              >
+                Refund Policy
+              </a>
+              <span>|</span>
+              <a
+                href="/terms&conditions"
+                className="hover:text-white transition-colors text-blue-600 underline"
+              >
+                Terms & Conditions
+              </a>
+            </div>
             <p>© 2025 Asset Sense. All rights reserved.</p>
           </div>
         </div>

@@ -8,11 +8,13 @@ const Header3 = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <img
-                className="mt-4 w-35 h-20 overflow-hidden"
-                src="/logo.png"
-                alt="logo"
-              />
+              <a href="/virtual-office">
+                <img
+                  className="mt-4 w-35 h-20 overflow-hidden"
+                  src="/logo.png"
+                  alt="logo"
+                />
+              </a>
               {/* <p className="text-white">Virtual Office Solutions</p> */}
             </div>
 

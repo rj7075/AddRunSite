@@ -52,6 +52,7 @@ const Pricing = () => {
         "Legal Compliance Consulting",
       ],
       popular: false,
+      refund: true,
       cta: "Get Started",
       link: "https://inkpot.tech/checkouts/assetsense-virtual-office-registration-11499/",
     },
@@ -89,7 +90,11 @@ const Pricing = () => {
   );
 
   const Crown = () => (
-    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+    <svg
+      className="w-4 h-4 text-gray-200"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+    >
       <path
         fillRule="evenodd"
         d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zm7-10a1 1 0 01.967.744L14.146 7.2 17 8.134a1 1 0 010 1.732l-2.854 1.134-1.18 4.455a1 1 0 01-1.933 0L9.854 10.2 7 8.134a1 1 0 010-1.732l2.854-1.134 1.18-4.455A1 1 0 0112 2z"
@@ -141,6 +146,16 @@ const Pricing = () => {
                     <Crown />
                     <span className="text-xs font-semibold text-gray-200">
                       Most Popular
+                    </span>
+                  </div>
+                </div>
+              )}
+              {plan.refund && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-amber-200 to-green-800 rounded-full px-6  py-2 flex items-center space-x-2">
+                    <Crown />
+                    <span className="text-xs font-bold text-gray-900">
+                      100% Refund
                     </span>
                   </div>
                 </div>

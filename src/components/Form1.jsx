@@ -21,6 +21,7 @@ const cities = [
 export default function CTASection() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formTitle, setFormTitle] = useState("");
+  const [agreed, setAgreed] = useState(false);
 
   const handleOpenForm = (title) => {
     setFormTitle(title);
@@ -52,6 +53,10 @@ export default function CTASection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!agreed) {
+      alert("You must agree to our policy before submitting.");
+      return;
+    }
 
     // ✅ Google Form hidden "formResponse" endpoint
     const formUrl =
@@ -170,7 +175,7 @@ export default function CTASection() {
               Get Virtual Office in {selectedCity}
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            {/* <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
                 name="name"
@@ -198,9 +203,80 @@ export default function CTASection() {
                 required
                 className="w-full border border-gray-300 rounded px-3 py-2"
               />
+          
+          <p>by submitting this form you are agree to our policy</p>
               <button
                 type="submit"
                 className="w-full bg-[#5CC6EC] text-white py-2 rounded-lg font-semibold hover:bg-[#161C25] transition"
+              >
+                Submit
+              </button>
+            </form> */}
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded px-3 py-2"
+              />
+
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                value={selectedCity}
+                onChange={(e) => setSelectedCity(e.target.value)}
+                required
+                className="w-full border border-gray-300 rounded px-3 py-2"
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded px-3 py-2"
+              />
+
+              {/* ✅ Checkbox */}
+              <div className="flex items-start space-x-2">
+                <input
+                  type="checkbox"
+                  id="policy"
+                  checked={agreed}
+                  onChange={(e) => setAgreed(e.target.checked)}
+                  className="mt-1 w-4 h-4"
+                  required
+                />
+                <label htmlFor="policy" className="text-sm text-gray-700">
+                  By submitting this form, you agree to our{" "}
+                  <a
+                    href="/terms&conditions"
+                    className="text-blue-600 underline"
+                  >
+                    Terms & Conditions
+                  </a>{" "}
+                  and{" "}
+                  <a href="/privacy-policy" className="text-blue-600 underline">
+                    Privacy Policy
+                  </a>
+                  .
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                disabled={!agreed}
+                className={`w-full py-2 rounded-lg font-semibold transition ${
+                  agreed
+                    ? "bg-[#5CC6EC] text-white hover:bg-[#161C25]"
+                    : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                }`}
               >
                 Submit
               </button>

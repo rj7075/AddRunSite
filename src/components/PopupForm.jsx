@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
+  const [agreed, setAgreed] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     city: initialCity,
@@ -14,6 +15,10 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!agreed) {
+      alert("You must agree to our policy before submitting.");
+      return;
+    }
 
     const formUrl =
       "https://docs.google.com/forms/d/e/1FAIpQLSer60HKgpOidicarJbM3By1V6l7gOHFiH_WyNUjWBVpDuQCdw/formResponse";
@@ -87,6 +92,29 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
             required
             className="w-full border border-gray-300 text-black rounded px-3 py-2"
           />
+
+          {/* ✅ Checkbox */}
+          <div className="flex items-start space-x-2">
+            <input
+              type="checkbox"
+              id="policy"
+              checked={agreed}
+              onChange={(e) => setAgreed(e.target.checked)}
+              className="mt-1 w-4 h-4"
+              required
+            />
+            <label htmlFor="policy" className="text-sm text-gray-700">
+              By submitting this form, you agree to our{" "}
+              <a href="/terms&conditions" className="text-blue-600 underline">
+                Terms & Conditions
+              </a>{" "}
+              and{" "}
+              <a href="/privacy-policy" className="text-blue-600 underline">
+                Privacy Policy
+              </a>
+              .
+            </label>
+          </div>
           <button
             type="submit"
             className="w-full bg-[#5CC6EC] text-white py-2 rounded-lg font-semibold hover:bg-[#161C25] transition"
