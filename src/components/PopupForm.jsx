@@ -37,6 +37,15 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
       toast.success(
         `Thank you ${formData.name}! We will contact you for Virtual Office in ${formData.city}.`
       );
+
+      // ✅ Push custom GTM event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "popupFormSubmit",
+        formCity: formData.city,
+        formName: formData.name,
+      });
+
       onClose();
       setFormData({ name: "", city: "" });
     } catch (err) {
@@ -52,10 +61,17 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      id="popupFormOverlay"
+    >
+      <div
+        className="bg-white rounded-lg shadow-lg w-96 p-6 relative"
+        id="popupFormContainer"
+      >
         <button
           onClick={onClose}
+          id="popupFormCloseBtn"
           className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
         >
           ✕
@@ -64,9 +80,11 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
           Get Virtual Office in {formData.city || "Your City"}
         </h3>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        {/* ✅ Added ID to form */}
+        <form id="popupForm" className="space-y-4" onSubmit={handleSubmit}>
           <input
             type="text"
+            id="popupName"
             name="name"
             placeholder="Your Name"
             value={formData.name}
@@ -76,6 +94,7 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
           />
           <input
             type="text"
+            id="popupCity"
             name="city"
             placeholder="City"
             value={formData.city}
@@ -85,6 +104,7 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
           />
           <input
             type="tel"
+            id="popupPhone"
             name="phone"
             placeholder="Phone Number"
             value={formData.phone}
@@ -97,13 +117,13 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
           <div className="flex items-start space-x-2">
             <input
               type="checkbox"
-              id="policy"
+              id="popupPolicy"
               checked={agreed}
               onChange={(e) => setAgreed(e.target.checked)}
               className="mt-1 w-4 h-4"
               required
             />
-            <label htmlFor="policy" className="text-sm text-gray-700">
+            <label htmlFor="popupPolicy" className="text-sm text-gray-700">
               By submitting this form, you agree to our{" "}
               <a href="/terms&conditions" className="text-blue-600 underline">
                 Terms & Conditions
@@ -115,8 +135,11 @@ export default function PopupForm({ isOpen, onClose, initialCity = "" }) {
               .
             </label>
           </div>
+
+          {/* ✅ Added ID to button */}
           <button
             type="submit"
+            id="popupSubmitBtn"
             className="w-full bg-[#5CC6EC] text-white py-2 rounded-lg font-semibold hover:bg-[#161C25] transition"
           >
             Submit

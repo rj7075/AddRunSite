@@ -75,9 +75,21 @@ export default function CTASection() {
         mode: "no-cors", // required since Google doesn't return CORS headers
       });
 
+      // ✅ Success toast
       toast.success(
         `Thank you ${formData.name}! We will contact you for Virtual Office in ${selectedCity}.`
       );
+
+      // ✅ Push event to GTM DataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "popupFormSubmission",
+        formCity: selectedCity,
+        formName: formData.name,
+        formPhone: formData.phone,
+      });
+
+      // ✅ Close popup
       closeForm();
     } catch (error) {
       toast.error("❌ Something went wrong. Please try again.");
@@ -87,13 +99,6 @@ export default function CTASection() {
 
   return (
     <section className="py-16 bg-[#334c68] text-center">
-      {/* <h2 className="text-2xl text-gray-200 font-bold mb-6">
-        Other location for your Virtual Office
-      </h2>
-      <p className="justify-center items-center text-sm mb-4 px-2 font-medium text-gray-300">
-        Click On City where You Want Your Virtual Office or Fill Your Desired
-        City By Clicking on Any City, Our Team Will Contact You Soon.
-      </p> */}
       <div className="text-center mb-12 px-4">
         {/* Heading with gradient underline */}
         <h2 className=" text-3xl sm:text-4xl lg:text-5xl mr-4 font-extrabold text-gray-100 mb-4 relative inline-block">
@@ -148,18 +153,6 @@ export default function CTASection() {
           ))}
         </div>
       </div>
-      {/* City buttons */}
-      {/* <div className="flex flex-wrap gap-4 px-3  items-center justify-center">
-        {cities.map((city, index) => (
-          <button
-            key={index}
-            onClick={() => openForm(city)}
-            className="bg-[#3f4047] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#5CC6EC] transition"
-          >
-            {city}
-          </button>
-        ))}
-      </div> */}
 
       {/* Modal */}
       {isOpen && (
@@ -175,43 +168,6 @@ export default function CTASection() {
               Get Virtual Office in {selectedCity}
             </h3>
 
-            {/* <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded px-3 py-2"
-              />
-              <input
-                type="text"
-                name="city"
-                placeholder="City"
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.target.value)}
-                required
-                className="w-full border border-gray-300 rounded px-3 py-2"
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-300 rounded px-3 py-2"
-              />
-          
-          <p>by submitting this form you are agree to our policy</p>
-              <button
-                type="submit"
-                className="w-full bg-[#5CC6EC] text-white py-2 rounded-lg font-semibold hover:bg-[#161C25] transition"
-              >
-                Submit
-              </button>
-            </form> */}
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
@@ -270,6 +226,7 @@ export default function CTASection() {
               </div>
 
               <button
+                id="popupFormSubmit"
                 type="submit"
                 disabled={!agreed}
                 className={`w-full py-2 rounded-lg font-semibold transition ${
