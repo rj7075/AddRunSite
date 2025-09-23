@@ -89,9 +89,52 @@ const RefundPolicy = () => {
         </ul>
       </div>
 
+      {/* Value Pack GST Assist */}
+      <div className="mb-6">
+        <h2 className="text-2xl font-semibold mb-2">
+          4. Value Pack GST Assist (₹14,499/year)
+        </h2>
+        <p className="mb-2">
+          This plan is designed for new businesses and entrepreneurs whose
+          primary goal is to secure GST registration and a business bank account
+          quickly and affordably. It includes a compliant Virtual Office
+          Address, Online Submission of GST Application, Representative for
+          Physical Verification, Current Bank Account Assistance, and Basic Mail
+          Handling.
+        </p>
+        <p className="font-semibold">Refund Policy:</p>
+        <p className="mb-2">
+          The fees for the Value Pack GST Assist are non-refundable once the GST
+          application process has been initiated or a representative has been
+          assigned. This is because the service involves direct government
+          liaison and resource allocation that cannot be retracted.
+        </p>
+      </div>
+
+      {/* Premium Business Registration */}
+      <div className="mb-6">
+        <h2 className="text-2xl font-semibold mb-2">
+          5. Premium Business Registration (₹19,499/year)
+        </h2>
+        <p className="mb-2">
+          This elite plan is for businesses seeking to establish a prestigious
+          corporate presence in India’s top commercial hubs. It includes all
+          benefits of the Enterprise Plan plus a Prestigious Virtual Office
+          Address, Dedicated Receptionist Service, Exclusive Business Lounge
+          Access, and Concierge Services.
+        </p>
+        <p className="font-semibold">Refund Policy:</p>
+        <p className="mb-2">
+          Fees paid for the Premium Business Registration plan are strictly
+          non-refundable. This is due to the significant upfront costs and
+          commitments associated with securing premium real estate addresses and
+          allocating dedicated receptionist resources.
+        </p>
+      </div>
+
       {/* General Conditions */}
       <div className="mb-6">
-        <h2 className="text-2xl font-semibold mb-2">4. General Conditions</h2>
+        <h2 className="text-2xl font-semibold mb-2">6. General Conditions</h2>
         <ul className="list-disc list-inside space-y-1">
           <li>
             Refunds, wherever applicable, are made exclusively to the
@@ -113,7 +156,7 @@ const RefundPolicy = () => {
       {/* Company Information */}
       <div className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">
-          5. Company Information and Payments
+          7. Company Information and Payments
         </h2>
         <p className="mb-2">
           Asset Sense Workspaces is a wholly owned subsidiary of Asset Sense Pvt
