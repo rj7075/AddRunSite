@@ -28,7 +28,7 @@ function App() {
       <Toaster position="top-center" />
       <Routes>
         <Route path="/" element={<Home2 />} />
-        <Route path="/mumbai" element={<Mumbai />} />
+        <Route path="/virtual-office-in-mumbai" element={<Mumbai />} />
         <Route index element={<Home />} />
         <Route path="/city/:slug" element={<GenralCities />} />
 
