@@ -1,6 +1,6 @@
 import { FaMapPin, FaBuilding, FaStar, FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
-import PopupForm from "./Form";
+import PopupForm1 from "./PopupForm1";
 
 const Button = ({ variant, size, className, children, disabled, ...props }) => {
   const baseClasses =
@@ -59,10 +59,11 @@ const CardContent = ({ children, className }) => {
 
 const MaharashtraMumbai = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [formTitle, setFormTitle] = useState("");
+  const [selectedCity, setSelectedCity] = useState(" ");
 
-  const handleOpenForm = (title) => {
-    setFormTitle(title);
+  // Open form with city prefilled
+  const openForm = (city = "") => {
+    setSelectedCity(city);
     setIsFormOpen(true);
   };
   const cities = [
@@ -223,7 +224,7 @@ const MaharashtraMumbai = () => {
                   </div>
 
                   <Button
-                    onClick={() => handleOpenForm("Reserve My Address")}
+                    onClick={() => openForm(city.name)}
                     variant={
                       city.isFlagship
                         ? "cta"
@@ -242,10 +243,10 @@ const MaharashtraMumbai = () => {
             </Card>
           ))}
         </div>
-        <PopupForm
+        <PopupForm1
           isOpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
-          formTitle={formTitle}
+          initialCity={selectedCity} // Prefilled city from card or empty
         />
 
         {/* Bottom CTA */}

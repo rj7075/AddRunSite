@@ -8,7 +8,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { useState } from "react";
-import PopupForm from "./Form";
+import PopupFormMumbai from "./Formmumbai";
 
 const FooterMumbai = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -181,7 +181,7 @@ const FooterMumbai = () => {
             Get Started Today
           </button>
         </div>
-        <PopupForm
+        <PopupFormMumbai
           isOpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
           formTitle={formTitle}

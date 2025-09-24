@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaPhone, FaStar } from "react-icons/fa";
-import PopupForm from "./Form";
+import PopupFormMumbai from "./Formmumbai";
 
 const StickyMumbai = ({ onBookingOpen }) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -96,7 +96,7 @@ const StickyMumbai = ({ onBookingOpen }) => {
           </div>
         </div>
       )}
-      <PopupForm
+      <PopupFormMumbai
         isOpen={isFormOpen}
         onClose={() => setIsFormOpen(false)}
         formTitle={formTitle}

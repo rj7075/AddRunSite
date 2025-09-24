@@ -2,7 +2,11 @@
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
-export default function PopupForm({ isOpen, onClose, initialCity = " " }) {
+export default function PopupFormMumbai({
+  isOpen,
+  onClose,
+  initialCity = " ",
+}) {
   const [agreed, setAgreed] = useState(false);
   const [formData, setFormData] = useState({
     name: "",

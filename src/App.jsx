@@ -20,7 +20,9 @@ import FooterMumbai from "./components/CityMumbai/FooterMumbai.jsx";
 
 function App() {
   const location = useLocation();
-  const showcustomFooter = ["/mumbai"].includes(location.pathname);
+  const showcustomFooter = ["/virtual-office-in-mumbai"].includes(
+    location.pathname
+  );
 
   return (
     <>

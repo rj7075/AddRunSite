@@ -6,8 +6,9 @@ import {
   FaPhone,
   FaBuilding,
 } from "react-icons/fa";
-import PopupForm from "./Form";
+
 import { useState } from "react";
+import PopupFormMumbai from "./Formmumbai";
 
 const Button = ({ variant, size, className, children, ...props }) => {
   const baseClasses =
@@ -219,7 +220,7 @@ const ServicesMumbai = () => {
             </Card>
           ))}
         </div>
-        <PopupForm
+        <PopupFormMumbai
           isOpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
           formTitle={formTitle}
