@@ -255,7 +255,7 @@ const MaharashtraMumbai = () => {
             Can't find your city? We're expanding across Maharashtra.
           </p>
           <Button
-            onClick={() => handleOpenForm("Reserve My Address")}
+            onClick={() => openForm(" ")}
             variant="outline"
             size="lg"
           >
