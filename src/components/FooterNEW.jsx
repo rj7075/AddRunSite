@@ -80,10 +80,10 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="/coworking"
+                    href="/virtual-office-in-mumbai"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
-                    Meeting Rooms
+                   Virtual Office in Mumbai
                   </a>
                 </li>
                 <li>
