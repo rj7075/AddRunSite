@@ -44,7 +44,7 @@ const WorkSpaceFaq = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section id="faq" className="py-25 bg-gray-100">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4 text-gray-900">

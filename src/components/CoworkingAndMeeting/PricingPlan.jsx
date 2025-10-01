@@ -51,7 +51,7 @@ const PricingPlan = () => {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
+    <section id="pricing" className="py-25 bg-gray-50">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4 text-gray-900">

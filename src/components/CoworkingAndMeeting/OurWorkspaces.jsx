@@ -25,6 +25,24 @@ const workspaces = [
   },
 ];
 
+const smallImages = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1568992688065-536aad8a12f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    alt: "Modern workspace with plants",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    alt: "Collaborative workspace area",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+    alt: "Comfortable seating area",
+  },
+];
+
 const WorkSpacesGallery = () => {
   return (
     <section className="py-20 bg-gray-100">
@@ -38,7 +56,8 @@ const WorkSpacesGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        {/* Main Gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-12">
           {workspaces.map((space, index) => (
             <div
               key={index}
@@ -58,6 +77,28 @@ const WorkSpacesGallery = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Small Images Row */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900">
+            Workspace Highlights
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {smallImages.map((image, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300 aspect-square"
+              >
+                <img
+                  src={image.image}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Additional Info Section */}

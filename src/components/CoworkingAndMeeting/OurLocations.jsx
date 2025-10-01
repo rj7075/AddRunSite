@@ -3,6 +3,8 @@ import { FaBuilding } from "react-icons/fa6";
 
 const cityLocations = [
   { name: "Bangalore", area: "MG Road, Koramangala" },
+  { name: "Surat", area: "Surat, GandhiNagar, Ahmdabad" },
+  { name: "Pune", area: "Sector 62, Sector 18" },
   { name: "Mumbai", area: "Andheri, BKC" },
   { name: "Delhi", area: "Connaught Place, Saket" },
   { name: "Hyderabad", area: "Hitech City, Gachibowli" },

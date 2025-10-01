@@ -18,6 +18,7 @@ import Mumbai from "./Pages/Citywisepage/Mumbai.jsx";
 import { useLocation } from "react-router-dom";
 import FooterMumbai from "./components/CityMumbai/FooterMumbai.jsx";
 import CoWorking from "./Pages/CoWorking.jsx";
+import FooterNew from "./components/FooterNEW.jsx";
 
 function App() {
   const location = useLocation();
@@ -48,7 +49,7 @@ function App() {
         <Route path="/refund-policy" element={<Refund />} />
         <Route path="/terms&conditions" element={<TermsAndConditions />} />
       </Routes>
-      {showcustomFooter ? <FooterMumbai /> : <Footer />}
+      {showcustomFooter ? <FooterMumbai /> : <FooterNew />}
     </>
   );
 }
