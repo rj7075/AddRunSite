@@ -17,6 +17,7 @@ import GenralCities from "./Pages/Citywisepage/Genralcities/GenralCityPage.jsx";
 import Mumbai from "./Pages/Citywisepage/Mumbai.jsx";
 import { useLocation } from "react-router-dom";
 import FooterMumbai from "./components/CityMumbai/FooterMumbai.jsx";
+import CoWorking from "./Pages/CoWorking.jsx";
 
 function App() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home2 />} />
         <Route path="/virtual-office-in-mumbai" element={<Mumbai />} />
+        <Route path="/coworking" element={<CoWorking />} />
         <Route index element={<Home />} />
         <Route path="/city/:slug" element={<GenralCities />} />
 
