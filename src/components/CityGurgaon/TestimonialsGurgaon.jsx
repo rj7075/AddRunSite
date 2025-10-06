@@ -6,7 +6,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      text: "myHQ Team provided great and fast support to us! Great and fast service...",
+      text: "Asset Sense Team provided great and fast support to us! Great and fast service...",
       name: "Harshit Arora",
       position: "Director",
       company: "Screen stitcheras",
@@ -16,7 +16,7 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      text: "Everything was arranged swiftly by myHQ and all my requests were adhered to within a day...",
+      text: "Flexible plans and transparent pricing. The team is supportive and the facilities are top-notch. Best decision for our growing team!...",
       name: "Utkal Samal",
       position: "Director",
       company: "UHR Pharmachem Pvt Ltd",
@@ -26,7 +26,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      text: "myHQ as one stop solution for office space and New Business registration business plans...",
+      text: "Virtual office service made our company registration so easy. Professional address and excellent mail handling. Worth every penny!..",
       name: "Amit Suresh Chavan",
       position: "CEO",
       company: "Quantinio Technologies Pvt Ltd",
@@ -36,11 +36,11 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      text: "Excellent service and support from the myHQ team. They made setting up our virtual office seamless...",
+      text: "The coworking space is amazing! Great location, professional environment, and excellent networking opportunities. Highly recommended!...",
       name: "Priya Sharma",
       position: "Founder",
       company: "Tech Innovations Ltd",
-      service: "Virtual Office",
+      service: "Coworking Office",
       image:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
     },
