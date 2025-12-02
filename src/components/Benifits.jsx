@@ -4,6 +4,8 @@ import { FaBuilding, FaUsers } from "react-icons/fa";
 import { TbWindow } from "react-icons/tb"; // Tabler Window Icon
 import { MdGroups } from "react-icons/md"; // Client meeting (group of people)
 import { FaFileInvoice } from "react-icons/fa"; // GST filing / invoice
+import { HiXCircle } from "react-icons/hi2";
+import { HiCheckCircle } from "react-icons/hi2";
 
 const Benifits = () => {
   const [openItems, setOpenItems] = useState([]);
@@ -166,7 +168,7 @@ const Benifits = () => {
                           key={detailIndex}
                           className="flex items-center gap-2 text-sm text-gray-400"
                         >
-                          <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                          <HiXCircle className="text-red-500 text-xl" />
 
                           {detail}
                         </li>
@@ -190,7 +192,8 @@ const Benifits = () => {
                           className="flex items-center gap-2 px-2 text-sm text-gray-700"
                         >
                           {/* <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> */}
-                          <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                          <HiCheckCircle className="text-green-500 text-xl" />
+
                           {detail}
                         </li>
                       ))}

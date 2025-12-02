@@ -14,21 +14,16 @@ import Pricing from "../components/Pricing";
 const Home2 = () => {
   return (
     <div>
-      {/* <!-- Header --> */}
       <Hero1 />
-      {/* <!-- Hero section  */}
       <Benifits />
       <Address />
       <Locations />
       <CTASection1 />
       <Pricing />
-      {/* <!-- Features Section --> */}
       <FeaturesSection />
       <TestimonialsSection />
-      {/* <!-- Audience Section --> */}
       <TargetAudience />
       <FAQSection />
-      {/* <!-- CTA Section --> */}
       <Cta />
     </div>
   );

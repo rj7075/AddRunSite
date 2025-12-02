@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home2 from "./Pages/Home2";
-import Footer from "./components/Footer";
 import Home from "./Pages/Home";
 import { Toaster } from "react-hot-toast";
 import Privacy from "./Pages/Privacy";
@@ -11,7 +10,6 @@ import TermsAndConditions from "./Pages/TermCondition";
 import Mumbai from "./Pages/Citywisepage/Mumbai.jsx";
 import { useLocation } from "react-router-dom";
 import FooterMumbai from "./components/CityMumbai/FooterMumbai.jsx";
-
 import FooterNew from "./components/FooterNEW.jsx";
 
 function App() {

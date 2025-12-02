@@ -1,6 +1,8 @@
 import React from "react";
 import PopupForm from "./PopupForm";
 import { useState } from "react";
+import { BsCurrencyRupee } from "react-icons/bs";
+import { FaFileInvoice, FaDoorOpen, FaBan } from "react-icons/fa";
 
 const FeaturesSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -10,11 +12,11 @@ const FeaturesSection = () => {
     setFormTitle(title);
     setIsFormOpen(true);
   };
-  // Features data stored in an array
+
   const featuresData = [
     {
       id: 1,
-      icon: "fas fa-indian-rupee-sign",
+      icon: BsCurrencyRupee,
       iconColor: "text-blue-500",
       bgColor: "bg-blue-100",
       title: "Lowest Price Guarantee",
@@ -23,7 +25,7 @@ const FeaturesSection = () => {
     },
     {
       id: 2,
-      icon: "fas fa-file-invoice",
+      icon: FaFileInvoice,
       iconColor: "text-green-500",
       bgColor: "bg-green-100",
       title: "Bank Documents in 4 hrs",
@@ -32,7 +34,7 @@ const FeaturesSection = () => {
     },
     {
       id: 3,
-      icon: "fas fa-door-open",
+      icon: FaDoorOpen,
       iconColor: "text-purple-500",
       bgColor: "bg-purple-100",
       title: "Meeting Rooms @ ₹200/hr",
@@ -41,7 +43,7 @@ const FeaturesSection = () => {
     },
     {
       id: 4,
-      icon: "fas fa-ban",
+      icon: FaBan,
       iconColor: "text-red-500",
       bgColor: "bg-red-100",
       title: "Zero Hidden Fees",
@@ -56,52 +58,62 @@ const FeaturesSection = () => {
         <h2 className="text-3xl font-bold text-center text-[#dbd5d5] mb-4">
           Why Asset Sense
         </h2>
+
         <p className="text-lg text-center text-[#a9acab] max-w-3xl mx-auto mb-12">
           Everything you need to run a compliant business, at a fraction of the
           cost
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuresData.map((feature) => (
-            <div
-              key={feature.id}
-              className="bg-[#151B24] p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
-            >
+          {featuresData.map((feature) => {
+            const IconComp = feature.icon; // ✅ FIX HERE
+
+            return (
               <div
-                className={`w-16 h-16 ${feature.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
+                key={feature.id}
+                className="bg-[#151B24] p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
               >
-                <i
-                  className={`${feature.icon} ${feature.iconColor} text-2xl`}
-                ></i>
+                <div
+                  className={`w-16 h-16 ${feature.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
+                >
+                  <IconComp className={`text-2xl ${feature.iconColor}`} />
+                </div>
+
+                <h3 className="text-xl font-semibold mb-2 text-gray-100">
+                  {feature.title}
+                </h3>
+
+                <p className="mb-4 text-gray-300">{feature.price}</p>
+
+                <p className="text-sm text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-100">
-                {feature.title}
-              </h3>
-              <p className=" mb-4 text-gray-300">{feature.price}</p>
-              <p className="text-sm text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
+        {/* Bottom Section */}
         <div className="mt-12 bg-[#151B24] p-8 rounded-xl text-center">
           <h3 className="text-2xl font-bold text-gray-100 mb-2">
             Save 95% on Office Costs
           </h3>
+
           <p className="text-gray-300 mb-6">
             Get all the benefits of a premium business address without the
             overhead
           </p>
+
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <div className="bg-[#ffffff] p-4 rounded-lg shadow-sm">
               <span className="text-2xl font-bold text-gray-900">₹650</span>
               <span className="text-gray-900">/mo</span>
               <p className="text-sm text-gray-900">Premium Virtual Office</p>
             </div>
+
             <div className="text-xl text-gray-900">
               →
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#5CC6EC]  text-gray-100 items-center justify-center px-2 pb-2 rounded-lg  shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-[#5CC6EC] text-gray-100 items-center justify-center px-2 pb-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <span className="text-5xl font-bold text-blue-100">→</span>
               </button>
@@ -111,6 +123,7 @@ const FeaturesSection = () => {
                 formTitle={formTitle}
               />
             </div>
+
             <div className="bg-[#ffffff] p-4 rounded-lg shadow-sm">
               <span className="text-2xl font-bold text-green-600">
                 Save 95%

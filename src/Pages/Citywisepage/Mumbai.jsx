@@ -8,7 +8,6 @@ import TestimonialsMumbai from "../../components/CityMumbai/TestimonilasMumbai";
 import FeaturesMumbai from "../../components/CityMumbai/FeaturesMumbai";
 import FaqMumbai from "../../components/CityMumbai/FaqMumbai";
 import StickyMumbai from "../../components/CityMumbai/StickyMumbai";
-import FooterMumbai from "../../components/CityMumbai/FooterMumbai";
 
 const Mumbai = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);

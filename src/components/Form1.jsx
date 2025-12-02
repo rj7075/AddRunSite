@@ -1,5 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { FaCity } from "react-icons/fa";
 
 import PopupForm from "./PopupForm";
 
@@ -140,7 +141,7 @@ export default function CTASection() {
             >
               <div className="flex flex-col items-center">
                 <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-200 transition-colors">
-                  <i className="fas fa-city text-blue-600 text-xl"></i>
+                  <FaCity className="text-2xl text-blue-600" />
                 </div>
                 <span className="font-semibold text-gray-300 group-hover:text-blue-700 transition-colors">
                   {city}
