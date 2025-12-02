@@ -1,5 +1,6 @@
 import { useState } from "react";
 // import { faq1 } from "../assets/Faq";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const faq1 = [
   {
@@ -79,11 +80,11 @@ const FAQSection = () => {
                     </span>
                   )}
                   <span className="text-[#587270]">{faq.question}</span>
-                  <i
-                    className={`fas ${
-                      openIndex === index ? "fa-chevron-up" : "fa-chevron-down"
-                    } text-gray-200`}
-                  ></i>
+                  {openIndex === index ? (
+                    <FaChevronUp className="text-gray-200" />
+                  ) : (
+                    <FaChevronDown className="text-gray-200" />
+                  )}
                 </button>
 
                 {openIndex === index && (
