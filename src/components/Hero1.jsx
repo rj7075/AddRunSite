@@ -134,7 +134,14 @@ const Hero1 = () => {
           <div className="relative">
             <div className="rounded-2xl p-2 shadow-xl">
               <div className="aspect-square border bg-[#0c5c7c] rounded-xl flex items-center justify-center">
-                <img src="/Hero pic.webp" alt="Hero Image" />
+                <img
+                  src="/Hero pic.webp"
+                  alt="Hero Image"
+                  loading="lazy"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 

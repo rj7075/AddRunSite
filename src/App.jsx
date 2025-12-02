@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home2 from "./Pages/Home2";
+
 import Home from "./Pages/Home";
 import { Toaster } from "react-hot-toast";
 import Privacy from "./Pages/Privacy";
@@ -23,7 +23,7 @@ function App() {
       <Header3 />
       <Toaster position="top-center" />
       <Routes>
-        <Route path="/" element={<Home2 />} />
+        <Route path="/" element={<Home />} />
         <Route path="/virtual-office-in-mumbai" element={<Mumbai />} />
         <Route index element={<Home />} />
 
