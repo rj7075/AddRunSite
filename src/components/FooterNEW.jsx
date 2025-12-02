@@ -64,7 +64,7 @@ const FooterNew = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="/coworking"
+                    href="https://assetsense.in/"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Coworking Spaces
@@ -72,7 +72,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="/virtual-office"
+                    href="https://assetsense.in/"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Virtual Office
@@ -96,7 +96,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="/coworking"
+                    href="#"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Day Passes
@@ -104,7 +104,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="/coworking"
+                    href="#"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Conference Rooms
@@ -121,7 +121,7 @@ const FooterNew = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="3"
+                    href="https://assetsense.in/about"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     About Us
@@ -129,7 +129,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://assetsense.in/"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Our Locations
@@ -145,7 +145,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://assetsense.in/"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Gallery
@@ -161,7 +161,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://assetsense.in/contact"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Contact Us
@@ -246,7 +246,7 @@ const FooterNew = () => {
               </a>
               <span className="text-gray-600">|</span>
               <a
-                href="/sitemap"
+                href="/"
                 className="hover:text-white transition-colors text-sm"
               >
                 Sitemap

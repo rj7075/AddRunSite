@@ -135,6 +135,16 @@ const FeaturesSection = () => {
           </div>
         </div>
       </div>
+      <div className="items-center flex mt-10 justify-center">
+        <a
+          href="https://assetsense.in/"
+          target="_blank" // opens in new tab (optional)
+          rel="noopener noreferrer"
+          className="bg-[#5CC6EC] text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+        >
+          Know More About US
+        </a>
+      </div>
     </section>
   );
 };

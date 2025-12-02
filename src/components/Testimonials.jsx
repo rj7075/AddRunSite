@@ -178,9 +178,19 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="text-center mt-8">
-          <button className="text-blue-600 font-semibold hover:underline flex items-center justify-center mx-auto">
+          <div className="items-center flex mt-10 justify-center">
+            <a
+              href="https://assetsense.in/"
+              target="_blank" // opens in new tab (optional)
+              rel="noopener noreferrer"
+              className="bg-[#5CC6EC] text-gray-900 text-sm md:text-lg px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+            >
+              Know More About Virtual Office
+            </a>
+          </div>
+          {/* <button className="text-blue-600 font-semibold hover:underline flex items-center justify-center mx-auto">
             Read 300+ Reviews <i className="fas fa-arrow-right ml-2"></i>
-          </button>
+          </button> */}
         </div>
       </div>
 
