@@ -12,7 +12,7 @@ import {
 const FooterNew = () => {
   return (
     <div>
-      <footer className="bg-[#0E141B] text-white py-12">
+      <footer className="bg-[#1C2735] text-white py-12">
         <div className="container mx-auto px-4">
           {/* Four Column Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -20,7 +20,7 @@ const FooterNew = () => {
             <div className="space-y-4">
               <div className="text-2xl font-bold mb-2">
                 <a href="/virtual-office">
-                  <img className="w-35 h-20" src="/logo.png" alt="logo" />
+                  <img className="w-35 h-17" src="/assetlogo.webp" alt="logo" />
                 </a>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -83,7 +83,7 @@ const FooterNew = () => {
                     href="/virtual-office-in-mumbai"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
-                   Virtual Office in Mumbai
+                    Virtual Office in Mumbai
                   </a>
                 </li>
                 <li>

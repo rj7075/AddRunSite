@@ -3,15 +3,15 @@ import React from "react";
 const Header3 = () => {
   return (
     <div>
-      <header className="bg-[#0E141B] top-0 z-50 w-full shadow-md fixed">
+      <header className="bg-[#1C2735] top-0 z-50 w-full shadow-md fixed">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <a href="/virtual-office">
                 <img
-                  className="mt-4 w-35 h-20 overflow-hidden"
-                  src="/logo.png"
+                  className="mt-4 w-35 h-16 overflow-hidden"
+                  src="/assetlogo.webp"
                   alt="logo"
                 />
               </a>
@@ -72,23 +72,6 @@ const Header3 = () => {
                   <span>Talk to an advisor in 3 min</span>
                 </a>
               </div>
-
-              {/* <div className="flex items-center space-x-2 text-xs text-gray-300">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                </svg>
-                <span>+91-98XXX XXXX</span>
-              </div>{" "} */}
 
               <a
                 href="https://wa.me/919907800600?text=Hello%2C%20I%20am%20interested%20in%20your%20Virtual%20Office%20Services.%20Please%20send%20me%20your%20Plans.

@@ -19,12 +19,14 @@ const FooterMumbai = () => {
     setIsFormOpen(true);
   };
   return (
-    <footer className="bg-blue-900 text-white">
+    <footer className="bg-[#1C2735] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Asset Sense Workspaces</h3>
+            <h3 className="text-xl font-bold mb-2">
+              <img className="w-35 h-17" src="/assetlogo.webp" alt="siteLogo" />
+            </h3>
             <p className="text-blue-100 mb-6 max-w-md">
               Premium business addresses and virtual office solutions across
               India. Trusted by 10,000+ businesses for professional workspace

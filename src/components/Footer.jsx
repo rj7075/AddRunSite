@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="mb-6 md:mb-0">
               <div className="text-2xl font-bold mb-2">
                 <a href="/virtual-office">
-                  <img className="w-35 h-20" src="/logo.png" alt="logo" />
+                  <img className="w-35 h-20" src="/assetlogo.webp" alt="logo" />
                 </a>
               </div>
               <p className="text-gray-400">Virtual Office Solutions</p>

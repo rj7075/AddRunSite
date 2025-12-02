@@ -4,3 +4,7 @@
   --color-secondary: #0f172a;
   --color-accent: #3b82f6;
 }
+
+* {
+  font-display: swap;
+}
