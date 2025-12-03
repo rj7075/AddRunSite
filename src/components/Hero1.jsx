@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PopupForm from "./PopupForm";
+import InlineForm from "./InlineForm";
 
 const Hero1 = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -10,37 +11,31 @@ const Hero1 = () => {
     setIsFormOpen(true);
   };
   return (
-    <section className="relative min-h-screen flex py-7 pb-6 items-center justify-center overflow-hidden bg-[#011F3F] from-blue-900 via-[#0E141B] to-purple-900">
+    <section className="relative min-h-screen flex py-7 pb-6 items-center justify-center overflow-hidden bg-[var(--color-primary)] from-blue-900 via-[#0E141B] to-purple-900">
       {/* Background effects */}
       <div className="absolute bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
-
-      {/* Floating elements */}
-      {/* <div className="absolute top-20 right-10 w-20 h-20 bg-[#3196a5]/20 rounded-full blur-xl animate-bounce"></div> */}
-      {/* <div
-        className="absolute bottom-20 left-10 w-32 top-20 h-32 bg-[#3196a5]/20 rounded-full blur-xl animate-bounce"
-        style={{ animationDelay: "2s" }}
-      ></div> */}
 
       <div className="container mt-30 mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
-              <span className="bg-[#3196a5]/20 text-[#3196a5] border  border-[#3196a5]/30 px-4 py-2 rounded-full text-sm font-bold">
+              <span className="bg-[#3196a5]/20 text-[#289165] border  border-[#3196a5]/30 px-4 py-2 rounded-full text-sm font-bold">
                 Go Live in 24 Hours
               </span>
 
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight py-2 text-white">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight py-2 text-gray">
                 Get an{" "}
                 <span className="bg-[#5CC6EC] from-[#3196a5]  bg-clip-text text-transparent">
                   MCA- & GST-Ready
                 </span>{" "}
-                Business Address in any City In India.
+                Business Address in any City In India in 3 days.
               </h1>
 
-              <p className="text-xl text-gray-300 max-w-xl">
-                Stop burning cash on rent. Start operating nationwide with a
-                compliant virtual office at a city of your choice.
+              <p className="text-xl text-gray-600 max-w-xl">
+                Plans starting from just ₹999/mo. Stop burning cash on rent.
+                Start operating nationwide with a compliant virtual office at a
+                city of your choice.
               </p>
             </div>
 
@@ -48,7 +43,7 @@ const Hero1 = () => {
             <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+                className="bg-[#17CFBF]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
               >
                 Reserve My Address
               </button>
@@ -59,7 +54,7 @@ const Hero1 = () => {
                 formTitle={formTitle}
               />
 
-              <div className="flex items-center space-x-2 text-sm text-gray-300">
+              <div className="flex items-center space-x-2 text-sm text-gray-600">
                 {/* Clock Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +70,7 @@ const Hero1 = () => {
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-                <span>Setup in 24 hours</span>
+                <span className="font-semibold">Setup in 24 hours</span>
               </div>
             </div>
 
@@ -99,7 +94,7 @@ const Hero1 = () => {
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
-                <span className="text-sm text-gray-300">
+                <span className="text-sm font-semibold text-gray-600">
                   Trusted by 500+ Indian founders
                 </span>
               </div>
@@ -123,7 +118,7 @@ const Hero1 = () => {
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm text-gray-300">
+                <span className="text-sm font-semibold text-gray-600">
                   4.9★ Google rating
                 </span>
               </div>
@@ -133,21 +128,24 @@ const Hero1 = () => {
           {/* Visual */}
           <div className="relative">
             <div className="rounded-2xl p-2 shadow-xl">
-              <div className="aspect-square border bg-[#0c5c7c] rounded-xl flex items-center justify-center">
-                <img
+              <div
+                className="border bg-[#0c5c7c] rounded-xl flex items-center justify-center 
+                  h-auto md:aspect-square"
+              >
+                <InlineForm />
+                {/* <img
                   src="/Hero pic.webp"
                   alt="Hero Image"
                   loading="lazy"
                   fetchPriority="high"
                   decoding="async"
                   className="w-full h-full object-cover"
-                />
+                /> */}
               </div>
             </div>
 
             {/* Floating badges */}
             <div className="absolute -top-4 -right-4 bg-yellow-100 text-yellow-800 px-3 py-2 rounded-full text-xs font-medium flex items-center space-x-1 shadow-md">
-              {/* Star Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"

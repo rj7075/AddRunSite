@@ -50,25 +50,25 @@ const Address = () => {
   ];
   return (
     <div>
-      <section class="py-16 bg-[#0E141B]">
+      <section class="py-16 bg-[var(--color-primary)]">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center text-white mb-4">
+          <h2 class="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
             Your Legal Address
           </h2>
-          <p class="text-xl text-center text-[#979292] font-semibold mb-12">
+          <p class="text-xl text-center text-[var(--color-subheading)] font-semibold mb-12">
             Pick a City of your choice from more than 40+ locations in India
           </p>
 
-          <div className="min-h-screen bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-[var(--color-primary)] py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8">
               {/* First Column */}
               <div className="w-full lg:w-1/2">
-                <div className="bg-[#243E4C] w-full p-4 sm:p-6 rounded-xl shadow-md h-full">
-                  <h3 className="text-lg sm:text-xl text-white font-semibold mb-4">
+                <div className="bg-[var(--color-secondary)] w-full p-4 sm:p-6 rounded-xl shadow-md h-full">
+                  <h3 className="text-lg sm:text-xl text-[var(--color-subheading)] font-semibold mb-4">
                     Virtual offices in 40+ Cities across India
                   </h3>
 
-                  <div className="relative h-64 sm:h-80 md:h-75 lg:h-72 bg-gray-200 rounded-lg mb-4 overflow-hidden">
+                  <div className="relative h-64 sm:h-80 md:h-75 lg:h-72 bg-[var(--color-secondary)] rounded-lg mb-4 overflow-hidden">
                     <img
                       className="absolute top-0 left-0 w-full h-full object-cover"
                       src="/location2.webp"
@@ -76,8 +76,8 @@ const Address = () => {
                     />
                   </div>
 
-                  <p className="text-gray-300 flex gap-2 items-start mb-4">
-                    <FaShieldAlt className="text-purple-400 text-xl mt-1 flex-shrink-0" />
+                  <p className="text-[var(--color-subheading)] flex gap-2 items-start mb-4">
+                    <FaShieldAlt className="text-purple-700 text-xl mt-1 flex-shrink-0" />
                     <span className="text-sm sm:text-base">
                       Reliable Service Trusted by 500+ businesses nationwide
                     </span>
@@ -103,23 +103,23 @@ const Address = () => {
                   {highlights.map((item, index) => (
                     <div
                       key={index}
-                      className="bg-gray-800 p-4 sm:p-5 rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
+                      className="bg-[var(--color-primary)] p-4 sm:p-5 rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
                     >
                       {item.icon}
-                      <h3 className="text-white font-semibold mt-3 text-sm sm:text-base">
+                      <h3 className="text-[var(--color-heading)] font-semibold mt-3 text-sm sm:text-base">
                         {item.title}
                       </h3>
                       {/* <p className="text-gray-300 text-xs sm:text-sm mt-1">
                         {item.desc}
                       </p> */}
                       {Array.isArray(item.desc) ? (
-                        <ul className="list-inside space-y-1 text-left text-sm text-gray-300">
+                        <ul className="list-inside space-y-1 text-left text-sm text-[var(--color-subheading)] mt-2">
                           {item.desc.map((step, i) => (
                             <li key={i}>{step}</li>
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-gray-300 text-sm sm:text-sm mt-1">
+                        <p className="text-[var(--color-subheading)] text-sm sm:text-sm mt-1">
                           {item.desc}
                         </p>
                       )}

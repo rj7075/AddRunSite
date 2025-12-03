@@ -73,15 +73,18 @@ const Locations = () => {
   );
 
   return (
-    <section className="py-20 lg:py-32 bg-[#0E141B]" id="locations">
+    <section
+      className="py-20 lg:py-32 bg-[var(--color-primary)]"
+      id="locations"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-200">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-heading)]">
             Choose Your City for
             <br />
             <span className="text-blue-600">Virtual Office</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--color-subheading)] max-w-3xl mx-auto">
             Establish your business presence in prime commercial locations
             across India's major business hubs. All addresses are legally
             compliant and professionally managed.
@@ -89,12 +92,12 @@ const Locations = () => {
         </div>
 
         {/* Locations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl  mx-auto mb-16">
           {locations.map((location, index) => (
             <div
               key={index}
               onClick={() => openForm(location.city)}
-              className={`bg-[#2b2d30] rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 group cursor-pointer ${
+              className={`bg-[var(--color-primary)] rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 group cursor-pointer ${
                 location.popular ? "ring-2 ring-blue-300" : ""
               }`}
             >
@@ -109,16 +112,18 @@ const Locations = () => {
                 </div>
               )}
 
-              <div className="flex items-start space-x-1">
+              <div className="flex items-start space-x-1 ">
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-3 group-hover:shadow-lg group-hover:shadow-blue-200 transition-all duration-300">
                   <MapPin />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-1 px-1 text-gray-300">
+                  <h3 className="text-lg font-semibold mb-1 px-1 text-[var(--color-heading)]">
                     {location.city}
                   </h3>
 
-                  <p className="text-gray-400 text-sm mb-3">{location.area}</p>
+                  <p className="text-[var(--color-subheading)] text-sm mb-3">
+                    {location.area}
+                  </p>
                   <div className="flex items-center space-x-2 text-blue-600">
                     <Building />
                     <span className="text-sm font-medium">

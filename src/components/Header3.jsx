@@ -1,6 +1,15 @@
 import React from "react";
+import PopupForm from "./PopupForm";
+import { useState } from "react";
 
 const Header3 = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState("");
+  const handleOpenForm = (title) => {
+    setFormTitle(title);
+    setIsFormOpen(true);
+  };
+
   return (
     <div>
       <header className="bg-[#1C2735] top-0 z-50 w-full shadow-md fixed">
@@ -32,17 +41,18 @@ const Header3 = () => {
               >
                 FAQ
               </a>
-              <a
-                href="https://wa.me/919907800600?text=Hello%2C%20I%20am%20interested%20in%20your%20Virtual%20Office%20Services.%20Please%20call%20me%20back.
 
-
-"
-                target="_blank"
+              <button
+                onClick={() => handleOpenForm("Book a Call")}
+                className="cursor-pointer bg-[#17CFBF] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
               >
-                <button className="cursor-pointer bg-[#5CC6EC] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
-                  Book a Call
-                </button>
-              </a>
+                Check Availability
+              </button>
+              <PopupForm
+                isOpen={isFormOpen}
+                onClose={() => setIsFormOpen(false)}
+                formTitle={formTitle}
+              />
             </nav>
 
             {/* Contact Info */}
@@ -135,14 +145,18 @@ const Header3 = () => {
               >
                 FAQ
               </a>
-              <a
-                href="https://wa.me/919907800600?text=Hello%2C%20I%20am%20interested%20in%20your%20Virtual%20Office%20Services.%20Please%20call%20me%20back."
-                target="_blank"
+
+              <button
+                onClick={() => handleOpenForm("Book a Call")}
+                className="cursor-pointer bg-[#17CFBF] border border-gray-300 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
               >
-                <button className="cursor-pointer bg-[#5CC6EC] border border-gray-300 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors">
-                  Book a Call
-                </button>
-              </a>
+                Check Availability
+              </button>
+              <PopupForm
+                isOpen={isFormOpen}
+                onClose={() => setIsFormOpen(false)}
+                formTitle={formTitle}
+              />
             </nav>
           </div>
         </div>

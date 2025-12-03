@@ -1,4 +1,13 @@
 import React, { useState, useRef } from "react";
+import {
+  FaFileInvoiceDollar,
+  FaClock,
+  FaMapMarkerAlt,
+  FaCity,
+  FaFileContract,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 
 const TestimonialsSection = () => {
   const testimonialData = [
@@ -11,7 +20,7 @@ const TestimonialsSection = () => {
       initials: "RS",
       bgColor: "bg-blue-500",
       textColor: "text-white",
-      icon: "fas fa-file-invoice-dollar",
+      icon: <FaFileInvoiceDollar />,
       iconColor: "text-green-500",
       tag: "95% cost savings",
     },
@@ -24,7 +33,7 @@ const TestimonialsSection = () => {
       initials: "JK",
       bgColor: "bg-purple-500",
       textColor: "text-white",
-      icon: "fas fa-clock",
+      icon: <FaClock />,
       iconColor: "text-blue-500",
       tag: "3-min response time",
     },
@@ -37,7 +46,7 @@ const TestimonialsSection = () => {
       initials: "MS",
       bgColor: "bg-green-500",
       textColor: "text-white",
-      icon: "fas fa-map-marker-alt",
+      icon: <FaMapMarkerAlt />,
       iconColor: "text-red-500",
       tag: "5-state expansion",
     },
@@ -50,7 +59,7 @@ const TestimonialsSection = () => {
       initials: "AS",
       bgColor: "bg-yellow-500",
       textColor: "text-white",
-      icon: "fas fa-city",
+      icon: <FaCity />,
       iconColor: "text-indigo-500",
       tag: "Single window service",
     },
@@ -63,7 +72,7 @@ const TestimonialsSection = () => {
       initials: "PK",
       bgColor: "bg-pink-500",
       textColor: "text-white",
-      icon: "fas fa-file-contract",
+      icon: <FaFileContract />,
       iconColor: "text-teal-500",
       tag: "Quick documentation",
     },
@@ -93,12 +102,12 @@ const TestimonialsSection = () => {
     );
 
   return (
-    <section className="py-16 bg-[#0E141B]">
+    <section className="py-16 bg-[var(--color-primary)]" id="testimonials">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-100 mb-4">
+        <h2 className="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
           What Clients Say About Asset Sense Virtual Office
         </h2>
-        <p className="text-lg text-center text-gray-300 mb-12">
+        <p className="text-lg text-center text-[var(--color-subheading)] mb-12">
           Rated 4.9/5 from 384 Google Reviews
         </p>
 
@@ -106,17 +115,16 @@ const TestimonialsSection = () => {
           {/* Navigation Arrows */}
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#161C25] rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none hidden md:block"
-            aria-label="Previous testimonials"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#161C25] rounded-full p-2 shadow-md hidden md:block"
           >
-            <i className="fas fa-chevron-left text-gray-700"></i>
+            <FaChevronLeft className="text-gray-200 text-xl" />
           </button>
+
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#161C25] rounded-full p-2 shadow-md hover:bg-gray-100 focus:outline-none hidden md:block"
-            aria-label="Next testimonials"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#161C25] rounded-full p-2 shadow-md hidden md:block"
           >
-            <i className="fas fa-chevron-right text-gray-700"></i>
+            <FaChevronRight className="text-gray-200 text-xl" />
           </button>
 
           {/* Testimonial Cards */}
@@ -128,10 +136,9 @@ const TestimonialsSection = () => {
             {testimonialData.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="flex-shrink-0 w-80 sm:w-72 md:w-96 snap-center bg-[#2f333a] p-6 rounded-xl shadow-md"
+                className="flex-shrink-0 w-80 sm:w-72 md:w-96 snap-center bg-[var(--color-secondary)] p-6 rounded-xl shadow-md"
               >
                 <div className="flex items-center mb-4">
-                  {/* Initials Circle */}
                   <div
                     className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${testimonial.bgColor} ${testimonial.textColor} font-bold`}
                   >
@@ -139,23 +146,23 @@ const TestimonialsSection = () => {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-gray-100">
+                    <h4 className="font-semibold text-[var(--color-heading)]">
                       {testimonial.name}
                     </h4>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-[var(--color-subheading)] text-sm">
                       {testimonial.position}
                     </p>
                   </div>
                 </div>
 
-                <p className="text-gray-300 mb-4 text-sm md:text-base">
+                <p className="text-[var(--color-description)] mb-4 text-sm md:text-base">
                   {testimonial.content}
                 </p>
 
-                <div className="flex items-center text-sm text-gray-300">
-                  <i
-                    className={`${testimonial.icon} ${testimonial.iconColor} mr-2`}
-                  ></i>
+                <div className="flex items-center text-sm text-[var(--color-heading)]">
+                  <span className={`${testimonial.iconColor} text-lg mr-2`}>
+                    {testimonial.icon}
+                  </span>
                   <span>{testimonial.tag}</span>
                 </div>
               </div>
@@ -171,34 +178,22 @@ const TestimonialsSection = () => {
                 className={`w-3 h-3 rounded-full ${
                   currentIndex === index ? "bg-blue-500" : "bg-gray-300"
                 }`}
-                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>
         </div>
 
         <div className="text-center mt-8">
-          <div className="items-center flex mt-10 justify-center">
-            <a
-              href="https://assetsense.in/"
-              target="_blank" // opens in new tab (optional)
-              rel="noopener noreferrer"
-              className="bg-[#5CC6EC] text-gray-900 text-sm md:text-lg px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
-            >
-              Know More About Virtual Office
-            </a>
-          </div>
-          {/* <button className="text-blue-600 font-semibold hover:underline flex items-center justify-center mx-auto">
-            Read 300+ Reviews <i className="fas fa-arrow-right ml-2"></i>
-          </button> */}
+          <a
+            href="https://assetsense.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#5CC6EC] text-gray-900 text-sm md:text-lg px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Know More About Virtual Office
+          </a>
         </div>
       </div>
-
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 };

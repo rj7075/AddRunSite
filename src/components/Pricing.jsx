@@ -120,13 +120,13 @@ const Pricing = () => {
   );
 
   return (
-    <section className="py-20 lg:py-32 bg-[#0E141B]" id="pricing">
+    <section className="py-20 lg:py-32 bg-[var(--color-primary)]" id="pricing">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-200">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-heading)]">
             Choose Your <span className="text-blue-600">Perfect Plan</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--color-subheading)] max-w-3xl mx-auto">
             Transparent pricing with no hidden fees. Money back if GST gets
             rejected.
           </p>
@@ -136,7 +136,7 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`bg-[#32363b] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative ${
+              className={`bg-[var(--color-secondary)] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative ${
                 plan.popular ? "ring-2 ring-blue-500 shadow-blue-200" : ""
               }`}
             >
@@ -154,7 +154,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-gradient-to-r from-amber-200 to-green-800 rounded-full px-6  py-2 flex items-center space-x-2">
                     <Crown />
-                    <span className="text-xs font-bold text-gray-900">
+                    <span className="text-xs font-bold text-[var(--color-heading)]">
                       100% Refund
                     </span>
                   </div>
@@ -162,15 +162,19 @@ const Pricing = () => {
               )}
 
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2 text-gray-300">
+                <h3 className="text-2xl font-bold mb-2 text-[var(--color-heading)]">
                   {plan.name}
                 </h3>
-                <p className="text-gray-400 mb-4">{plan.description}</p>
+                <p className="text-[var(--color-subheading)] mb-4">
+                  {plan.description}
+                </p>
                 <div className="flex items-baseline justify-center space-x-1">
                   <span className="text-4xl font-bold text-purple-600">
                     {plan.price}
                   </span>
-                  <span className="text-gray-400">{plan.period}</span>
+                  <span className="text-[var(--color-subheading)]">
+                    {plan.period}
+                  </span>
                 </div>
               </div>
 
@@ -178,7 +182,9 @@ const Pricing = () => {
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start space-x-3">
                     <CheckCircle />
-                    <span className="text-gray-400">{feature}</span>
+                    <span className="text-[var(--color-subheading)]">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -202,12 +208,12 @@ const Pricing = () => {
 
         {/* Additional Information */}
         <div className="mt-16 text-center">
-          <div className="bg-[#242c35] rounded-2xl p-8 max-w-4xl mx-auto shadow-md">
+          <div className="bg-[var(--color-secondary)] rounded-2xl border border-gray-400 p-8 max-w-4xl mx-auto shadow-md">
             <h3 className="text-2xl font-bold mb-4 text-purple-600">
               All Plans Include
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-400">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-[var(--color-subheading)]">
               <div className="flex justify-start items-center text-left space-x-2">
                 <CheckCircle />
                 <span>No Setup Fees</span>

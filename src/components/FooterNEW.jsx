@@ -88,7 +88,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="/coworking"
+                    href="#"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Dedicated Desks
@@ -137,7 +137,7 @@ const FooterNew = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#pricing"
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     Pricing Plans

@@ -56,10 +56,10 @@ const FAQSection = () => {
   return (
     <section className="py-16 bg-[var(--color-primary)]" id="faq">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#fff] mb-4">
+        <h2 className="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
           Frequently Asked Questions
         </h2>
-        <p className="text-lg text-center text-[#747070] mb-12">
+        <p className="text-lg text-center text-[var(--color-subheading)] mb-12">
           Everything you need to know about our virtual office services
         </p>
 
@@ -79,16 +79,18 @@ const FAQSection = () => {
                       Popular
                     </span>
                   )}
-                  <span className="text-[#587270]">{faq.question}</span>
+                  <span className="text-[var(--color-subheading)]">
+                    {faq.question}
+                  </span>
                   {openIndex === index ? (
-                    <FaChevronUp className="text-gray-200" />
+                    <FaChevronUp className="text-[var(--color-subheading)]" />
                   ) : (
-                    <FaChevronDown className="text-gray-200" />
+                    <FaChevronDown className="text-[var(--color-subheading)]" />
                   )}
                 </button>
 
                 {openIndex === index && (
-                  <div className="p-4 border-t text-[#929c9a] border-gray-200">
+                  <div className="p-4 font-semibold border-t text-[var(--color-subheading)] border-gray-200">
                     {faq.answer}
                   </div>
                 )}

@@ -10,10 +10,14 @@ import Hero1 from "../components/Hero1";
 import TargetAudience from "../components/TargetAudience";
 import Locations from "../components/Location1";
 import CTASection1 from "../components/Form1";
+import TrustedBySlider from "../components/TrustedSlider";
+import GSTStep from "../components/GSTStep";
 const Home = () => {
   return (
     <div>
       <Hero1 />
+      <TrustedBySlider />
+      <GSTStep />
       <Benifits />
       <Address />
       <Locations />

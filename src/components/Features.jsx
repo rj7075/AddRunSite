@@ -55,11 +55,11 @@ const FeaturesSection = () => {
   return (
     <section className="py-16 bg-[var(--color-primary)]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#dbd5d5] mb-4">
+        <h2 className="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
           Why Asset Sense
         </h2>
 
-        <p className="text-lg text-center text-[#a9acab] max-w-3xl mx-auto mb-12">
+        <p className="text-lg text-center text-[var(--color-subheading)] max-w-3xl mx-auto mb-12">
           Everything you need to run a compliant business, at a fraction of the
           cost
         </p>
@@ -71,7 +71,7 @@ const FeaturesSection = () => {
             return (
               <div
                 key={feature.id}
-                className="bg-[#151B24] p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
+                className="bg-[var(--color-secondary)] p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
               >
                 <div
                   className={`w-16 h-16 ${feature.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
@@ -79,25 +79,29 @@ const FeaturesSection = () => {
                   <IconComp className={`text-2xl ${feature.iconColor}`} />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-2 text-gray-100">
+                <h3 className="text-xl font-semibold mb-2 text-[var(--color-heading)]">
                   {feature.title}
                 </h3>
 
-                <p className="mb-4 text-gray-300">{feature.price}</p>
+                <p className="mb-4 text-[var(--color-heading)]">
+                  {feature.price}
+                </p>
 
-                <p className="text-sm text-gray-300">{feature.description}</p>
+                <p className="text-sm text-[var(--color-subheading)]">
+                  {feature.description}
+                </p>
               </div>
             );
           })}
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 bg-[#151B24] p-8 rounded-xl text-center">
-          <h3 className="text-2xl font-bold text-gray-100 mb-2">
+        <div className="mt-12 bg-[var(--color-secondary)] p-8 rounded-xl text-center">
+          <h3 className="text-2xl font-bold text-[var(--color-heading)] mb-2">
             Save 95% on Office Costs
           </h3>
 
-          <p className="text-gray-300 mb-6">
+          <p className="text-[var(--color-subheading)] mb-6">
             Get all the benefits of a premium business address without the
             overhead
           </p>
@@ -110,7 +114,6 @@ const FeaturesSection = () => {
             </div>
 
             <div className="text-xl text-gray-900">
-              →
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
                 className="bg-[#5CC6EC] text-gray-100 items-center justify-center px-2 pb-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"

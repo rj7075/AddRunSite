@@ -117,10 +117,10 @@ const Benifits = () => {
     <section className="py-20 relative bg-[var(--color-primary)]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-heading)]">
             Is This For You?
           </h2>
-          <p className="text-xl md:text-sm text-gray-200 max-w-2xl mx-auto">
+          <p className="text-xl md:text-xl text-[var(--color-subheading)] font-semibold max-w-2xl mx-auto">
             Perfect for businesses of all sizes looking for professional
             presence without the overhead
           </p>
@@ -133,7 +133,7 @@ const Benifits = () => {
             return (
               <div
                 key={index}
-                className="border border-gray-600 rounded-xl overflow-hidden bg-gray-900 shadow-sm hover:shadow-md transition-shadow"
+                className="border border-gray-600 rounded-xl overflow-hidden bg-[var(--color-secondary)] shadow-sm hover:shadow-md transition-shadow"
               >
                 <div
                   className="p-3 cursor-pointer group"
@@ -141,12 +141,12 @@ const Benifits = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                      <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-xl flex items-center justify-center group-hover:bg-blue-100 transition-colors">
                         {iconComponent[index]}
                       </div>
 
-                      <div className="text-left">
-                        <h3 className="font-semibold text-lg text-gray-200">
+                      <div className="text-left bg-[var(--color-secondary)]">
+                        <h3 className="font-semibold text-lg text-gray-600">
                           {audience.title}
                         </h3>
                         {/* <p className="text-sm text-gray-300">
@@ -161,12 +161,12 @@ const Benifits = () => {
                   {/* <p className="text-gray-300 mt-4 text-left">
                     {audience.description}
                   </p> */}
-                  <div className="bg-gray-900 p-3">
+                  <div className="bg-white p-3">
                     <ul className="space-y-2">
                       {audience.detailsloss.map((detail, detailIndex) => (
                         <li
                           key={detailIndex}
-                          className="flex items-center gap-2 text-sm text-gray-400"
+                          className="flex items-center gap-2 text-sm text-gray-600"
                         >
                           <HiXCircle className="text-red-500 text-xl" />
 
@@ -175,7 +175,7 @@ const Benifits = () => {
                       ))}
                     </ul>
                   </div>
-                  <button className="hover:bg-[#49925b] text-gray-900 bg-white cursor-pointer mt-3 hover:text-gray-100 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-lg font-semibold text-base sm:text-sm transition w-full sm:w-auto">
+                  <button className="hover:bg-[#49925b] text-gray-900 bg-gray-300 cursor-pointer mt-3 hover:text-gray-100 px-3 py-1.5 sm:px-4 sm:py-1.5 rounded-lg font-semibold text-base sm:text-sm transition w-full sm:w-auto">
                     [How to Solve] ↓
                   </button>
                 </div>
