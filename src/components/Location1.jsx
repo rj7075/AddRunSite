@@ -97,7 +97,7 @@ const Locations = () => {
             <div
               key={index}
               onClick={() => openForm(location.city)}
-              className={`bg-[var(--color-primary)] rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 group cursor-pointer ${
+              className={`bg-[var(--color-secondary)] rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 group cursor-pointer ${
                 location.popular ? "ring-2 ring-blue-300" : ""
               }`}
             >
@@ -133,7 +133,7 @@ const Locations = () => {
                 </div>
                 <button
                   onClick={() => openForm("")}
-                  className="cursor-pointer bg-[#5CC6EC] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
+                  className="cursor-pointer bg-[#17CFBF] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
                 >
                   Book Now
                 </button>
@@ -146,7 +146,7 @@ const Locations = () => {
         <div className="flex justify-center">
           <button
             onClick={() => openForm("")} // Open popup with empty city for custom input
-            className="bg-[#5CC6EC] text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+            className="bg-[#17CFBF] text-[var(--color-heading)] text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
           >
             City of My Choice
           </button>

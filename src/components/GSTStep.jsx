@@ -152,10 +152,10 @@ export default function GSTStep() {
 
         {/* CTA */}
         <div className="mt-8 text-center">
-          <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg">
+          <button className="px-6 py-3 bg-[#17CFBF] text-[var(--color-heading)] font-semibold rounded-lg">
             Start Your GST Registration
           </button>
-          <p className="mt-2 text-gray-500 text-xs sm:text-sm">
+          <p className="mt-2 text-[var(--color-subheading)] text-xs sm:text-sm">
             No hidden fees • 24/7 Support • 100% Compliance Guarantee
           </p>
         </div>

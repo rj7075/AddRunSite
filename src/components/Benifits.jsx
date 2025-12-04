@@ -141,7 +141,7 @@ const Benifits = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-xl flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                      <div className="w-12 h-12 bg-[var(--color-primary)] rounded-xl flex items-center justify-center group-hover:bg-blue-100 transition-colors">
                         {iconComponent[index]}
                       </div>
 
@@ -161,7 +161,7 @@ const Benifits = () => {
                   {/* <p className="text-gray-300 mt-4 text-left">
                     {audience.description}
                   </p> */}
-                  <div className="bg-white p-3">
+                  <div className="bg-[var(--color-secondary)] p-3">
                     <ul className="space-y-2">
                       {audience.detailsloss.map((detail, detailIndex) => (
                         <li

@@ -103,7 +103,7 @@ const Address = () => {
                   {highlights.map((item, index) => (
                     <div
                       key={index}
-                      className="bg-[var(--color-primary)] p-4 sm:p-5 rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
+                      className="bg-[var(--color-secondary)] p-4 sm:p-5 rounded-2xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition"
                     >
                       {item.icon}
                       <h3 className="text-[var(--color-heading)] font-semibold mt-3 text-sm sm:text-base">
@@ -131,7 +131,7 @@ const Address = () => {
             <div className="items-center flex mt-10 justify-center">
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#5CC6EC]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+                className="bg-[#17CFBF]  text-[var(--color-heading)] text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
               >
                 Reserve My Address
               </button>

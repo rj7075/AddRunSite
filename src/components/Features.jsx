@@ -108,7 +108,9 @@ const FeaturesSection = () => {
 
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <div className="bg-[#ffffff] p-4 rounded-lg shadow-sm">
-              <span className="text-2xl font-bold text-gray-900">₹650</span>
+              <span className="text-2xl font-bold text-[var(--color-heading)]">
+                ₹650
+              </span>
               <span className="text-gray-900">/mo</span>
               <p className="text-sm text-gray-900">Premium Virtual Office</p>
             </div>
@@ -116,7 +118,7 @@ const FeaturesSection = () => {
             <div className="text-xl text-gray-900">
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#5CC6EC] text-gray-100 items-center justify-center px-2 pb-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-[#17CFBF] text-gray-100 items-center justify-center px-2 pb-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <span className="text-5xl font-bold text-blue-100">→</span>
               </button>
@@ -143,7 +145,7 @@ const FeaturesSection = () => {
           href="https://assetsense.in/"
           target="_blank" // opens in new tab (optional)
           rel="noopener noreferrer"
-          className="bg-[#5CC6EC] text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+          className="bg-[#17CFBF] text-[var(--color-heading)] text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
         >
           Know More About US
         </a>

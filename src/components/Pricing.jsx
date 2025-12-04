@@ -193,7 +193,7 @@ const Pricing = () => {
                   className={`w-full py-1 text-lg font-semibold rounded-lg group ${
                     plan.popular
                       ? "bg-gradient-to-r mt-2 from-blue-500 to-purple-600 text-white shadow-md hover:shadow-lg transition-shadow"
-                      : "bg-gray-100 text-gray-900 hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:text-white transition-all"
+                      : "bg-[var(--color-primary)] text-gray-900 hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-600 hover:text-white transition-all"
                   }`}
                 >
                   <span className="flex items-center justify-center">

@@ -12,7 +12,7 @@ const Cta = () => {
     setIsFormOpen(true);
   };
   return (
-    <section className="py-16 bg-[var(--color-priamry)] text-[var(--color-heading)]">
+    <section className="py-16 bg-[var(--color-secondary)] text-[var(--color-heading)]">
       <div className="container mx-auto px-4 gap-4 text-center">
         <h2 className="text-3xl font-bold mb-6">
           Ready to Activate Your Virtual Office?
@@ -26,7 +26,7 @@ const Cta = () => {
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
           <button
             onClick={() => handleOpenForm("Reserve My Address")}
-            className="bg-[var(--color-secondary)] text-gray-900 text-lg px-8 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+            className="bg-[var(--color-primary)] text-[var(--color-heading)] text-lg px-8 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
           >
             Start For ₹650
           </button>
@@ -36,7 +36,7 @@ const Cta = () => {
             isOpen={isFormOpen}
             onClose={() => setIsFormOpen(false)}
             formTitle={formTitle}
-            className="text-gray-900"
+            className="text-[var(--color-heading)]"
           />
 
           <a

@@ -5,8 +5,13 @@ export default function TrustedBySlider() {
   const logos = [
     "bank/sbi.webp",
     "bank/hdfc.svg",
-    "bank/yesbank.png",
-    "bank/icici.png",
+    "bank/yesbank1.png",
+    "bank/icici1.png",
+    "bank/PNB_Logo.png",
+    "bank/axis2.png",
+    "bank/kotak.svg",
+    "bank/idfc.svg",
+    "bank/indusland.webp",
   ];
 
   return (
@@ -43,7 +48,7 @@ export default function TrustedBySlider() {
         }
 
         .animate-slide {
-          animation: slide 10s linear infinite;
+          animation: slide 30s linear infinite;
           width: max-content;
         }
       `}</style>

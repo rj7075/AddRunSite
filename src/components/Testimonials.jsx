@@ -188,7 +188,7 @@ const TestimonialsSection = () => {
             href="https://assetsense.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#5CC6EC] text-gray-900 text-sm md:text-lg px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-[#17CFBF] text-[var(--color-heading)] text-sm md:text-lg px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           >
             Know More About Virtual Office
           </a>

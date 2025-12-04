@@ -137,7 +137,7 @@ export default function CTASection() {
             <button
               key={index}
               onClick={() => openForm(city)}
-              className="group relative bg-[var(--color-primary)] rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-5 border border-gray-100 hover:border-blue-300 overflow-hidden"
+              className="group relative bg-[var(--color-secondary)] rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-5 border border-gray-400 hover:border-blue-300 overflow-hidden"
             >
               <div className="flex flex-col items-center">
                 <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-200 transition-colors">

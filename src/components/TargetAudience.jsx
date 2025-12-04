@@ -180,7 +180,7 @@ const TargetAudience = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-xl flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                      <div className="w-12 h-12 bg-[var(--color-primary)] rounded-xl flex items-center justify-center group-hover:bg-blue-100 transition-colors">
                         {iconComponents[index]}
                       </div>
 
@@ -230,7 +230,7 @@ const TargetAudience = () => {
           href="https://assetsense.in/"
           target="_blank" // opens in new tab (optional)
           rel="noopener noreferrer"
-          className="bg-[#5CC6EC] text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+          className="bg-[#17CFBF] text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
         >
           Visit Main Website
         </a>

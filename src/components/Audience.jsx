@@ -1,12 +1,11 @@
 import React from "react";
+import { LuRocket, LuShoppingCart, LuLaptop, LuGlobe } from "react-icons/lu";
 
 const AudienceSection = () => {
-  // Audience data stored in an array
   const audienceData = [
     {
       id: 1,
-      icon: "fas fa-rocket",
-      iconColor: "text-blue-500",
+      icon: <LuRocket className="text-blue-500 text-3xl" />,
       bgColor: "bg-blue-100",
       title: "Start-ups & SMEs launching in NCR",
       description:
@@ -14,8 +13,7 @@ const AudienceSection = () => {
     },
     {
       id: 2,
-      icon: "fas fa-shopping-cart",
-      iconColor: "text-green-500",
+      icon: <LuShoppingCart className="text-green-500 text-3xl" />,
       bgColor: "bg-green-100",
       title: "Amazon / Flipkart Sellers needing multi-state GST",
       description:
@@ -23,8 +21,7 @@ const AudienceSection = () => {
     },
     {
       id: 3,
-      icon: "fas fa-laptop-code",
-      iconColor: "text-purple-500",
+      icon: <LuLaptop className="text-purple-500 text-3xl" />,
       bgColor: "bg-purple-100",
       title: "Consultants & Freelancers who work remote but need a city HQ",
       description:
@@ -32,8 +29,7 @@ const AudienceSection = () => {
     },
     {
       id: 4,
-      icon: "fas fa-globe-americas",
-      iconColor: "text-red-500",
+      icon: <LuGlobe className="text-red-500 text-3xl" />,
       bgColor: "bg-red-100",
       title: "Global Companies testing Indian market",
       description:
@@ -61,8 +57,9 @@ const AudienceSection = () => {
               <div
                 className={`w-16 h-16 ${item.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
               >
-                <i className={`${item.icon} ${item.iconColor} text-2xl`}></i>
+                {item.icon}
               </div>
+
               <h3 className="text-xl font-semibold text-[#bdbcc4] mb-4">
                 {item.title}
               </h3>
