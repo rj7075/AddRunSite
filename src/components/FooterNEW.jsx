@@ -1,13 +1,13 @@
 import React from "react";
 import {
   FiFacebook,
-  FiTwitter,
   FiLinkedin,
   FiInstagram,
   FiMail,
   FiPhone,
   FiMapPin,
 } from "react-icons/fi";
+import { FaYoutube } from "react-icons/fa";
 
 const FooterNew = () => {
   return (
@@ -30,24 +30,28 @@ const FooterNew = () => {
               </p>
               <div className="flex space-x-4">
                 <a
+                  target="_blank"
                   href="https://www.facebook.com/AssetSenseIndia"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <FiFacebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://x.com/mohan_skills"
+                  target="_blank"
+                  href="https://www.youtube.com/@assetsenseworkspaces"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  <FiTwitter className="w-5 h-5" />
+                  <FaYoutube className="w-5 h-5" />
                 </a>
                 <a
+                  target="_blank"
                   href="https://www.linkedin.com/company/asset-sense-pvt-ltd"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <FiLinkedin className="w-5 h-5" />
                 </a>
                 <a
+                  target="_blank"
                   href="https://www.instagram.com/assetsense1/#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
