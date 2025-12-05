@@ -19,7 +19,7 @@ const Header3 = () => {
             <div className="flex items-center space-x-2">
               <a href="/virtual-office">
                 <img
-                  className="mt-4 w-35 h-16 overflow-hidden"
+                  className="mt-4 w-40 h-17 overflow-hidden"
                   src="/assetlogo.webp"
                   alt="logo"
                 />
@@ -31,20 +31,20 @@ const Header3 = () => {
             <nav className="hidden md:flex items-center space-x-6">
               <a
                 href="#pricing"
-                className="text-sm  text-gray-300 hover:text-white transition-colors"
+                className="text-sm  text-gray-100 hover:text-white transition-colors"
               >
                 Pricing
               </a>
               <a
                 href="#faq"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
+                className="text-sm text-gray-100 hover:text-white transition-colors"
               >
                 FAQ
               </a>
 
               <button
                 onClick={() => handleOpenForm("Book a Call")}
-                className="cursor-pointer bg-[#17CFBF] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
+                className="cursor-pointer font-semibold bg-[var(--cta-color)] border border-gray-700 text-[var(--color-heading)]  px-3 py-1.5 rounded-md text-sm transition-colors"
               >
                 Check Availability
               </button>
@@ -57,7 +57,7 @@ const Header3 = () => {
 
             {/* Contact Info */}
             <div className="flex items-center space-x-4">
-              <div className="hidden lg:flex items-center space-x-2 text-xs text-gray-300">
+              <div className="hidden lg:flex items-center space-x-2 text-xs text-gray-100">
                 {/* Phone Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -21,7 +21,7 @@ export default function TrustedBySlider() {
       <h3 className="flex items-center justify-center gap-2 py-5 text-sm font-bold mb-4">
         <span className="flex items-center gap-2 bg-blue-50 text-green-700 px-4 py-2 rounded-full shadow-sm">
           <FaShieldAlt className="text-green-600 text-sm" />
-          Trusted by Major Banks
+          NOC Accepted at all Major Banks
         </span>
       </h3>
 
@@ -48,7 +48,7 @@ export default function TrustedBySlider() {
         }
 
         .animate-slide {
-          animation: slide 30s linear infinite;
+          animation: slide 40s linear infinite;
           width: max-content;
         }
       `}</style>
@@ -57,19 +57,19 @@ export default function TrustedBySlider() {
       <div className="mt-6 text-center">
         <div className="flex flex-wrap justify-center gap-6 mt-3">
           {/* Badge 1 */}
-          <div className="flex items-center gap-2 text-gray-700">
+          <div className="flex items-center gap-2 text-md font-semibold text-[var(--color-subheading)]">
             <FaCheckCircle className="text-green-600 text-xl" />
             <span>Verified Service</span>
           </div>
 
           {/* Badge 2 */}
-          <div className="flex items-center gap-2 text-gray-700">
+          <div className="flex items-center gap-2 text-md font-semibold text-[var(--color-subheading)]">
             <FaShieldAlt className="text-green-600 text-xl" />
             <span>Secure & Trusted</span>
           </div>
 
           {/* Badge 3 */}
-          <div className="flex items-center gap-2 text-gray-700">
+          <div className="flex items-center gap-2 text-md font-semibold text-[var(--color-subheading)]">
             <FaCertificate className="text-green-600 text-xl" />
             <span>Certified Experts</span>
           </div>

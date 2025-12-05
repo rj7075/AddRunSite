@@ -57,9 +57,10 @@ const FAQSection = () => {
     <section className="py-16 bg-[var(--color-primary)]" id="faq">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
-          Frequently Asked Questions
+          Frequently Asked{" "}
+          <span className="text-[var(--color-important)]">Questions</span>
         </h2>
-        <p className="text-lg text-center text-[var(--color-subheading)] mb-12">
+        <p className="text-md text-center font-semibold text-[var(--color-subheading)] mb-12">
           Everything you need to know about our virtual office services
         </p>
 
@@ -90,7 +91,7 @@ const FAQSection = () => {
                 </button>
 
                 {openIndex === index && (
-                  <div className="p-4 font-semibold border-t text-[var(--color-subheading)] border-gray-200">
+                  <div className="p-4 font-semibold border-t text-[var(--color-subheading)] border-gray-400">
                     {faq.answer}
                   </div>
                 )}

@@ -1,21 +1,16 @@
 // InlineForm.jsx
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
-import { FaCheckCircle } from "react-icons/fa";
+
+import { useNavigate } from "react-router-dom";
 
 export default function InlineForm({ initialCity = "" }) {
   const [agreed, setAgreed] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    city: initialCity,
+    city: " ",
     phone: "",
   });
-  const items = [
-    "MCA Compliant",
-    "GST Registration Ready",
-    "Bank Account Support",
-    "Mail Forwarding",
-  ];
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -56,6 +51,9 @@ export default function InlineForm({ initialCity = "" }) {
 
       setFormData({ name: "", city: "", phone: "" });
       setAgreed(false);
+      setTimeout(() => {
+        window.location.href = "https://assetsense.in"; // <-- your website
+      }, 1000);
     } catch (err) {
       console.error(err);
       toast.error("❌ Something went wrong. Please try again.");
@@ -127,19 +125,11 @@ export default function InlineForm({ initialCity = "" }) {
 
         <button
           type="submit"
-          className="w-full bg-[#17CFBF] text-white py-2 rounded-lg font-semibold hover:bg-[#161C25] transition"
+          className="w-full cursor-pointer bg-[var(--cta-color)] text-[var(--color-heading)] py-2 rounded-lg font-semibold  transition"
         >
           Check Availability
         </button>
       </form>
-      <div className="mt-10 grid grid-cols-1  sm:grid-cols-2 gap-y-3 gap-x-6">
-        {items.map((item, index) => (
-          <div key={index} className="flex items-center space-x-2">
-            <FaCheckCircle className="text-green-600 text-lg" />
-            <span className="text-sm text-gray-700 font-medium">{item}</span>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }

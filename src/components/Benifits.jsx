@@ -118,7 +118,8 @@ const Benifits = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-heading)]">
-            Is This For You?
+            Is This{" "}
+            <span className="text-[var(--color-important)]">For You ?</span>
           </h2>
           <p className="text-xl md:text-xl text-[var(--color-subheading)] font-semibold max-w-2xl mx-auto">
             Perfect for businesses of all sizes looking for professional

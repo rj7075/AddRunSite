@@ -40,8 +40,9 @@ const AudienceSection = () => {
   return (
     <section className="py-16 bg-[var(--color-primary)]" id="audience">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#d6dbdb] mb-4">
-          Is This For You?
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#d6dbdb] mb-4">
+          Is This{" "}
+          <span className="text-[var(--color-important)]">For You?</span>
         </h2>
         <p className="text-lg text-center text-gray-300 mb-12">
           Perfect for businesses of all sizes looking for professional presence

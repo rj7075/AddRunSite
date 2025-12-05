@@ -102,16 +102,16 @@ export default function CTASection() {
     <section className="py-16 bg-[var(--color-primary)] text-center">
       <div className="text-center mb-12 px-4">
         {/* Heading with gradient underline */}
-        <h2 className=" text-3xl sm:text-4xl lg:text-5xl mr-4 font-extrabold text-[var(--color-heading)] mb-4 relative inline-block">
+        <h2 className=" text-3xl md:text-4xl mr-4 font-extrabold text-[var(--color-heading)] mb-4 relative inline-block">
           Other Locations for Your
-          <span className="px-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+          <span className="px-2 bg-[var(--color-primary)] text-[var(--color-important)]">
             Virtual Office
           </span>
           <span className="absolute left-0 -bottom-2 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
         </h2>
 
         {/* Subtext with background glow and padding */}
-        <p className="max-w-3xl mx-auto text-[var(--color-subheading)] text-sm sm:text-base md:text-lg font-medium mb-6 px-4 py-2 bg-[var(--color-secondary)] rounded-lg shadow-md">
+        <p className="max-w-3xl mx-auto text-[var(--color-subheading)] text-sm sm:text-base md:text-md font-medium mb-6 px-4 py-2 bg-[var(--color-secondary)] rounded-lg shadow-md">
           Click on any city where you want Your Virtual Office, or enter a
           custom city of your choice. Our team will reach out to you promptly
           with details and support.
@@ -120,7 +120,7 @@ export default function CTASection() {
         {/* Optional call-to-action button */}
         <button
           onClick={() => handleOpenForm("Reserve My Address")}
-          className="mt-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 hover:scale-105"
+          className="mt-2 bg-gradient-to-r cursor-pointer from-blue-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 hover:scale-105"
         >
           Explore Cities
         </button>
@@ -137,7 +137,7 @@ export default function CTASection() {
             <button
               key={index}
               onClick={() => openForm(city)}
-              className="group relative bg-[var(--color-secondary)] rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-5 border border-gray-400 hover:border-blue-300 overflow-hidden"
+              className="group relative cursor-pointer bg-[var(--color-secondary)] rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-5 border border-gray-400 hover:border-blue-300 overflow-hidden"
             >
               <div className="flex flex-col items-center">
                 <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-200 transition-colors">

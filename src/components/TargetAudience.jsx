@@ -157,9 +157,12 @@ const TargetAudience = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-heading)]">
-            Is This For You?
+            Is This For{" "}
+            <span className="text-[var(--color-important)]">
+              Your Business ?
+            </span>
           </h2>
-          <p className="text-xl text-[var(--color-subheading)] max-w-2xl mx-auto">
+          <p className="text-md font-semibold text-[var(--color-subheading)] max-w-2xl mx-auto">
             Perfect for businesses of all sizes looking for professional
             presence without the overhead
           </p>
@@ -230,7 +233,7 @@ const TargetAudience = () => {
           href="https://assetsense.in/"
           target="_blank" // opens in new tab (optional)
           rel="noopener noreferrer"
-          className="bg-[#17CFBF] text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+          className="bg-[var(--cta-color)] text-gray-900 text-lg px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
         >
           Visit Main Website
         </a>

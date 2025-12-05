@@ -6,8 +6,11 @@ import {
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
+import GSTForm from "./GSTpopup";
 
 export default function GSTStep() {
+  const [showPopup, setShowPopup] = useState(false);
   const scrollRef = useRef(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -68,11 +71,11 @@ export default function GSTStep() {
         <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-2">
           Simple & Efficient
         </span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-heading)]">
           Get Your GST Registration in{" "}
-          <span className="text-blue-600">3 Simple Steps</span>
+          <span className="text-[var(--color-important)]">3 Simple Steps</span>
         </h2>
-        <p className="text-sm sm:text-base text-gray-600 mt-2">
+        <p className="text-md font-semibold text-[var(--color-subheading)] mt-2">
           Fast, simple, and fully compliant — start operating your business
           quickly.
         </p>
@@ -80,83 +83,93 @@ export default function GSTStep() {
 
       {/* Steps Section */}
       <div className="relative max-w-6xl mx-auto">
-        {/* Mobile Arrows outside scroll */}
+        {/* Mobile Arrows */}
         {isMobile && (
           <>
             <button
               onClick={() => scroll("left")}
               disabled={currentStep === 0}
-              className="absolute left-0 top-1/3 -translate-y-1/2 z-20 p-3 bg-white shadow rounded-full text-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="absolute left-0 top-1/3 -translate-y-1/2 z-20 p-3 bg-gray-400 shadow-sm rounded-full text-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
             >
-              <FaChevronLeft />
+              <FaChevronLeft className="text-[var(--color-primary)]" />
             </button>
 
             <button
               onClick={() => scroll("right")}
               disabled={currentStep === steps.length - 1}
-              className="absolute right-0 top-1/3 -translate-y-1/2 z-20 p-3 bg-white shadow rounded-full text-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="absolute right-0 top-1/3 -translate-y-1/2 z-20 p-3 bg-gray-400 shadow-sm rounded-full text-gray-700 disabled:opacity-40 disabled:cursor-not-allowed"
             >
-              <FaChevronRight />
+              <FaChevronRight className="text-[var(--color-primary)]" />
             </button>
           </>
         )}
 
+        {/* Steps + Arrows */}
         <div
           ref={scrollRef}
-          className="flex lg:grid lg:grid-cols-3 gap-4 overflow-x-auto scroll-smooth px-1 py-2 scrollbar-hide"
+          className="flex lg:grid lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 overflow-x-auto scroll-smooth px-1 py-2 scrollbar-hide"
         >
           {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`relative flex flex-col items-center justify-center text-center flex-shrink-0 w-[80vw] sm:w-[300px] lg:w-full h-[280px] rounded-xl shadow ${step.bgColor}`}
-            >
-              {/* Step Number */}
-              <div className="absolute top-1 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 flex items-center justify-center text-white font-bold text-sm shadow">
-                {index + 1}
+            <>
+              {/* Step Card */}
+              <div
+                key={index}
+                className={`relative flex flex-col items-center justify-center text-center flex-shrink-0 w-[80vw] sm:w-[300px] lg:w-full h-[280px] rounded-xl shadow ${step.bgColor}`}
+              >
+                <div className="absolute top-1 left-1/2 -translate-x-1/2 w-15 h-6 rounded-full bg-gradient-to-r from-orange-500 to-amber-400 flex items-center justify-center text-white font-bold text-sm shadow">
+                  Step {index + 1}
+                </div>
+
+                <div className="flex flex-col items-center justify-center w-full h-full px-4">
+                  <div
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-r ${step.gradient} flex items-center justify-center text-white shadow mb-4`}
+                  >
+                    {step.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900">
+                    {step.title}
+                  </h3>
+                  <p className="text-md font-semibold text-[var(--color-subheading)] text-sm mt-1">
+                    {step.desc}
+                  </p>
+                </div>
               </div>
 
-              {/* Content */}
-              <div className="flex flex-col items-center justify-center w-full h-full px-4">
-                <div
-                  className={`w-14 h-14 rounded-xl bg-gradient-to-r ${step.gradient} flex items-center justify-center text-white shadow mb-4`}
-                >
-                  {step.icon}
+              {/* Arrow Between Cards — Only Desktop */}
+              {index < steps.length - 1 && (
+                <div className=" flex items-center justify-center">
+                  <GoArrowRight className="text-gray-600 text-2xl" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm mt-1">{step.desc}</p>
-              </div>
-            </div>
+              )}
+            </>
           ))}
         </div>
 
-        {/* Desktop Arrows */}
-        {/* {!isMobile && (
-          <>
-            <button
-              onClick={() => scroll("left")}
-              className="hidden lg:flex absolute -left-3 top-1/3 -translate-y-1/2 z-10 p-3 bg-white shadow rounded-full"
-            >
-              <FaChevronLeft className="text-lg" />
-            </button>
-
-            <button
-              onClick={() => scroll("right")}
-              className="hidden lg:flex absolute -right-3 top-1/3 -translate-y-1/2 z-10 p-3 bg-white shadow rounded-full"
-            >
-              <FaChevronRight className="text-lg" />
-            </button>
-          </>
-        )} */}
-
-        {/* CTA */}
+        {/* CTA Button */}
         <div className="mt-8 text-center">
-          <button className="px-6 py-3 bg-[#17CFBF] text-[var(--color-heading)] font-semibold rounded-lg">
-            Start Your GST Registration
-          </button>
-          <p className="mt-2 text-[var(--color-subheading)] text-xs sm:text-sm">
-            No hidden fees • 24/7 Support • 100% Compliance Guarantee
+          <div className="relative inline-block">
+            <button
+              onClick={() => setShowPopup(true)}
+              className="px-6 py-3 bg-[var(--cta-color)] cursor-pointer text-[var(--color-heading)] font-semibold rounded-lg relative"
+            >
+              Take The GST Compliance Shield Quiz
+            </button>
+            <GSTForm
+              show={showPopup}
+              onClose={() => setShowPopup(false)}
+              city=" "
+            />
+
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full shadow-md animate-pulse">
+              NEW
+            </span>
+
+            <span className="absolute -top-2 -right-2 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
+          </div>
+
+          <p className="mt-2 text-md font-semibold text-[var(--color-subheading)]">
+            Avoid Rejection By Answering These Questions Related To
+            Documentation
           </p>
         </div>
       </div>

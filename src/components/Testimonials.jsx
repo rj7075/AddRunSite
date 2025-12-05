@@ -104,10 +104,13 @@ const TestimonialsSection = () => {
   return (
     <section className="py-16 bg-[var(--color-primary)]" id="testimonials">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
-          What Clients Say About Asset Sense Virtual Office
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-heading)] mb-4">
+          What Clients Say About{" "}
+          <span className="text-[var(--color-important)]">
+            Asset Sense Virtual Office
+          </span>
         </h2>
-        <p className="text-lg text-center text-[var(--color-subheading)] mb-12">
+        <p className="text-md font-semibold text-center text-[var(--color-subheading)] mb-12">
           Rated 4.9/5 from 384 Google Reviews
         </p>
 
@@ -188,7 +191,7 @@ const TestimonialsSection = () => {
             href="https://assetsense.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#17CFBF] text-[var(--color-heading)] text-sm md:text-lg px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-[var(--cta-color)] text-[var(--color-heading)] text-sm md:text-lg px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           >
             Know More About Virtual Office
           </a>

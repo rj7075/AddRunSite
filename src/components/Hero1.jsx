@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import PopupForm from "./PopupForm";
 import InlineForm from "./InlineForm";
 
+// React Icons
+import { FiClock, FiUsers } from "react-icons/fi";
+import { FaStar, FaCheckCircle } from "react-icons/fa";
+
 const Hero1 = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formTitle, setFormTitle] = useState("");
@@ -10,8 +14,16 @@ const Hero1 = () => {
     setFormTitle(title);
     setIsFormOpen(true);
   };
+
+  const items = [
+    "MCA Compliant",
+    "GST Registration Ready",
+    "Bank Account Support",
+    "Mail Forwarding",
+  ];
+
   return (
-    <section className="relative min-h-screen flex py-7 pb-6 items-center justify-center overflow-hidden bg-[var(--color-primary)] from-blue-900 via-[#0E141B] to-purple-900">
+    <section className="relative min-h-screen flex py-7 pb-6 items-center justify-center overflow-hidden bg-[var(--color-primary)]">
       {/* Background effects */}
       <div className="absolute bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent"></div>
 
@@ -20,30 +32,53 @@ const Hero1 = () => {
           {/* Content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
-              <span className="bg-[#3196a5]/20 text-[#289165] border  border-[#3196a5]/30 px-4 py-2 rounded-full text-sm font-bold">
+              <span className="bg-[#3196a5]/20 text-[#289165] border border-[#3196a5]/30 px-4 py-1 rounded-full text-sm font-bold">
                 Go Live in 24 Hours
               </span>
 
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight py-2 text-gray">
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight py-2 text-gray">
                 Get an{" "}
-                <span className="bg-[#5CC6EC] from-[#3196a5]  bg-clip-text text-transparent">
+                <span className="bg-[var(--color-important)] bg-clip-text text-transparent">
                   MCA- & GST-Ready
                 </span>{" "}
-                Business Address in any City In India in 3 days.
+                Virtual Office Address in Any Indian City in 3 Days
               </h1>
 
-              <p className="text-xl text-gray-600 max-w-xl">
-                Plans starting from just ₹999/mo. Stop burning cash on rent.
-                Start operating nationwide with a compliant virtual office at a
-                city of your choice.
+              {/* Inline Bullet Points */}
+              <p className="text-md font-semibold text-[var(--color-subheading)] max-w-xl text-left">
+                Perfect for
+                {/* List container */}
+                <span className="mt-2 flex flex-col gap-2">
+                  <span className="flex items-center gap-2">
+                    <FaStar className="text-[var(--color-important)] text-sm" />
+                    GST registration
+                  </span>
+
+                  <span className="flex items-center gap-2">
+                    <FaStar className="text-[var(--color-important)] text-sm" />
+                    Bank account opening
+                  </span>
+
+                  <span className="flex items-center gap-2">
+                    <FaStar className="text-[var(--color-important)] text-sm" />
+                    MCA compliance
+                  </span>
+                </span>
+                {/* Pricing section */}
+                <div className="mt-3 flex items-center">
+                  <span>Pricing Starts from</span>
+                  <span className="font-bold ml-2 text-[var(--color-heading)]">
+                    ₹650/month
+                  </span>
+                </div>
               </p>
             </div>
 
-            {/* CTA */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#17CFBF]  text-gray-900 text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+                className="bg-[var(--cta-color)] cursor-pointer text-[var(--color-heading)] text-md px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 Reserve My Address
               </button>
@@ -54,113 +89,65 @@ const Hero1 = () => {
                 formTitle={formTitle}
               />
 
+              {/* Clock Icon */}
               <div className="flex items-center space-x-2 text-sm text-gray-600">
-                {/* Clock Icon */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+                <FiClock className="text-[#3196a5]" size={18} />
                 <span className="font-semibold">Setup in 24 hours</span>
               </div>
             </div>
 
-            {/* Trust indicators */}
+            {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-6 pt-8 border-t border-white/10">
-              <div className="flex items-center space-x-2">
-                {/* Users Icon */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#3196a5"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-                <span className="text-sm font-semibold text-gray-600">
+              {/* Users Badge */}
+              <div className="flex items-center space-x-2 bg-green-100 text-green-800 px-2 py-1 rounded-full shadow-sm">
+                <FiUsers className="text-[#3196a5]" size={18} />
+                <span className="text-sm font-semibold">
                   Trusted by 500+ Indian founders
                 </span>
               </div>
 
-              <div className="flex items-center space-x-2">
+              {/* Stars + Rating */}
+              <div className="flex items-center space-x-2 bg-yellow-100 px-2 py-1 rounded-full shadow-sm">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    // Star Icon
-                    <svg
-                      key={i}
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      className="text-yellow-400"
-                    >
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
+                    <FaStar key={i} className="text-yellow-500" size={16} />
                   ))}
                 </div>
-                <span className="text-sm font-semibold text-gray-600">
+                <span className="text-sm font-semibold text-yellow-800">
                   4.9★ Google rating
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Right Side (Form + Feature Points) */}
           <div className="relative">
             <div className="rounded-2xl p-2 shadow-xl">
-              <div
-                className="border bg-[#0c5c7c] rounded-xl flex items-center justify-center 
-                  h-auto md:aspect-square"
-              >
+              {/* FORM BOX – Fixed height issue */}
+              <div className="border bg-[#0c5c7c] rounded-xl p-1 flex items-center justify-center h-auto">
                 <InlineForm />
-                {/* <img
-                  src="/Hero pic.webp"
-                  alt="Hero Image"
-                  loading="lazy"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="w-full h-full object-cover"
-                /> */}
+              </div>
+
+              {/* 4 Feature Points below form */}
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 bg-white/10 p-4 rounded-xl">
+                {items.map((item, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <FaCheckCircle className="text-green-500 text-lg" />
+                    <span className="text-sm text-[var(--color-heading)] font-semibold">
+                      {item}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Floating badges */}
+            {/* Floating badge top-right */}
             <div className="absolute -top-4 -right-4 bg-yellow-100 text-yellow-800 px-3 py-2 rounded-full text-xs font-medium flex items-center space-x-1 shadow-md">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="currentColor"
-                strokeWidth="0"
-                className="text-yellow-500"
-              >
-                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-              </svg>
+              <FaStar className="text-yellow-500" size={12} />
               <span>MCA Approved</span>
             </div>
 
+            {/* Floating badge bottom-left */}
             <div className="absolute -bottom-4 -left-4 bg-green-100 text-green-800 px-3 py-2 rounded-full text-xs font-medium shadow-md">
               GST Ready
             </div>

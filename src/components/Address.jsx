@@ -53,9 +53,10 @@ const Address = () => {
       <section class="py-16 bg-[var(--color-primary)]">
         <div class="container mx-auto px-4">
           <h2 class="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
-            Your Legal Address
+            Your{" "}
+            <span className="text-[var(--color-important)]">Legal Address</span>
           </h2>
-          <p class="text-xl text-center text-[var(--color-subheading)] font-semibold mb-12">
+          <p class="text-md text-center text-[var(--color-subheading)] font-semibold mb-12">
             Pick a City of your choice from more than 40+ locations in India
           </p>
 
@@ -78,7 +79,7 @@ const Address = () => {
 
                   <p className="text-[var(--color-subheading)] flex gap-2 items-start mb-4">
                     <FaShieldAlt className="text-purple-700 text-xl mt-1 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">
+                    <span className="text-md text-[var(--color-subheading)] font-semibold">
                       Reliable Service Trusted by 500+ businesses nationwide
                     </span>
                   </p>
@@ -131,7 +132,7 @@ const Address = () => {
             <div className="items-center flex mt-10 justify-center">
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#17CFBF]  text-[var(--color-heading)] text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+                className="bg-[var(--cta-color)] cursor-pointer text-[var(--color-heading)] text-md px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
               >
                 Reserve My Address
               </button>

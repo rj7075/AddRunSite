@@ -79,12 +79,14 @@ const Locations = () => {
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[var(--color-heading)]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[var(--color-heading)]">
             Choose Your City for
             <br />
-            <span className="text-blue-600">Virtual Office</span>
+            <span className="text-[var(--color-important)]">
+              Virtual Office
+            </span>
           </h2>
-          <p className="text-xl text-[var(--color-subheading)] max-w-3xl mx-auto">
+          <p className="text-md font-semibold text-[var(--color-subheading)] max-w-3xl mx-auto">
             Establish your business presence in prime commercial locations
             across India's major business hubs. All addresses are legally
             compliant and professionally managed.
@@ -133,7 +135,7 @@ const Locations = () => {
                 </div>
                 <button
                   onClick={() => openForm("")}
-                  className="cursor-pointer bg-[#17CFBF] border border-gray-700 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
+                  className="cursor-pointer bg-[var(--cta-color)] border border-gray-700 text-[var(--color-heading)] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
                 >
                   Book Now
                 </button>
@@ -146,7 +148,7 @@ const Locations = () => {
         <div className="flex justify-center">
           <button
             onClick={() => openForm("")} // Open popup with empty city for custom input
-            className="bg-[#17CFBF] text-[var(--color-heading)] text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+            className="bg-[var(--cta-color)] cursor-pointer text-[var(--color-heading)] text-md px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
           >
             City of My Choice
           </button>

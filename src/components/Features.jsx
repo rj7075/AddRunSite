@@ -56,10 +56,10 @@ const FeaturesSection = () => {
     <section className="py-16 bg-[var(--color-primary)]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-[var(--color-heading)] mb-4">
-          Why Asset Sense
+          Why <span className="text-[var(--color-important)]">Asset Sense</span>
         </h2>
 
-        <p className="text-lg text-center text-[var(--color-subheading)] max-w-3xl mx-auto mb-12">
+        <p className="text-md font-semibold text-center text-[var(--color-subheading)] max-w-3xl mx-auto mb-12">
           Everything you need to run a compliant business, at a fraction of the
           cost
         </p>
@@ -97,11 +97,12 @@ const FeaturesSection = () => {
 
         {/* Bottom Section */}
         <div className="mt-12 bg-[var(--color-secondary)] p-8 rounded-xl text-center">
-          <h3 className="text-2xl font-bold text-[var(--color-heading)] mb-2">
-            Save 95% on Office Costs
+          <h3 className="text-3xl font-bold text-[var(--color-heading)] mb-2">
+            Save 95% on{" "}
+            <span className="text-[var(--color-important)]">Office Costs</span>
           </h3>
 
-          <p className="text-[var(--color-subheading)] mb-6">
+          <p className="text-[var(--color-subheading)] text-md font-semibold mb-6">
             Get all the benefits of a premium business address without the
             overhead
           </p>
@@ -111,16 +112,22 @@ const FeaturesSection = () => {
               <span className="text-2xl font-bold text-[var(--color-heading)]">
                 ₹650
               </span>
-              <span className="text-gray-900">/mo</span>
-              <p className="text-sm text-gray-900">Premium Virtual Office</p>
+              <span className=" font-semibold text-[var(--color-subheading)]">
+                /mo
+              </span>
+              <p className="text-sm font-semibold text-[var(--color-subheading)]">
+                Premium Virtual Office
+              </p>
             </div>
 
             <div className="text-xl text-gray-900">
               <button
                 onClick={() => handleOpenForm("Reserve My Address")}
-                className="bg-[#17CFBF] text-gray-100 items-center justify-center px-2 pb-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-[var(--cta-color)] text-gray-100 items-center justify-center px-2 pb-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <span className="text-5xl font-bold text-blue-100">→</span>
+                <span className="text-5xl font-bold text-[var(--color-heading)]">
+                  →
+                </span>
               </button>
               <PopupForm
                 isOpen={isFormOpen}
@@ -133,7 +140,7 @@ const FeaturesSection = () => {
               <span className="text-2xl font-bold text-green-600">
                 Save 95%
               </span>
-              <p className="text-sm text-gray-700">
+              <p className="text-sm font-semibold text-[var(--color-subheading)]">
                 Compared to traditional office
               </p>
             </div>
@@ -145,9 +152,9 @@ const FeaturesSection = () => {
           href="https://assetsense.in/"
           target="_blank" // opens in new tab (optional)
           rel="noopener noreferrer"
-          className="bg-[#17CFBF] text-[var(--color-heading)] text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
+          className="bg-[var(--cta-color)] text-[var(--color-heading)] text-md px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-[#267985] hover:to-green-600 transform hover:-translate-y-1"
         >
-          Know More About US
+          CHECK OUR CITY WISE PAYMENT PLAN
         </a>
       </div>
     </section>
