@@ -52,7 +52,8 @@ export default function InlineForm({ initialCity = "" }) {
       setFormData({ name: "", city: "", phone: "" });
       setAgreed(false);
       setTimeout(() => {
-        window.location.href = "https://assetsense.in"; // <-- your website
+        window.location.href =
+          "https://assetsense.in/compliance/gst-registration-checklist#quiz"; // <-- your website
       }, 1000);
     } catch (err) {
       console.error(err);
