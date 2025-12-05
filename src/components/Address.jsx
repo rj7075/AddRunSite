@@ -57,7 +57,7 @@ const Address = () => {
             <span className="text-[var(--color-important)]">Legal Address</span>
           </h2>
           <p class="text-md text-center text-[var(--color-subheading)] font-semibold mb-12">
-            Pick a City of your choice from more than 40+ locations in India
+            Pick a City of your choice from more than 50+ locations in India
           </p>
 
           <div className="min-h-screen bg-[var(--color-primary)] py-8 px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ const Address = () => {
               <div className="w-full lg:w-1/2">
                 <div className="bg-[var(--color-secondary)] w-full p-4 sm:p-6 rounded-xl shadow-md h-full">
                   <h3 className="text-lg sm:text-xl text-[var(--color-subheading)] font-semibold mb-4">
-                    Virtual offices in 40+ Cities across India
+                    Virtual offices in 50+ Cities across India
                   </h3>
 
                   <div className="relative h-64 sm:h-80 md:h-75 lg:h-72 bg-[var(--color-secondary)] rounded-lg mb-4 overflow-hidden">
