@@ -128,7 +128,7 @@ export default function InlineForm({ initialCity = "" }) {
           type="submit"
           className="w-full cursor-pointer bg-[var(--cta-color)] text-[var(--color-heading)] py-2 rounded-lg font-semibold  transition"
         >
-          Check Availability
+          Submit
         </button>
       </form>
     </div>
