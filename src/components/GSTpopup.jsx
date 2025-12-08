@@ -1,5 +1,6 @@
 // PopupForm.jsx
 import InlineForm from "./InlineForm";
+import { FaTimes } from "react-icons/fa";
 
 export default function GSTForm({ show, onClose }) {
   if (!show) return null;
@@ -12,11 +13,11 @@ export default function GSTForm({ show, onClose }) {
           onClick={onClose}
           className="cursor-pointer absolute top-6 right-6 text-gray-800 text-xl"
         >
-          ✖
+          <FaTimes className="w-6 h-6" />
         </button>
 
         {/* Your same InlineForm here */}
-        <InlineForm />
+        <InlineForm isPopup={true} />
       </div>
     </div>
   );

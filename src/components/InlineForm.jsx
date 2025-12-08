@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 import { useNavigate } from "react-router-dom";
 
-export default function InlineForm({ initialCity = "" }) {
+export default function InlineForm({ initialCity = "", isPopup = false }) {
   const [agreed, setAgreed] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -128,7 +128,7 @@ export default function InlineForm({ initialCity = "" }) {
           type="submit"
           className="w-full cursor-pointer bg-[var(--cta-color)] text-[var(--color-heading)] py-2 rounded-lg font-semibold  transition"
         >
-          Check Availability
+          {isPopup ? "Submit" : "Check Availability"}
         </button>
       </form>
     </div>
