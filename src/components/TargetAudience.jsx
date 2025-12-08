@@ -5,27 +5,27 @@ const TargetAudience = () => {
 
   const audiences = [
     {
-      title: "Start-ups & SMEs",
-      subtitle: "launching in NCR",
+      title: "Start-up India",
+      subtitle: "Apply startup India certificate",
       description:
-        "Perfect for new businesses that need a professional address without the overhead of physical office space.",
+        "Offering compliant virtual office address for registration, drafting, and end-to-end support to startup india certificate apply successfully. ",
       details: [
-        "MCA registration support",
-        "Bank account opening assistance",
-        "Professional business address",
-        "Mail handling and forwarding",
+        "Expert drafting for startup india certificate innovation write-ups.",
+        "End-to-end startup india certificate apply and profile submission.",
+        "स्टार्टअप इंडिया सर्टिफिकेट व जीएसटी रजिस्ट्रेशन हेतु वैध वर्चुअल ऑफिस का पता।",
+        "स्टार्टअप इंडिया सर्टिफिकेट आवेदन व इनोवेशन राइट-अप तैयार करने में विशेषज्ञ सहायता।",
       ],
     },
     {
       title: "Amazon / Flipkart Sellers",
       subtitle: "needing multi-state GST",
       description:
-        "Essential for e-commerce sellers who need GST registration across multiple states.",
+        "Lowest Cost Setup, VPOB/APOB for New Resellers Minimize gst registration fees using the cheapest virtual office solution for your startup documentation.",
       details: [
-        "Multi-state GST registration",
-        "vpob gst",
-        "Return address for customers",
-        "Virtual office space in India (any city)",
+        "Start your Amazon business instantly by securing a compliant virtual office address that meets all government criteria. This is the perfect solution if you are wondering online business ke liye gst number kaise le without renting a physical shop. ",
+        "Amazon strictly requires a professional business address and not a residential one for better approval rates. We provide a registered office address with a valid NOC and Rent Agreement to ensure your seller account is verified smoothly. ",
+        "Don't spend your capital on rent; use the cheapest virtual office solution to get your documentation done. We help you save on gst registration fees and overheads so you can invest more in your inventory. ",
+        "If you want to store inventory in Amazon warehouses in major hubs, use our virtual office for GST registration in Delhi (or other states). This allows you to expand your reach without managing physical offices in every city. ",
       ],
     },
     {
@@ -41,15 +41,15 @@ const TargetAudience = () => {
       ],
     },
     {
-      title: "Global Companies",
-      subtitle: "testing Indian market",
+      title: "Udyog Aadhar (MSME)",
+      subtitle: "Udyam Registration",
       description:
-        "Perfect for international businesses entering the Indian market.",
+        "Asset Sense ki madad se MSME aur Laghu Udyog register karein aur government schemes ka labh lein. ",
       details: [
-        "Market entry support",
-        "Regulatory compliance",
-        "Local presence establishment",
-        "Virtual address for company registration in India",
+        "Service for Loan Eligibility: We select the correct NIC Codes during your Udyam registration to ensure your business qualifies for collateral-free government loans.",
+        "Service for Subsidies: Our compliant Virtual Office Address ensures your MSME application is approved without rejection, unlocking the 50% discount on Trademark & Patent fees.",
+        "Payment Protection Service: Asset Sense से सही Udyog Aadhar (MSME) रजिस्ट्रेशन करवाएं और ग्राहकों से पेमेंट में देरी होने पर कानूनी सुरक्षा (Payment Protection) पाएं।",
+        "Banking Benefit Service: हमारे Bank-Valid Rent Agreement से अपना करंट अकाउंट खुलवाएं और बैंक से ओवरड्राफ्ट (OD) पर ब्याज दर में छूट का लाभ उठाएं।",
       ],
     },
   ];
@@ -153,7 +153,7 @@ const TargetAudience = () => {
   );
 
   return (
-    <section className="py-20 relative bg-[var(--color-primary)]">
+    <section id="startups" className="py-25 relative bg-[var(--color-primary)]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-heading)]">
@@ -210,14 +210,14 @@ const TargetAudience = () => {
 
                 {isOpen && (
                   <div className="bg-[#fff] border-t border-blue-100 p-4">
-                    <ul className="space-y-2">
+                    <ul className="space-y-1">
                       {audience.details.map((detail, detailIndex) => (
                         <li
                           key={detailIndex}
-                          className="flex items-center gap-2 text-sm text-gray-600"
+                          className="flex items-start gap-4 text-sm text-gray-600"
                         >
-                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                          {detail}
+                          <div className="w-2 h-2 bg-green-500 rounded-full shrink-0 mt-2"></div>
+                          <span>{detail}</span>
                         </li>
                       ))}
                     </ul>

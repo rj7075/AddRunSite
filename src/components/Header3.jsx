@@ -30,10 +30,10 @@ const Header3 = () => {
             {/* Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
               <a
-                href="#pricing"
+                href="#startups"
                 className="text-sm  text-gray-100 hover:text-white transition-colors"
               >
-                Pricing
+                Start-up India
               </a>
               <a
                 href="#faq"
@@ -134,10 +134,10 @@ const Header3 = () => {
 
             <nav className="flex mt-2 items-center justify-center space-x-6 md:hidden">
               <a
-                href="#pricing"
+                href="#startups"
                 className="text-sm bg-green-100 text-green-800 p-1 border px-3 rounded-full transition-colors"
               >
-                Pricing
+                Start-up India
               </a>
               <a
                 href="#faq"

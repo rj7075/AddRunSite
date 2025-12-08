@@ -11,7 +11,7 @@ export default function TrustedBySlider() {
     "bank/axis2.png",
     "bank/kotak.svg",
     "bank/idfc.svg",
-    "bank/indusland.webp",
+    "bank/indus.png",
   ];
 
   return (

@@ -56,7 +56,7 @@ const Hero1 = () => {
 
                   <span className="flex items-center gap-2">
                     <FaStar className="text-[var(--color-important)] text-sm" />
-                    Bank account opening
+                    Start-up India / MSME Certificate
                   </span>
 
                   <span className="flex items-center gap-2">
