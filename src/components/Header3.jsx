@@ -132,23 +132,23 @@ const Header3 = () => {
               </div>
             </div>
 
-            <nav className="flex mt-2 items-center justify-center space-x-6 md:hidden">
+            <nav className="flex mt-2 items-center justify-center space-x-8 md:hidden">
               <a
                 href="#startups"
-                className="text-sm bg-green-100 text-green-800 p-1 border px-3 rounded-full transition-colors"
+                className="text-xs bg-green-100 text-green-800 p-1 border px-1 rounded-md transition-colors"
               >
                 Start-up India
               </a>
               <a
                 href="#faq"
-                className="text-sm bg-blue-100  text-blue-800 p-1 border px-3 rounded-full transition-colors"
+                className="text-xs bg-blue-100  text-blue-800 p-1 border px-1 rounded-md transition-colors"
               >
                 FAQ
               </a>
 
               <button
                 onClick={() => handleOpenForm("Book a Call")}
-                className="cursor-pointer bg-[#17CFBF] border border-gray-300 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-3 py-1.5 rounded-md text-sm transition-colors"
+                className="cursor-pointer bg-[#17CFBF] border border-gray-300 text-[#ffffff] hover:text-gray-800 hover:bg-[#66D9FF] px-1 py-1.5 rounded-md text-xs transition-colors"
               >
                 Check Availability
               </button>
