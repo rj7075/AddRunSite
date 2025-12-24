@@ -61,13 +61,13 @@ export default function CTASection() {
 
     // ✅ Google Form hidden "formResponse" endpoint
     const formUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLSer60HKgpOidicarJbM3By1V6l7gOHFiH_WyNUjWBVpDuQCdw/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLSc9z3stoaILghG4MQ5kB2ybL8jqJGxOJZr_TFjyPN-cM4h1fg/formResponse";
 
     // ✅ Map your custom fields to Google Form entry IDs
     const formDataToSend = new FormData();
-    formDataToSend.append("entry.2005620554", formData.name); // Name field
-    formDataToSend.append("entry.1166974658", selectedCity); // City field
-    formDataToSend.append("entry.839337160", formData.phone); // Phone field
+    formDataToSend.append("entry.986636130", formData.name); // Name field
+    formDataToSend.append("entry.1430806911", selectedCity); // City field
+    formDataToSend.append("entry.819097800", formData.phone); // Phone field
 
     try {
       await fetch(formUrl, {

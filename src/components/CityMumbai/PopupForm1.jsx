@@ -21,12 +21,12 @@ export default function PopupForm1({ isOpen, onClose, initialCity = "" }) {
     }
 
     const formUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLSer60HKgpOidicarJbM3By1V6l7gOHFiH_WyNUjWBVpDuQCdw/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLSc9z3stoaILghG4MQ5kB2ybL8jqJGxOJZr_TFjyPN-cM4h1fg/formResponse";
 
     const formDataToSend = new FormData();
-    formDataToSend.append("entry.2005620554", formData.name);
-    formDataToSend.append("entry.1166974658", formData.city);
-    formDataToSend.append("entry.839337160", formData.phone);
+    formDataToSend.append("entry.986636130", formData.name);
+    formDataToSend.append("entry.1430806911", formData.city);
+    formDataToSend.append("entry.819097800", formData.phone);
 
     try {
       await fetch(formUrl, {
