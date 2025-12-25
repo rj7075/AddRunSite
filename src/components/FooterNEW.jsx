@@ -243,7 +243,7 @@ const FooterNew = () => {
               </a>
               <span className="text-gray-600">|</span>
               <a
-                href="/terms-conditions"
+                href="/terms&conditions"
                 className="hover:text-white transition-colors text-sm"
               >
                 Terms & Conditions
