@@ -4,30 +4,30 @@ const pillars = [
   {
     icon: FaDollarSign,
     number: "01",
-    title: "Zero Capital, Infinite Scale.",
+    title: "Asset Sense Workspaces is not an idea or a concept.",
     description:
-      "Traditional real estate requires crores. Asset Sense gives you exclusive access to 1 lac sq. ft. of prime office space in Gurgaon, Delhi, and Noida to market as your own.",
-    highlight: "0 investment required",
+      "It is a live commercial real estate platform operating across Delhi NCR, with managed office inventory, active clients, and expanding locations. Operating since 2012 as Asset Sense Pvt Ltd. ",
+    highlight: "Trusted Since 2012",
   },
   {
     icon: FaRocket,
     number: "02",
-    title: "We Fuel Your Growth.",
+    title: "Operational Proof",
     description:
-      "We don't just give you a link. Every selected partner gets ₹5,000 in Meta/Google Ad credits to supercharge their content.",
-    highlight: "₹5,000 ad credits",
+      "Our spaces are located inside Grade-A commercial buildings, Welldone Tech Park, Spaze i-Tech Park, Vipul Square and at many more locations. Companies are already paying monthly subscriptions for these offices. ",
+    highlight: "Grade A Buildings",
   },
   {
     icon: FaSyncAlt,
     number: "03",
-    title: "The Passive Revenue Flywheel.",
+    title: "Why Prop-Influencers Choose Asset Sense ",
     description:
-      "Earn a monthly recurring commission for every seat closed. Sell once, get paid every month. Our subscription-based ECS model ensures you get paid as soon as we do.",
+      "Most brokers earn once and start from zero again on the next deal. Asset Sense partners participate in a subscription-based office model, where businesses pay monthly for workspace — creating ongoing earning potential instead of one-time commissions.",
     highlight: "Recurring revenue",
   },
 ];
 
-export default function PropPillerPoint() {
+export default function PropAdvantage() {
   return (
     <section id="advantage" className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6">
@@ -35,11 +35,11 @@ export default function PropPillerPoint() {
         {/* Heading */}
         <div className="mb-16 max-w-2xl">
           <p className="mb-3 font-semibold text-xs uppercase tracking-widest text-[#F2B966]">
-            Asset Sense Prop-Influencer Advantage
+            Asset Sense Advantage
           </p>
 
           <h2 className="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl">
-            Three pillars that make this work.
+           A Real Business. Backed by Real Assets 
           </h2>
         </div>
 

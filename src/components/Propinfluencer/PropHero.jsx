@@ -31,10 +31,20 @@ export default function PropHero() {
 
             {/* Description */}
             <p className="max-w-lg text-lg leading-relaxed text-gray-400">
-              Join the Asset Sense Prop-Influencer Network. We provide the
-              premium Delhi-NCR office spaces, the tech, and the ad budget. You
-              provide the reach. {"Let's hit 1 Lac sq. ft. together."}
+              Asset Sense Prop-Influencer is a partner program where individuals promote <strong className="text-[#F2B966]">"Managed Office Spaces"</strong> & <strong className="text-[#F2B966]">"Coworking Seats"</strong> across Delhi NCR and earn recurring revenue when companies take offices through their network. Asset Sense operates under the brand name "Asset Sense Workspaces (ASW)". {"Let's hit 1 Lac sq. ft. together."}
             </p>
+
+            <h3 className="text-xl font-semibold text-white">
+              Who is it for?
+            </h3>
+
+            <ul className="list-disc pl-5 space-y-1 text-[#F2B966] text-sm">
+              <li>Real Estate Brokers.</li>
+              <li>Influencers</li>
+              <li>Start-up Advisors & Consultants</li>
+            </ul>
+
+
 
             {/* CTA */}
             <section className="relative">
@@ -71,7 +81,7 @@ export default function PropHero() {
 
               <div>
                 <p className="text-2xl font-bold text-white">
-                  3
+                  10+
                 </p>
                 <p className="mt-1 text-xs text-gray-300">
                   NCR locations

@@ -6,6 +6,7 @@ import PropWorkingModel from './PropWorkingModel'
 import PropTheMathSection from './PropTheMath'
 import PropRoadmapSection from './PropRaodmap'
 import PropHeader from './PropHeader'
+import PropAdvantage from './PropAdvantage'
 
 const PropPage = () => {
   return (
@@ -15,6 +16,7 @@ const PropPage = () => {
       <PropPillerPoint/>
       <PropWorkingModel/>
       <PropTheMathSection/>
+      <PropAdvantage/>
       <PropRoadmapSection/>
       <PropCta/>
     </div>

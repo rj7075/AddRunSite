@@ -31,7 +31,7 @@ export default function PropTheMathSection() {
 
             <blockquote className="border-l-2 border-[#F2B966] pl-6">
               <p className="text-lg italic leading-relaxed text-gray-300">
-                "A typical Mogul partner managing 50 seats at our MG Road center
+                "A typical Prop-Influencer managing 50 seats at our Welldone Tech Park center
                 can generate ₹25,000 - ₹50,000 in monthly recurring revenue
                 with zero overhead."
               </p>
@@ -127,7 +127,7 @@ export default function PropTheMathSection() {
                 return (
                   <div key={row.seats} className="flex items-center gap-3">
 
-                    <span className="w-10 text-right font-semibold text-xs text-gray-500">
+                    <span className="w-10 text-right font-semibold text-xs text-gray-300">
                       {row.seats}
                     </span>
 

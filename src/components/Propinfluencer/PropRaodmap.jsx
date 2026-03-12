@@ -6,10 +6,10 @@ const phases = [
     status: "live",
     label: "Phase 1",
     timing: "Now",
-    title: "Launch at Spaze i-Tech Park",
+    title: "Launch at Welldone Tech Park",
     description:
       "Our flagship location is live and operational. Partners onboarding now.",
-    location: "Spaze i-Tech Park, Gurgaon",
+    location: "Welldone Tech Park, Gurgaon",
   },
   {
     icon: FaClock,

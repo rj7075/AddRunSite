@@ -19,7 +19,7 @@ function App() {
   const showcustomFooter = ["/virtual-office-in-mumbai"].includes(
     location.pathname
   );
-  const ShowPropheader = ["/propinfluencer"].includes(location.pathname);
+  const ShowPropheader = ["/prop-influencer"].includes(location.pathname);
 
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/virtual-office-in-mumbai" element={<Mumbai />} />
         <Route index element={<Home />} />
-        <Route path="/propinfluencer" element={<PropPage/>} />
+        <Route path="/prop-influencer" element={<PropPage/>} />
         <Route path="/virtual-office" element={<Home />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/refund-policy" element={<Refund />} />

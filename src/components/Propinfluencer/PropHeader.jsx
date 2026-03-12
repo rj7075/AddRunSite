@@ -27,7 +27,7 @@ export default function PropHeader() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2">
         {/* Logo */}
         <div className="flex items-center">
-              <a href="/virtual-office">
+              <a href="/prop-influencer">
                 <img
                   className="w-40 h-17 overflow-hidden"
                   src="/assetlogo.webp"
