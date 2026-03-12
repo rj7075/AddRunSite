@@ -11,22 +11,25 @@ import Mumbai from "./Pages/Citywisepage/Mumbai.jsx";
 import { useLocation } from "react-router-dom";
 import FooterMumbai from "./components/CityMumbai/FooterMumbai.jsx";
 import FooterNew from "./components/FooterNEW.jsx";
+import PropHeader from "./components/Propinfluencer/PropHeader.jsx";
+import PropPage from "./components/Propinfluencer/PropPage.jsx";
 
 function App() {
   const location = useLocation();
   const showcustomFooter = ["/virtual-office-in-mumbai"].includes(
     location.pathname
   );
+  const ShowPropheader = ["/propinfluencer"].includes(location.pathname);
 
   return (
     <>
-      <Header3 />
+     {ShowPropheader ? <PropHeader/> : <Header3 />}
       <Toaster position="top-center" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/virtual-office-in-mumbai" element={<Mumbai />} />
         <Route index element={<Home />} />
-
+        <Route path="/propinfluencer" element={<PropPage/>} />
         <Route path="/virtual-office" element={<Home />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/refund-policy" element={<Refund />} />
