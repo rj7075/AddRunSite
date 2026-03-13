@@ -27,9 +27,9 @@ export default function PropCta() {
           </p>
 
           {/* CTA Button */}
-          <button onClick={() => setOpen(true)} className="flex items-center gap-2 rounded-md bg-[#F2B966] hover:bg-[#e09625] px-6 py-3 font-semibold cursor-pointer text-sm uppercase tracking-wider text-black transition ">
+          <button onClick={() => setOpen(true)} className="flex items-center gap-2 rounded-md bg-[#F2B966] hover:bg-[#e09625] px-2 py-3 font-semibold cursor-pointer text-xs uppercase tracking-wider text-black transition ">
             Apply for Exclusive Partnership
-            <FaArrowRight className="text-sm" />
+            <FaArrowRight className="text-xs" />
           </button>
           <PropPopupForm
            isOpen={open}
@@ -37,7 +37,7 @@ export default function PropCta() {
           />
 
           {/* Footer Info */}
-          <div className="mt-4 flex flex-wrap items-center font-semibold justify-center gap-6 text-xs text-gray-300">
+          <div className="mt-4 flex flex-wrap items-center font-semibold justify-center gap-6 text-sm text-gray-300">
             <span>Zero Capital Required</span>
 
             <span className="hidden text-gray-300 font-semibold sm:inline">|</span>

@@ -115,7 +115,7 @@ export default function PropHero() {
 
                 <div className="absolute inset-0 bg-white/20" />
 
-                <span className="absolute bottom-3 left-3 right-3 rounded-md border border-gray-200 bg-white/80 px-2 py-1 font-semibold text-xs text-gray-900 backdrop-blur-sm">
+                <span className="absolute bottom-3 left-3 right-3 rounded-md border border-gray-200 bg-white/80 px-2 py-1 font-semibold text-xs text-gray-900">
                   Welldone Tech Park Sohna Road Sector 48 Gurgaon
                 </span>
               </div>
