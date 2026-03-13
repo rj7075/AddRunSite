@@ -29,9 +29,9 @@ const pillars = [
 
 export default function PropPillerPoint() {
   return (
-    <section id="advantage" className="relative py-24 lg:py-32">
+    <section id="advantage" className="relative py-10">
       <div className="mx-auto max-w-6xl px-6">
-
+<hr />
         {/* Heading */}
         <div className="mb-16 max-w-2xl">
           <p className="mb-3 font-semibold text-xs uppercase tracking-widest text-[#F2B966]">

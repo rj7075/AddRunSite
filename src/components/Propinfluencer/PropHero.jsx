@@ -10,7 +10,7 @@ export default function PropHero() {
       {/* Background radial gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,200,0,0.06),transparent_60%)]" />
 
-      <div className="mx-auto max-w-6xl px-6 py-20 lg:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* LEFT CONTENT */}
@@ -25,7 +25,7 @@ export default function PropHero() {
             <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               Build a Real Estate Empire{" "}
               <span className="text-[#F2B966]">
-                Without Owning a Single Brick.
+                Without Owning a Single Brick
               </span>
             </h1>
 
@@ -51,6 +51,7 @@ export default function PropHero() {
 
   {/* background */}
             <div className="absolute inset-0 pointer-events-none"></div>
+            
 
             {/* content */}
             <div className="relative z-10">
@@ -107,22 +108,22 @@ export default function PropHero() {
               {/* Image 1 */}
               <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-gray-200">
                 <img
-                  src="/mumbai3.png"
+                  src="/welldone.png"
                   alt="Premium coworking office space"
                   className="h-full w-full object-cover"
                 />
 
                 <div className="absolute inset-0 bg-white/20" />
 
-                <span className="absolute bottom-3 left-3 rounded-md border border-gray-200 bg-white/80 px-2 py-1 font-semibold text-xs text-gray-900 backdrop-blur-sm">
-                  MG Road, Gurgaon
+                <span className="absolute bottom-3 left-3 right-3 rounded-md border border-gray-200 bg-white/80 px-2 py-1 font-semibold text-xs text-gray-900 backdrop-blur-sm">
+                  Welldone Tech Park Sohna Road Sector 48 Gurgaon
                 </span>
               </div>
 
               {/* Image 2 */}
               <div className="relative aspect-[16/10] overflow-hidden rounded-lg border border-gray-200">
                 <img
-                  src="/mumbai3.png"
+                  src="/welldone2.png"
                   alt="Revenue analytics dashboard"
                   className="h-full w-full object-cover"
                 />
@@ -130,7 +131,7 @@ export default function PropHero() {
                 <div className="absolute inset-0 bg-white/10" />
 
                 <span className="absolute bottom-3 left-3 rounded-md border border-gray-200 bg-white/80 px-2 py-1 font-semibold text-xs text-gray-900 backdrop-blur-sm">
-                  Your Dashboard
+                  
                 </span>
               </div>
             </div>

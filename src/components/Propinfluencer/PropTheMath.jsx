@@ -11,7 +11,7 @@ export default function PropTheMathSection() {
   return (
     <section
       id="the-math"
-      className="relative border-t border-gray-200 py-24 lg:py-32"
+      className="relative border-t border-gray-200 py-16"
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">

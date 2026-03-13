@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function PropCta() {
    const [open, setOpen] = useState(false);
   return (
-    <section className="relative border-t border-gray-200 py-24 lg:py-32">
+    <section className="relative border-t border-gray-200 py-20">
       
       {/* Background gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.05),transparent_60%)]" />

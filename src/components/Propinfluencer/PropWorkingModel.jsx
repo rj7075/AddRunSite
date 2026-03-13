@@ -34,7 +34,7 @@ export default function PropWorkingModel() {
   return (
     <section
       id="how-it-works"
-      className="relative border-t border-gray-200 py-24 lg:py-32"
+      className="relative border-t border-gray-200 py-15 "
     >
       <div className="mx-auto max-w-6xl px-6">
 

@@ -37,7 +37,7 @@ export default function PropRoadmapSection() {
   return (
     <section
       id="roadmap"
-      className="relative border-t border-gray-200 py-24 lg:py-32"
+      className="relative border-t border-gray-200 py-20"
     >
       <div className="mx-auto max-w-6xl px-6">
         {/* Heading */}

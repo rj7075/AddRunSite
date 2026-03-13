@@ -54,14 +54,14 @@ export default function PropHeader() {
           </button>
           
         </div>
-<PropPopupForm
+         <PropPopupForm
            isOpen={open}
            onClose={() => setOpen(false)}
           />
         {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-gray-900 md:hidden"
+          className="text-gray-300 md:hidden"
           aria-label="Toggle mobile menu"
         >
           {mobileOpen ? <FiX size={22} /> : <FiMenu size={22} />}
